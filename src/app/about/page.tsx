@@ -215,18 +215,21 @@ export default function AboutPage() {
             pointer-events: none;
           }
           .bg-image-layer {
-            filter: blur(8px);
+            filter: blur(8px) saturate(0.8);
             transform: scale(1.1);
+            opacity: 0.15;
           }
           .bg-overlay-layer {
-            background: linear-gradient(
-              to bottom,
-              #050505 0%,
-              rgba(5, 5, 5, 0.45) 15%,
-              rgba(5, 5, 5, 0.25) 50%,
-              rgba(5, 5, 5, 0.45) 85%,
-              #050505 100%
-            );
+            background: 
+              radial-gradient(circle at 50% 50%, rgba(13, 10, 25, 0.4) 0%, transparent 100%),
+              linear-gradient(
+                to bottom,
+                #050505 0%,
+                rgba(5, 5, 5, 0.6) 15%,
+                rgba(5, 5, 5, 0.4) 50%,
+                rgba(5, 5, 5, 0.6) 85%,
+                #050505 100%
+              );
           }
           .main-mission-container {
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -237,11 +240,11 @@ export default function AboutPage() {
             inset: 0;
             background: linear-gradient(
               to bottom,
-              rgba(0, 0, 0, 0.85) 0%,
-              rgba(0, 0, 0, 0.35) 20%,
-              rgba(0, 0, 0, 0.15) 50%,
-              rgba(0, 0, 0, 0.35) 80%,
-              rgba(0, 0, 0, 0.90) 100%
+              rgba(0, 0, 0, 0.9) 0%,
+              rgba(0, 0, 0, 0.5) 20%,
+              rgba(0, 0, 0, 0.3) 50%,
+              rgba(0, 0, 0, 0.5) 80%,
+              rgba(0, 0, 0, 0.95) 100%
             );
             z-index: 1;
           }
