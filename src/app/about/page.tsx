@@ -267,27 +267,47 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-24 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-32 overflow-hidden">
+        {/* Background Image for Section */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/partner-bg.jpg"
+            alt="Partner Background"
+            fill
+            className="object-cover opacity-40 scale-105"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black" />
+          <div className="absolute inset-0 bg-black/20 backdrop-blur-sm" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-card p-12 md:p-24 text-center relative overflow-hidden group"
+            className="glass-premium p-12 md:p-24 text-center relative overflow-hidden group border-white/20 shadow-[0_20px_80px_rgba(0,0,0,0.5)]"
+            style={{
+              background: "linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%)",
+              backdropFilter: "blur(40px) saturate(200%)",
+            }}
           >
-            <div className="absolute inset-0 bg-linear-to-r from-white/5 via-transparent to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+            {/* Mirror Reflection/Shine */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.1),transparent)]" />
+
             <div className="relative z-10">
-              <h2 className="text-4xl sm:text-5 font-bold font-display mb-10 leading-[1.1]">
+              <h2 className="text-4xl sm:text-6xl font-bold font-display mb-10 leading-[1.1] tracking-tighter">
                 Ready to <span className="text-gradient">Partner</span> with Us?
               </h2>
-              <p className="text-white/50 max-w-2xl mx-auto mb-16 text-xl font-medium">
-                Join us in transforming business operations with AI-driven solutions and world-class talent.
+              <p className="text-white/60 max-w-2xl mx-auto mb-16 text-xl font-medium leading-relaxed">
+                Join us in transforming business operations with AI-driven solutions and world-class talent. Let&apos;s build the future together.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <Button
                   asChild
                   size="lg"
-                  className="bg-white hover:bg-white/90 text-black font-bold rounded-full px-12 h-16 text-lg transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(255,255,255,0.2)]"
+                  className="bg-white hover:bg-white/90 text-black font-bold rounded-full px-12 h-16 text-lg transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(255,255,255,0.3)]"
                 >
                   <Link href="/contact" className="flex items-center gap-2">
                     Get in Touch
@@ -298,7 +318,7 @@ export default function AboutPage() {
                   asChild
                   size="lg"
                   variant="outline"
-                  className="border-white/20 hover:bg-white/10 rounded-full px-12 h-16 text-lg transition-all duration-300 glass"
+                  className="border-white/20 hover:bg-white/10 rounded-full px-12 h-16 text-lg transition-all duration-300 backdrop-blur-md"
                 >
                   <Link href="/careers">Join Our Team</Link>
                 </Button>
