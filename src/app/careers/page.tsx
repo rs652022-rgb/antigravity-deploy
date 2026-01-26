@@ -264,7 +264,16 @@ export default function CareersPage() {
       </section>
 
       <section id="culture" className="py-24 culture-values-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Optimized Background Image */}
+        <Image
+          src="/images/careers-bg-premium.jpg"
+          alt="Abstract Culture Background"
+          fill
+          className="object-cover z-0 pointer-events-none"
+          sizes="100vw"
+          quality={85}
+        />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}

@@ -327,23 +327,10 @@
 
 
 /* How We Partner Section - Premium Background */
+/* How We Partner Section - Premium Background */
 .how-we-partner-section {
   position: relative;
   overflow: hidden;
-}
-
-.how-we-partner-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url('/images/partnership-bg-premium-v2.jpg');
-  /* "Fit the section" requires cover. To minimize perceived zoom, we center it. */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  /* Optional slight blur for blending, keeping it very subtle */
-  filter: blur(1.5px);
-  z-index: 0;
 }
 
 .how-we-partner-section::after {
@@ -364,30 +351,10 @@
   pointer-events: none;
 }
 
-.how-we-partner-section>* {
-  position: relative;
-  z-index: 2;
-}
-
-/* Ensure content is strictly above overlays */
-
-
 /* Our Culture & Values Section - Premium Background */
 .culture-values-section {
   position: relative;
   overflow: hidden;
-}
-
-.culture-values-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url('/images/careers-bg-premium.jpg');
-  background-size: cover;
-  background-position: center;
-  /* Optional subtle blur per requirements */
-  filter: blur(1px) saturate(1.05) contrast(1.05);
-  z-index: 0;
 }
 
 .culture-values-section::after {
@@ -408,9 +375,4 @@
     linear-gradient(135deg, rgba(60, 140, 255, 0.10), rgba(0, 0, 0, 0) 55%);
   z-index: 1;
   pointer-events: none;
-}
-
-.culture-values-section>* {
-  position: relative;
-  z-index: 2;
 }

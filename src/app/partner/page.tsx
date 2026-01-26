@@ -244,7 +244,16 @@ export default function PartnerPage() {
       </section>
 
       <section className="py-24 how-we-partner-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Optimized Background Image */}
+        <Image
+          src="/images/partnership-bg-premium-v2.jpg"
+          alt="Abstract Partner Background"
+          fill
+          className="object-cover z-0 pointer-events-none"
+          sizes="100vw"
+          quality={85}
+        />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
