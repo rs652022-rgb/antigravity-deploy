@@ -115,8 +115,21 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-24 bg-[#050505]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-24 overflow-hidden">
+        {/* Background Image for Values Section */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/values-bg.png"
+            alt="Values Background"
+            fill
+            className="object-cover opacity-20 scale-110 blur-[2px]"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
+          <div className="absolute inset-0 bg-black/40" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -125,7 +138,7 @@ export default function AboutPage() {
             className="text-center mb-16"
           >
             <span className="inline-block px-4 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 text-xs font-bold uppercase tracking-widest mb-6">Our Core</span>
-            <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold font-display mb-8">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold font-display mb-8 tracking-tighter">
               Our Mission & <span className="text-gradient">Values</span>
             </h2>
             <p className="text-white/50 max-w-2xl mx-auto text-xl font-medium">
@@ -137,12 +150,16 @@ export default function AboutPage() {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="glass-card p-12 md:p-24 mb-16 relative group"
+            className="glass-premium p-12 md:p-24 mb-16 relative group overflow-hidden border-white/10"
+            style={{
+              background: "linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0) 100%)",
+              backdropFilter: "blur(20px)",
+            }}
           >
-            <div className="absolute inset-0 bg-linear-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
             <div className="relative z-10 flex flex-col md:flex-row items-center gap-16">
-              <div className="w-24 h-24 rounded-3xl bg-white/5 flex items-center justify-center shrink-0 border border-white/10 group-hover:scale-110 transition-transform duration-500">
-                <Award className="w-12 h-12 text-white" />
+              <div className="w-24 h-24 rounded-3xl bg-white/5 flex items-center justify-center shrink-0 border border-white/10 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_20px_rgba(255,255,255,0.05)]">
+                < Award className="w-12 h-12 text-white" />
               </div>
               <div className="text-center md:text-left">
                 <h3 className="text-3xl font-bold mb-6 font-display">Our Mission</h3>
@@ -163,13 +180,19 @@ export default function AboutPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="glass-card p-10 group"
+                  className="glass-premium p-10 group relative overflow-hidden border-white/10 hover:border-white/20 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
+                  style={{
+                    background: "linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%)",
+                    backdropFilter: "blur(30px)",
+                  }}
                 >
-                  <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 border border-white/10">
+                  <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+
+                  <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 border border-white/10 shadow-[0_4px_15px_rgba(0,0,0,0.2)]">
                     <value.icon className="w-7 h-7 text-white/70" />
                   </div>
                   <h4 className="text-xl font-bold mb-4 font-display">{value.title}</h4>
-                  <div className="relative h-40 w-full rounded-2xl overflow-hidden mb-6 border border-white/5">
+                  <div className="relative h-40 w-full rounded-2xl overflow-hidden mb-6 border border-white/10 group-hover:scale-[1.02] transition-transform duration-500">
                     <Image
                       src={value.image}
                       alt={value.title}
@@ -177,8 +200,9 @@ export default function AboutPage() {
                       className="object-cover"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                   </div>
-                  <p className="text-white/50 leading-relaxed font-medium">{value.description}</p>
+                  <p className="text-white/50 leading-relaxed font-medium group-hover:text-white/70 transition-colors duration-300">{value.description}</p>
                 </motion.div>
               ))}
             </div>
