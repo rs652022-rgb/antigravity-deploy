@@ -150,15 +150,11 @@ export default function AboutPage() {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="glass-premium p-12 md:p-24 mb-16 relative group overflow-hidden border-white/10"
-            style={{
-              background: "linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0) 100%)",
-              backdropFilter: "blur(20px)",
-            }}
+            className="glass-card p-12 md:p-24 mb-16 relative group"
           >
-            <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
+            <div className="absolute inset-0 bg-linear-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
             <div className="relative z-10 flex flex-col md:flex-row items-center gap-16">
-              <div className="w-24 h-24 rounded-3xl bg-white/5 flex items-center justify-center shrink-0 border border-white/10 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_20px_rgba(255,255,255,0.05)]">
+              <div className="w-24 h-24 rounded-3xl bg-white/5 flex items-center justify-center shrink-0 border border-white/10 group-hover:scale-110 transition-transform duration-500">
                 < Award className="w-12 h-12 text-white" />
               </div>
               <div className="text-center md:text-left">
@@ -180,19 +176,13 @@ export default function AboutPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="glass-premium p-10 group relative overflow-hidden border-white/10 hover:border-white/20 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
-                  style={{
-                    background: "linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%)",
-                    backdropFilter: "blur(30px)",
-                  }}
+                  className="glass-card p-10 group"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-
-                  <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 border border-white/10 shadow-[0_4px_15px_rgba(0,0,0,0.2)]">
+                  <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 border border-white/10">
                     <value.icon className="w-7 h-7 text-white/70" />
                   </div>
                   <h4 className="text-xl font-bold mb-4 font-display">{value.title}</h4>
-                  <div className="relative h-40 w-full rounded-2xl overflow-hidden mb-6 border border-white/10 group-hover:scale-[1.02] transition-transform duration-500">
+                  <div className="relative h-40 w-full rounded-2xl overflow-hidden mb-6 border border-white/5">
                     <Image
                       src={value.image}
                       alt={value.title}
@@ -200,9 +190,8 @@ export default function AboutPage() {
                       className="object-cover"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                   </div>
-                  <p className="text-white/50 leading-relaxed font-medium group-hover:text-white/70 transition-colors duration-300">{value.description}</p>
+                  <p className="text-white/50 leading-relaxed font-medium">{value.description}</p>
                 </motion.div>
               ))}
             </div>
