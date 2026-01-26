@@ -115,18 +115,17 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="relative py-24 overflow-hidden">
-        {/* Background Image for Values Section */}
-        <div className="absolute inset-0 z-0">
+      <section className="relative py-24 overflow-hidden mission-values-section">
+        {/* Section Background Layer */}
+        <div className="absolute inset-0 z-0 section-bg-container">
           <Image
-            src="/images/values-bg.png"
-            alt="Values Background"
+            src="/images/mission-values-bg.png"
+            alt="Mission Background"
             fill
-            className="object-cover opacity-20 scale-110 blur-[2px]"
+            className="object-cover object-center bg-image-layer"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-overlay-layer" />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -134,7 +133,6 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
-
             className="text-center mb-16"
           >
             <span className="inline-block px-4 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 text-xs font-bold uppercase tracking-widest mb-6">Our Core</span>
@@ -150,12 +148,23 @@ export default function AboutPage() {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="glass-card p-12 md:p-24 mb-16 relative group"
+            className="glass-card p-12 md:p-24 mb-16 relative group overflow-hidden main-mission-container"
           >
-            <div className="absolute inset-0 bg-linear-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+            {/* Inner Background Integration */}
+            <div className="absolute inset-0 z-0 opacity-40 inner-bg-layer">
+              <Image
+                src="/images/mission-values-bg.png"
+                alt="Inner Background"
+                fill
+                className="object-cover object-center blur-md scale-110"
+              />
+            </div>
+
+            <div className="absolute inset-0 bg-linear-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000 z-1" />
+
             <div className="relative z-10 flex flex-col md:flex-row items-center gap-16">
               <div className="w-24 h-24 rounded-3xl bg-white/5 flex items-center justify-center shrink-0 border border-white/10 group-hover:scale-110 transition-transform duration-500">
-                < Award className="w-12 h-12 text-white" />
+                <Award className="w-12 h-12 text-white" />
               </div>
               <div className="text-center md:text-left">
                 <h3 className="text-3xl font-bold mb-6 font-display">Our Mission</h3>
@@ -197,6 +206,33 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
+
+        <style jsx>{`
+          .mission-values-section {
+            background-color: #050505;
+          }
+          .section-bg-container {
+            pointer-events: none;
+          }
+          .bg-image-layer {
+            filter: blur(8px);
+            transform: scale(1.1);
+          }
+          .bg-overlay-layer {
+            background: linear-gradient(
+              to bottom,
+              rgba(0, 0, 0, 0.75) 0%,
+              rgba(0, 0, 0, 0.55) 50%,
+              rgba(0, 0, 0, 0.80) 100%
+            );
+          }
+          .main-mission-container {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+          }
+          .inner-bg-layer img {
+            filter: saturate(1.5) contrast(1.1);
+          }
+        `}</style>
       </section>
 
 
