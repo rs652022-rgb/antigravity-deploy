@@ -221,16 +221,29 @@ export default function AboutPage() {
           .bg-overlay-layer {
             background: linear-gradient(
               to bottom,
-              rgba(0, 0, 0, 0.75) 0%,
-              rgba(0, 0, 0, 0.55) 50%,
-              rgba(0, 0, 0, 0.80) 100%
+              #050505 0%,
+              rgba(5, 5, 5, 0.45) 15%,
+              rgba(5, 5, 5, 0.25) 50%,
+              rgba(5, 5, 5, 0.45) 85%,
+              #050505 100%
             );
           }
           .main-mission-container {
             border: 1px solid rgba(255, 255, 255, 0.1);
           }
-          .inner-bg-layer img {
-            filter: saturate(1.5) contrast(1.1);
+          .inner-bg-layer::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+              to bottom,
+              rgba(0, 0, 0, 0.85) 0%,
+              rgba(0, 0, 0, 0.35) 20%,
+              rgba(0, 0, 0, 0.15) 50%,
+              rgba(0, 0, 0, 0.35) 80%,
+              rgba(0, 0, 0, 0.90) 100%
+            );
+            z-index: 1;
           }
         `}</style>
       </section>
