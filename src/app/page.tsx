@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import "./solutions.css";
 import UnicornHero from "@/components/home/UnicornHero";
+
 import { Button } from "@/components/ui/button";
 import QualityComplianceSection from "@/components/home/QualityComplianceSection";
 import {
@@ -39,6 +40,7 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         {/* Background Elements - Unicorn Studio Animation */}
         <UnicornHero />
+
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-10">
           <motion.div

@@ -55,7 +55,7 @@ const benefits = [
     icon: Globe,
     title: "Global Reach",
     description: "24/7 operations across multiple time zones with multilingual support capabilities.",
-    image: "/images/nascent_remix.png",
+    image: "/images/global-reach-bpo.png",
   },
   {
     icon: Users,
@@ -243,7 +243,7 @@ export default function PartnerPage() {
         </div>
       </section>
 
-      <section className="py-24 bg-black overflow-hidden">
+      <section className="py-24 how-we-partner-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

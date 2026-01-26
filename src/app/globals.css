@@ -322,3 +322,95 @@
     border-radius: 1.25rem;
   }
 }
+
+/* Contact Page - Visit Our Headquarters Section */
+
+
+/* How We Partner Section - Premium Background */
+.how-we-partner-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.how-we-partner-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/partnership-bg-premium-v2.jpg');
+  /* "Fit the section" requires cover. To minimize perceived zoom, we center it. */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Optional slight blur for blending, keeping it very subtle */
+  filter: blur(1.5px);
+  z-index: 0;
+}
+
+.how-we-partner-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* Premium Overlay Recipe with seamless top/bottom blending */
+  background:
+    linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.92) 0%,
+      rgba(0, 0, 0, 0.55) 16%,
+      rgba(0, 0, 0, 0.18) 45%,
+      rgba(0, 0, 0, 0.18) 55%,
+      rgba(0, 0, 0, 0.55) 84%,
+      rgba(0, 0, 0, 0.94) 100%),
+    radial-gradient(70% 80% at 50% 45%, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.78));
+  z-index: 1;
+  pointer-events: none;
+}
+
+.how-we-partner-section>* {
+  position: relative;
+  z-index: 2;
+}
+
+/* Ensure content is strictly above overlays */
+
+
+/* Our Culture & Values Section - Premium Background */
+.culture-values-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.culture-values-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/careers-bg-premium.jpg');
+  background-size: cover;
+  background-position: center;
+  /* Optional subtle blur per requirements */
+  filter: blur(1px) saturate(1.05) contrast(1.05);
+  z-index: 0;
+}
+
+.culture-values-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* Premium Overlay Recipe: Stronger Top Black Fade + Blue tint */
+  background:
+    linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.98) 0%,
+      rgba(0, 0, 0, 0.80) 12%,
+      rgba(0, 0, 0, 0.40) 30%,
+      rgba(0, 0, 0, 0.20) 55%,
+      rgba(0, 0, 0, 0.58) 82%,
+      rgba(0, 0, 0, 0.94) 100%),
+    radial-gradient(70% 80% at 50% 45%, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.78)),
+    radial-gradient(60% 70% at 35% 35%, rgba(80, 160, 255, 0.18), rgba(0, 0, 0, 0) 60%),
+    linear-gradient(135deg, rgba(60, 140, 255, 0.10), rgba(0, 0, 0, 0) 55%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.culture-values-section>* {
+  position: relative;
+  z-index: 2;
+}
