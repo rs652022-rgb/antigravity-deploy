@@ -83,8 +83,18 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/services/sales-lead-generation" className="text-text-muted hover:text-white transition-colors text-sm">
+                  Sales & Lead Generation
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/finance-accounting" className="text-text-muted hover:text-white transition-colors text-sm">
+                  Finance & Accounting
+                </Link>
+              </li>
+              <li>
                 <Link href="/services/customer-support" className="text-text-muted hover:text-white transition-colors text-sm">
-                  Web Development & Application Development
+                  Customer Support
                 </Link>
               </li>
               <li>
