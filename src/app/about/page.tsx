@@ -188,86 +188,53 @@ export default function AboutPage() {
 
 
 
-      <section className="relative py-32 overflow-hidden bg-black">
-        {/* Background Atmosphere */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/roadmap-bg.jpg"
-            alt="Roadmap Background"
-            fill
-            className="object-cover opacity-30 scale-105"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
-          <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="py-24 bg-[#050505]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
-            className="text-center mb-24"
+
+            className="text-center mb-16"
           >
-            <motion.span
-              initial={{ scale: 0.9 }}
-              whileInView={{ scale: 1 }}
-              className="inline-block px-5 py-1.5 rounded-full bg-white/5 border border-white/10 text-white/80 text-[10px] font-black uppercase tracking-[0.3em] mb-8"
-            >
-              The Path to Future
-            </motion.span>
-            <h2 className="text-5xl sm:text-6xl md:text-8xl font-bold font-display mb-10 tracking-tighter">
+            <span className="inline-block px-4 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 text-xs font-bold uppercase tracking-widest mb-6">The Path</span>
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold font-display mb-8">
               Our <span className="text-gradient">Roadmap</span>
             </h2>
-            <p className="text-white/40 max-w-2xl mx-auto text-xl font-medium leading-relaxed">
-              Charting our journey towards transforming the global BPO landscape with AI-powered innovation and human excellence.
+            <p className="text-white/50 max-w-2xl mx-auto text-xl font-medium">
+              A clear vision for growth, innovation, and transformation.
             </p>
           </motion.div>
 
           <div className="relative">
-            {/* Animated Center Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-[2px] bg-linear-to-b from-transparent via-white/20 to-transparent hidden lg:block" />
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-white/10 hidden lg:block" />
 
-            <div className="space-y-24">
+            <div className="space-y-12">
               {roadmap.map((item, index) => (
                 <motion.div
                   key={item.phase}
-                  initial={{ opacity: 0, y: 40 }}
+                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.8, ease: "circOut", delay: index * 0.05 }}
-                  className={`relative flex flex-col lg:flex-row items-center gap-12 lg:gap-20 ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className={`relative flex flex-col lg:flex-row items-center gap-8 ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
                     }`}
                 >
-                  <div className={`flex-1 w-full ${index % 2 === 0 ? "lg:text-right" : "lg:text-left"}`}>
-                    <div className={`glass-premium p-10 lg:p-14 group relative transition-all duration-700 hover:scale-[1.02] ${index % 2 === 0 ? "lg:ml-auto" : "lg:mr-auto"
-                      } max-w-xl`}>
-                      <div className="absolute inset-x-0 -top-px h-px bg-linear-to-r from-transparent via-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+                  <div className={`flex-1 ${index % 2 === 0 ? "lg:text-right" : "lg:text-left"}`}>
+                    <div className={`glass-card p-10 inline-block group relative ${index % 2 === 0 ? "lg:ml-auto" : "lg:mr-auto"}`}>
+                      <div className="absolute inset-0 bg-linear-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
                       <div className="relative z-10">
-                        <span className="inline-block mb-8 text-4xl font-black font-display opacity-10 group-hover:opacity-20 transition-opacity duration-700">
-                          {item.phase.split(' ')[1]}
+                        <span className="inline-block px-4 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 text-[10px] font-bold uppercase tracking-widest mb-6">
+                          {item.phase}
                         </span>
-                        <div className="flex flex-col gap-4">
-                          <span className="text-white/40 text-[10px] font-bold uppercase tracking-[0.2em]">
-                            {item.phase}
-                          </span>
-                          <h3 className="text-3xl md:text-4xl font-bold font-display leading-tight">{item.title}</h3>
-                          <div className={`h-px w-12 bg-white/20 my-4 group-hover:w-20 transition-all duration-700 ${index % 2 === 0 ? "lg:ml-auto" : "lg:mr-auto"}`} />
-                          <p className="text-white/50 text-lg leading-relaxed font-medium">
-                            {item.description}
-                          </p>
-                        </div>
+                        <h3 className="text-2xl font-bold mb-4 font-display">{item.title}</h3>
+                        <p className="text-white/50 text-base leading-relaxed font-medium max-w-sm">{item.description}</p>
                       </div>
                     </div>
                   </div>
 
-                  {/* Icon / Marker */}
-                  <div className="relative flex items-center justify-center shrink-0 z-10 hidden lg:flex">
-                    <div className="w-12 h-12 rounded-full glass-premium flex items-center justify-center border border-white/20 group-hover:border-white/40 transition-colors duration-500 shadow-[0_0_30px_rgba(255,255,255,0.1)]">
-                      <div className="w-4 h-4 rounded-full bg-white opacity-40 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500 shadow-[0_0_15px_rgba(255,255,255,0.8)]" />
-                    </div>
-                    {/* Ping Animation */}
-                    <div className="absolute inset-0 w-full h-full rounded-full animate-ping bg-white/5 opacity-0 group-hover:opacity-100" />
+                  <div className="w-4 h-4 rounded-full bg-white border-4 border-black relative z-10 hidden lg:block shadow-[0_0_15px_rgba(255,255,255,0.5)]">
+                    <div className="absolute inset-0 rounded-full bg-white animate-ping opacity-25" />
                   </div>
 
                   <div className="flex-1 hidden lg:block" />
