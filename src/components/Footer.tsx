@@ -66,25 +66,32 @@ export function Footer() {
               <h4 className="text-white font-bold mb-6 text-[15px]">About us</h4>
               <ul className="space-y-3">
                 <li><Link href="/about" className="text-text-muted hover:text-white transition-colors text-sm">About AdmirerX</Link></li>
-                <li><Link href="/leaders" className="text-text-muted hover:text-white transition-colors text-sm">Our Leaders</Link></li>
                 <li><Link href="/careers" className="text-text-muted hover:text-white transition-colors text-sm">Careers</Link></li>
               </ul>
             </div>
 
             <h4 className="text-white font-bold mb-6 text-[15px]">Our Services</h4>
             <ul className="space-y-3">
-              {[
-                "BPO services",
-                "Hiring & Recruitment Services",
-                "Web Devlopment & Application Devlopment",
-                "AI Bots & AI Integrations"
-              ].map((service) => (
-                <li key={service}>
-                  <Link href={`/services/${service.toLowerCase().replace(/ /g, '-')}`} className="text-text-muted hover:text-white transition-colors text-sm">
-                    {service}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link href="/services/back-office" className="text-text-muted hover:text-white transition-colors text-sm">
+                  BPO services
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/recruitment-rpo" className="text-text-muted hover:text-white transition-colors text-sm">
+                  Hiring & Recruitment Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/customer-support" className="text-text-muted hover:text-white transition-colors text-sm">
+                  Web Development & Application Development
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/ai-data" className="text-text-muted hover:text-white transition-colors text-sm">
+                  AI Bots & AI Integrations
+                </Link>
+              </li>
             </ul>
           </div>
 
