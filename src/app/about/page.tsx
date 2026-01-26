@@ -115,20 +115,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="relative py-24 overflow-hidden mission-values-section">
-        {/* Section Background Layer */}
-        <div className="absolute inset-0 z-0 section-bg-container">
-          <Image
-            src="/images/mission-values-bg.png"
-            alt="Mission Background"
-            fill
-            className="object-cover object-center bg-image-layer"
-            priority
-          />
-          <div className="absolute inset-0 bg-overlay-layer" />
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="py-24 bg-[#050505]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -148,19 +136,9 @@ export default function AboutPage() {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="glass-card p-12 md:p-24 mb-16 relative group overflow-hidden main-mission-container"
+            className="glass-card p-12 md:p-24 mb-16 relative group"
           >
-            {/* Inner Background Integration */}
-            <div className="absolute inset-0 z-0 opacity-40 inner-bg-layer">
-              <Image
-                src="/images/mission-values-bg.png"
-                alt="Inner Background"
-                fill
-                className="object-cover object-center blur-md scale-110"
-              />
-            </div>
-
-            <div className="absolute inset-0 bg-linear-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000 z-1" />
+            <div className="absolute inset-0 bg-linear-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
 
             <div className="relative z-10 flex flex-col md:flex-row items-center gap-16">
               <div className="w-24 h-24 rounded-3xl bg-white/5 flex items-center justify-center shrink-0 border border-white/10 group-hover:scale-110 transition-transform duration-500">
@@ -206,49 +184,6 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-
-        <style jsx>{`
-          .mission-values-section {
-            background-color: #050505;
-          }
-          .section-bg-container {
-            pointer-events: none;
-          }
-          .bg-image-layer {
-            filter: blur(8px) saturate(0.8);
-            transform: scale(1.1);
-            opacity: 0.15;
-          }
-          .bg-overlay-layer {
-            background: 
-              radial-gradient(circle at 50% 50%, rgba(13, 10, 25, 0.4) 0%, transparent 100%),
-              linear-gradient(
-                to bottom,
-                #050505 0%,
-                rgba(5, 5, 5, 0.6) 15%,
-                rgba(5, 5, 5, 0.4) 50%,
-                rgba(5, 5, 5, 0.6) 85%,
-                #050505 100%
-              );
-          }
-          .main-mission-container {
-            border: 1px solid rgba(255, 255, 255, 0.1);
-          }
-          .inner-bg-layer::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(
-              to bottom,
-              rgba(0, 0, 0, 0.9) 0%,
-              rgba(0, 0, 0, 0.5) 20%,
-              rgba(0, 0, 0, 0.3) 50%,
-              rgba(0, 0, 0, 0.5) 80%,
-              rgba(0, 0, 0, 0.95) 100%
-            );
-            z-index: 1;
-          }
-        `}</style>
       </section>
 
 
