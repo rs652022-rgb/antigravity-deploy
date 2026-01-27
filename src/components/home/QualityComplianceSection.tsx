@@ -15,7 +15,6 @@ export default function QualityComplianceSection() {
                     alt="Quality Background"
                     fill
                     className="object-cover blur-[6px]"
-                    priority
                     sizes="100vw"
                     quality={70}
                 />
