@@ -22,8 +22,8 @@ const services = [
     items: [
       { name: "Call Center Solution", href: "/services" },
       { name: "Cloud Contact Center", href: "/services/cloud-contact-center" },
-      { name: "Blended Call Center", href: "/services" },
-      { name: "Outbound Call Center", href: "/services" },
+      { name: "Blended Contact Center", href: "/services/blended-contact-center" },
+      { name: "Outbound Call Center", href: "/services/outbound-call-center" },
       { name: "Inbound Call Center", href: "/services" },
       { name: "Automated Telemarketing", href: "/services" },
     ],
