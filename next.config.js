@@ -2,6 +2,12 @@
 const nextConfig = {
   // Config updated for performance
   reactStrictMode: true,
+  swcMinify: true,
+  compress: true,
+  poweredByHeader: false,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === "production",
+  },
   images: {
     formats: ["image/avif", "image/webp"],
     remotePatterns: [
