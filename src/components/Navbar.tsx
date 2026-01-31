@@ -40,7 +40,7 @@ const services = [
   {
     category: "Web Development Services",
     items: [
-      { name: "Custom Website Development", href: "/services" },
+      { name: "Custom Website Development", href: "/services/custom-website-development" },
       { name: "Full-Stack Development", href: "/services" },
       { name: "CMS Development", href: "/services" },
       { name: "Web Application Development", href: "/services" },
