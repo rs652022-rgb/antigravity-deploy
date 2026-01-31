@@ -84,8 +84,8 @@ export default function AutomatedWorkflowPage() {
                             Intelligent Automation
                         </Badge>
                         <h1 className="text-4xl md:text-6xl font-bold font-display leading-tight mb-8">
-                            Automated <br />
-                            <span className="text-gradient">Workflow</span>
+                            Our Automated <br />
+                            <span className="text-gradient">Workflow Services</span>
                         </h1>
                         <p className="text-xl text-white/60 max-w-3xl mx-auto mb-12 font-medium leading-relaxed">
                             Streamline operations, eliminate manual tasks, and improve efficiency through intelligent automation.
