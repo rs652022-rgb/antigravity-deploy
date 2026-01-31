@@ -25,17 +25,14 @@ const services = [
       { name: "Blended Contact Center", href: "/services/blended-contact-center" },
       { name: "Outbound Call Center", href: "/services/outbound-call-center" },
       { name: "Inbound Call Center", href: "/services/inbound-call-center" },
-      { name: "Automated Telemarketing", href: "/services" },
+      { name: "Automated Telemarketing", href: "/services/automated-telemarketing" },
     ],
   },
   {
     category: "Recruitment & Hiring Services",
     items: [
       { name: "End-to-End Recruitment", href: "/services/recruitment-rpo" },
-      { name: "Mass Hiring", href: "/services" },
-      { name: "Executive Search", href: "/services" },
       { name: "IT & Technical Recruitment", href: "/services" },
-      { name: "Temporary & Contract Staffing", href: "/services" },
       { name: "Background Verification", href: "/services" },
       { name: "Onboarding Support", href: "/services" },
     ],
