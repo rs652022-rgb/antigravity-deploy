@@ -99,10 +99,15 @@ export function Navbar() {
               asChild
               className="bg-white hover:bg-white/90 text-black font-bold rounded-full px-6 h-10 text-sm transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_25px_rgba(255,255,255,0.5)]"
             >
-              <Link href="/contact" className="flex items-center gap-2">
+              <a
+                href="https://wa.me/918826936399?text=Hi%2C%20I%27m%20interested%20in%20finding%20out%20more%20about%20your%20services."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
                 Book Appointment
                 <ArrowRight className="w-4 h-4" />
-              </Link>
+              </a>
             </Button>
           </div>
 
@@ -153,10 +158,16 @@ export function Navbar() {
                   asChild
                   className="w-full bg-white hover:bg-white/90 text-black font-bold rounded-2xl h-14 text-base shadow-xl"
                 >
-                  <Link href="/contact" onClick={() => setIsOpen(false)} className="flex items-center justify-center gap-2">
+                  <a
+                    href="https://wa.me/918826936399?text=Hi%2C%20I%27m%20interested%20in%20finding%20out%20more%20about%20your%20services."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsOpen(false)}
+                    className="flex items-center justify-center gap-2"
+                  >
                     Book Appointment
                     <ArrowRight className="w-5 h-5" />
-                  </Link>
+                  </a>
                 </Button>
               </div>
             </div>

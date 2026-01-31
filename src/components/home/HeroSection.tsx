@@ -35,9 +35,14 @@ export default function HeroSection() {
                             size="lg"
                             className="rounded-full bg-white text-black hover:bg-gray-200 px-8 h-12 font-bold text-[15px] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.4)]"
                         >
-                            <Link href="/contact" className="flex items-center gap-2">
+                            <a
+                                href="https://wa.me/918826936399?text=Hi,%20I'm%20interested%20in%20finding%20out%20more%20about%20your%20services."
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2"
+                            >
                                 Speak with an Expert <ArrowRight className="w-4 h-4" />
-                            </Link>
+                            </a>
                         </Button>
                         <Button
                             asChild
