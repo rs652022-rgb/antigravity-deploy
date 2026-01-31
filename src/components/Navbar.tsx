@@ -34,7 +34,7 @@ const services = [
       { name: "End-to-End Recruitment", href: "/services/recruitment-rpo" },
       { name: "IT & Technical Recruitment", href: "/services/it-technical-recruitment" },
       { name: "Background Verification", href: "/services/background-verification" },
-      { name: "Onboarding Support", href: "/services" },
+      { name: "Onboarding Support", href: "/services/onboarding-support" },
     ],
   },
   {
