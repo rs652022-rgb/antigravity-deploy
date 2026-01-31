@@ -32,7 +32,7 @@ const services = [
     category: "Recruitment & Hiring Services",
     items: [
       { name: "End-to-End Recruitment", href: "/services/recruitment-rpo" },
-      { name: "IT & Technical Recruitment", href: "/services" },
+      { name: "IT & Technical Recruitment", href: "/services/it-technical-recruitment" },
       { name: "Background Verification", href: "/services" },
       { name: "Onboarding Support", href: "/services" },
     ],
