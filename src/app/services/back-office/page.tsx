@@ -53,11 +53,11 @@ const comparisons = [
   {
     label: "Investment",
     traditional: "Heavy investment during growth periods.",
-    admirerx: "Just-in-time and quarter-end seasonal with scaling team commitment."
+    admirerx: "Just-in-time and quarter-end seasonal scaling with team commitment."
   },
   {
     label: "Manual Processes",
-    traditional: "Manual processes are error-prone, tedious, slow by human limitations and susceptibility to fatigue.",
+    traditional: "Manual processes are error-prone, tedious, slow due to human limitations and susceptibility to fatigue.",
     admirerx: "Integrated workflow platform with real-time dashboards, gamification, and analytics to optimize performance."
   }
 ];

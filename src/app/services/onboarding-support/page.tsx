@@ -125,7 +125,7 @@ export default function OnboardingSupportPage() {
                                     </p>
                                     <div className="p-4 rounded-xl bg-blue-600/10 border border-blue-500/20">
                                         <p className="font-medium text-blue-200">
-                                            "From documentation and training coordination to system access and follow-ups AdmirerX ensures nothing is missed."
+                                            "From documentation and training coordination to system access and follow-ups, AdmirerX ensures nothing is missed."
                                         </p>
                                     </div>
                                 </div>

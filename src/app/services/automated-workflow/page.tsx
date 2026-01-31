@@ -17,9 +17,7 @@ import {
     Repeat
 } from "lucide-react";
 
-// Import Target locally for benefits section if needed, though not explicitly in imports list above.
-// Looking at benefits list: "Full Control & Customization" -> Settings matches well. "Real-Time Process Visibility" -> Eye or BarChart.
-// Let's use standard icons from previous pages where appropriate or import what we need.
+
 
 const benefits = [
     {

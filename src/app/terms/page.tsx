@@ -101,7 +101,7 @@ export default function TermsPage() {
                 <section className="mt-12">
                   <h2 className="text-2xl font-bold mb-6 font-display">8. Service Level Agreements</h2>
                   <p className="text-white/60 leading-relaxed font-medium">
-                    Specific service level agreements (SLAs) for our BPO and outsourcing services will be defined in individual service contracts. These SLAs may include response times, quality metrics, and performance standards tailored to each client&apos;s requirements.
+                    Specific Service Level Agreements (SLAs) for our BPO and outsourcing services will be defined in individual service contracts. These SLAs may include response times, quality metrics, and performance standards tailored to each client&apos;s requirements.
                   </p>
                 </section>
 

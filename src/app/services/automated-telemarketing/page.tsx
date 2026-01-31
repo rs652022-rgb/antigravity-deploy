@@ -170,7 +170,7 @@ export default function AutomatedTelemarketingPage() {
                         <div className="order-1 md:order-2">
                             <h2 className="text-3xl md:text-5xl font-bold font-display mb-6">Optimized for <span className="text-gradient">Performance</span></h2>
                             <p className="text-white/60 mb-8 leading-relaxed text-lg">
-                                Our solution eliminates manual effort while maintaining a personalized customer experience. With built-in analytics and reporting, businesses gain complete visibility into campaign performance enabling continuous optimization and better decision-making.
+                                Our solution eliminates manual effort while maintaining a personalized customer experience. With built-in analytics and reporting, businesses gain complete visibility into campaign performance, enabling continuous optimization and better decision-making.
                             </p>
                             <div className="space-y-4">
                                 {["Zero Manual Effort", "Personalized Experience", "Continuous Optimization"].map((item) => (

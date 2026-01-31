@@ -25,7 +25,7 @@ const quickValues = [
   {
     icon: Zap,
     title: "50% Faster Time-to-Hire",
-    description: "50+ job boards, professional networks, and our proprietary CRM + candidate database simultaneously. Advanced matching algorithms identify perfect-fit candidates 3x faster than traditional recruiting."
+    description: "Leveraging 50+ job boards, professional networks, and our proprietary CRM + candidate database simultaneously. Advanced matching algorithms identify perfect-fit candidates 3x faster than traditional recruiting."
   },
   {
     icon: Bot,
@@ -114,7 +114,7 @@ export default function RecruitmentRPOPage() {
                 <Link href="/contact">Start Your Project <ArrowRight className="ml-2 w-5 h-5" /></Link>
               </Button>
             </div>
-            
+
             <div className="flex flex-wrap justify-center gap-8 md:gap-16">
               <div className="flex items-center gap-2 text-white/50 text-sm font-bold">
                 <Search className="w-5 h-5 text-blue-500" />
@@ -233,7 +233,7 @@ export default function RecruitmentRPOPage() {
             <span className="text-blue-500 font-bold uppercase tracking-widest text-[10px] mb-4 block">Strategic Approach</span>
             <h2 className="text-3xl md:text-5xl font-bold font-display mb-4">Transforming Your <span className="text-gradient">Recruitment Function</span></h2>
           </div>
-          
+
           <div className="space-y-8 text-white/60 leading-relaxed text-sm text-center md:text-left">
             <p>
               Our approach begins with deep understanding of your business strategy, culture, and talent requirements. We develop comprehensive talent acquisition roadmaps aligned with growth objectives, market realities, and budgetary constraints. This strategic foundation ensures every hire advances organizational goals.
@@ -254,7 +254,7 @@ export default function RecruitmentRPOPage() {
               Technology integration is seamless. We work within your existing Applicant Tracking System (ATS) including Greenhouse, Lever, Workday, SuccessFactors, iCIMS, or implement our enterprise-grade platform. All candidate data, communications, and recruiting metrics flow through unified systems providing complete visibility and compliance audit trails.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
             <div className="glass-card p-4 text-center">
               <ShieldCheck className="w-5 h-5 text-blue-500 mx-auto mb-2" />
@@ -297,7 +297,7 @@ export default function RecruitmentRPOPage() {
           </motion.div>
         </div>
       </section>
-      
+
       <section className="py-20 bg-[#020205]">
         <div className="max-w-3xl mx-auto px-4">
           <div className="text-center mb-12">
@@ -305,7 +305,7 @@ export default function RecruitmentRPOPage() {
             <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">Let&apos;s Build Something <span className="text-gradient">Remarkable</span></h2>
             <p className="text-white/40">Our team will respond within 24 hours.</p>
           </div>
-          
+
           <form className="space-y-4">
             <div className="grid md:grid-cols-2 gap-4">
               <input type="text" placeholder="Full Name *" className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-sm focus:outline-none focus:border-blue-500/50 transition-colors text-white" />
@@ -316,14 +316,14 @@ export default function RecruitmentRPOPage() {
               <input type="tel" placeholder="Phone Number" className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-sm focus:outline-none focus:border-blue-500/50 transition-colors text-white" />
             </div>
             <textarea placeholder="Tell us about your recruitment needs" rows={4} className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-sm focus:outline-none focus:border-blue-500/50 transition-colors resize-none text-white"></textarea>
-            
+
             <div className="glass-card p-4 border-dashed">
               <div className="flex items-center justify-center gap-2 text-white/40 text-sm">
                 <Upload className="w-4 h-4" />
                 <span>Click to upload documents - Max 10 MB</span>
               </div>
             </div>
-            
+
             <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl h-14 font-bold">
               Submit Inquiry
             </Button>
@@ -331,7 +331,7 @@ export default function RecruitmentRPOPage() {
               * Your information is secure and will never be shared.
             </p>
           </form>
-          
+
           <div className="flex justify-center gap-10 mt-16  opacity-30">
             <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest">
               <Clock className="w-4 h-4" /> 24-Hour response time

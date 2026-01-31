@@ -130,7 +130,7 @@ export default function AIIntegrationsPage() {
                                         <Cpu className="w-16 h-16 text-blue-500 opacity-80" />
                                         <div>
                                             <div className="text-2xl font-bold mb-2">Smart Systems</div>
-                                            <div className="text-white/50 text-sm">Systems that don't just work, they think.</div>
+                                            <div className="text-white/50 text-sm">Systems that don't just work—they think.</div>
                                         </div>
                                     </div>
                                 </div>

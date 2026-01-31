@@ -63,7 +63,7 @@ export function Footer() {
           {/* Reference Column 2: Services - Expanded to 4 columns */}
           <div className="lg:col-span-4 lg:pl-4">
             <div className="mb-10">
-              <h4 className="text-white font-bold mb-6 text-[15px]">About us</h4>
+              <h4 className="text-white font-bold mb-6 text-[15px]">About Us</h4>
               <ul className="space-y-3">
                 <li><Link href="/about" className="text-text-muted hover:text-white transition-colors text-sm">About AdmirerX</Link></li>
                 <li><Link href="/careers" className="text-text-muted hover:text-white transition-colors text-sm">Careers</Link></li>

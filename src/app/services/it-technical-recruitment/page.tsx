@@ -80,7 +80,7 @@ export default function ITTechnicalRecruitmentPage() {
                                         At AdmirerX, we specialize in delivering end-to-end IT & Technical Recruitment solutions that help businesses hire the right talent faster, smarter, and with precision.
                                     </p>
                                     <p className="text-white/60 mb-6 leading-relaxed">
-                                        Our recruitment process combines industry expertise, advanced screening tools, and data-driven hiring strategies to identify professionals who not only meet technical requirements but also align with your company’s culture and long-term goals.
+                                        Our recruitment process combines industry expertise, advanced screening tools, and data-driven hiring strategies to identify professionals who not only meet technical requirements but also align with your company's culture and long-term goals.
                                     </p>
                                     <p className="text-white/60 leading-relaxed">
                                         From startups to enterprises, we help organizations build strong, scalable tech teams without the hiring complexity.
@@ -207,7 +207,7 @@ export default function ITTechnicalRecruitmentPage() {
                     >
                         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-transparent to-blue-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
                         <div className="relative z-10">
-                            <h2 className="text-3xl md:text-5xl font-bold font-display mb-6">Let’s Build Your Tech Team</h2>
+                            <h2 className="text-3xl md:text-5xl font-bold font-display mb-6">Let's Build Your Tech Team</h2>
                             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-10 font-medium">
                                 Whether you need niche experts or a full development squad, we have the talent you need.
                             </p>

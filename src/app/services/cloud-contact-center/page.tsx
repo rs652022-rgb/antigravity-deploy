@@ -44,7 +44,7 @@ const features = [
     {
         icon: Headphones,
         title: "Agent Experience",
-        description: "Empower your team with intuitive tools and unified customer context for better effortless service."
+        description: "Empower your team with intuitive tools and unified customer context for effortless service."
     }
 ];
 

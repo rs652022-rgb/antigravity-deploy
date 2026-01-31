@@ -41,7 +41,7 @@ export default function HeroSection() {
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-2"
                             >
-                                Speak with an Expert <ArrowRight className="w-4 h-4" />
+                                Speak With An Expert <ArrowRight className="w-4 h-4" />
                             </a>
                         </Button>
                         <Button

@@ -210,7 +210,7 @@ export default function BlendedContactCenterPage() {
                                 Ready to Transform Your Customer Experience?
                             </h3>
                             <Button asChild size="lg" className="rounded-full bg-blue-600 hover:bg-blue-700 text-white px-10 h-14 font-bold shadow-[0_0_20px_rgba(37,99,235,0.3)]">
-                                <Link href="/contact">Partner with AdmirerX <ArrowRight className="ml-2 w-5 h-5" /></Link>
+                                <Link href="/contact">Partner With AdmirerX <ArrowRight className="ml-2 w-5 h-5" /></Link>
                             </Button>
                         </div>
                     </motion.div>

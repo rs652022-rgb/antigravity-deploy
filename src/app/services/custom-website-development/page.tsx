@@ -98,7 +98,7 @@ export default function CustomWebsiteDevelopmentPage() {
                                 <div>
                                     <h2 className="text-2xl md:text-3xl font-bold font-display mb-6">Beyond Generic Templates</h2>
                                     <p className="text-white/60 mb-6 leading-relaxed">
-                                        At AdmirerX, we build custom websites that are fast, scalable, secure, and designed to convert. Our Custom Website Development services focus on creating tailor-made digital experiences that align with your business goals not generic templates.
+                                        At AdmirerX, we build custom websites that are fast, scalable, secure, and designed to convert. Our Custom Website Development services focus on creating tailor-made digital experiences that align with your business goals, not generic templates.
                                     </p>
                                     <p className="text-white/60 mb-6 leading-relaxed">
                                         We design and develop websites from the ground up using modern technologies, clean architecture, and user-first design principles. Every website is built to be responsive, performance-optimized, SEO-ready, and fully customized to your brand identity.

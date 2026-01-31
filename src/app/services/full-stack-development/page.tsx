@@ -18,7 +18,8 @@ import {
     CheckCircle,
     Settings,
     Cpu,
-    BarChart
+    BarChart,
+    Target
 } from "lucide-react";
 
 const buildItems = [
@@ -79,10 +80,7 @@ const benefits = [
     }
 ];
 
-// Import Target locally since it wasn't in the initial lucide-react import list above clearly enough if I missed it, 
-// actually I see I missed adding Target to the import list in the code block above but used it in benefits. 
-// I will fix the import list to include Target.
-import { Target } from "lucide-react";
+
 
 
 export default function FullStackDevelopmentPage() {
@@ -120,7 +118,7 @@ export default function FullStackDevelopmentPage() {
                                         At AdmirerX, we deliver end-to-end Full-Stack Development solutions that turn ideas into scalable, high-performance digital products. Our services cover everything from intuitive front-end interfaces to robust back-end systems and secure databases.
                                     </p>
                                     <p className="text-white/60 mb-6 leading-relaxed">
-                                        With expertise across modern frameworks, cloud technologies, and APIs, cur team handles the complete development lifecycle from planning and design to deployment and ongoing optimization.
+                                        With expertise across modern frameworks, cloud technologies, and APIs, our team handles the complete development lifecycle from planning and design to deployment and ongoing optimization.
                                     </p>
                                     <div className="p-4 rounded-xl bg-blue-600/10 border border-blue-500/20">
                                         <p className="font-medium text-blue-200">

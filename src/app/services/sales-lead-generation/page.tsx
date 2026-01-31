@@ -116,7 +116,7 @@ export default function SalesLeadGenerationPage() {
                 <Link href="/contact">Start Your Project <ArrowRight className="ml-2 w-5 h-5" /></Link>
               </Button>
             </div>
-            
+
             <div className="flex flex-wrap justify-center gap-8 md:gap-16">
               <div className="flex items-center gap-2 text-white/50 text-sm font-bold">
                 <ShieldCheck className="w-5 h-5 text-emerald-500" />
@@ -239,19 +239,17 @@ export default function SalesLeadGenerationPage() {
             <span className="text-emerald-500 font-bold uppercase tracking-widest text-[10px] mb-4 block">Why Choose Us</span>
             <h2 className="text-3xl md:text-5xl font-bold font-display mb-4">Why Choose AdmirerX for <span className="text-gradient">Lead Generation</span></h2>
           </div>
-          
+
           <div className="space-y-8 text-white/60 leading-relaxed text-sm">
             <p>
               ...machine learning algorithms, natural language processing, and behavioral analysis to identify your ideal customers before your competitors do. We combine this technological advantage with highly trained business development representatives who understand complex sales cycles, industry-specific pain points, and sophisticated buying committees.
             </p>
-            <p>
-              ...composite shows, and proven progression program.
-            </p>
+
             <p>
               Our success is measured by your success. We offer flexible engagement models including cost-per-lead, cost per qualified opportunity, and performance-based compensation structures that align our incentives with your revenue goals. Experience the difference of working with a true technology-enabled BPO partner committed to your growth.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
             <div className="glass-card p-4 text-center">
               <ShieldCheck className="w-5 h-5 text-emerald-500 mx-auto mb-2" />
@@ -295,7 +293,7 @@ export default function SalesLeadGenerationPage() {
           </motion.div>
         </div>
       </section>
-      
+
       {/* Form Section */}
       <section className="py-20 bg-[#020205]">
         <div className="max-w-3xl mx-auto px-4">
@@ -304,7 +302,7 @@ export default function SalesLeadGenerationPage() {
             <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">Let&apos;s Build Something <span className="text-gradient">Remarkable</span></h2>
             <p className="text-white/40">Our team will respond within 24 hours.</p>
           </div>
-          
+
           <form className="space-y-4">
             <div className="grid md:grid-cols-2 gap-4">
               <input type="text" placeholder="Full Name *" className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-sm focus:outline-none focus:border-emerald-500/50 transition-colors" />
@@ -315,7 +313,7 @@ export default function SalesLeadGenerationPage() {
               <input type="tel" placeholder="Phone Number" className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-sm focus:outline-none focus:border-emerald-500/50 transition-colors" />
             </div>
             <textarea placeholder="Tell us about your project" rows={4} className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-sm focus:outline-none focus:border-emerald-500/50 transition-colors resize-none"></textarea>
-            
+
             <Button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl h-14 font-bold">
               Submit Inquiry <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
@@ -323,7 +321,7 @@ export default function SalesLeadGenerationPage() {
               * Your information is secure and will never be shared.
             </p>
           </form>
-          
+
           <div className="flex justify-center gap-10 mt-16  opacity-30">
             <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest">
               <Clock className="w-4 h-4" /> 24-Hour response time

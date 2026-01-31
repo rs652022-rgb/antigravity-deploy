@@ -105,7 +105,7 @@ export default function AIChatbotsPage() {
                                         At AdmirerX, our AI Chatbots and Voice Agents are built to transform how businesses communicate with customers instantly, intelligently, and at scale. Our AI-powered conversational agents engage customers across websites, apps, messaging platforms, and voice channels.
                                     </p>
                                     <p className="text-white/60 mb-6 leading-relaxed">
-                                        These systems understand user intent, respond in real time, and continuously improve with every interaction. Whether it’s answering customer queries, qualifying leads, or providing support, AdmirerX AI delivers human-like conversations without limitations.
+                                        These systems understand user intent, respond in real time, and continuously improve with every interaction. Whether it's answering customer queries, qualifying leads, or providing support, AdmirerX AI delivers human-like conversations without limitations.
                                     </p>
                                     <div className="p-4 rounded-xl bg-blue-600/10 border border-blue-500/20">
                                         <p className="font-medium text-blue-200">

@@ -195,7 +195,7 @@ export default function WebApplicationDevelopmentPage() {
                         <div className="glass-card p-8 md:p-12 text-center relative overflow-hidden bg-blue-900/10 border-blue-500/20">
                             <h3 className="text-2xl font-bold font-display mb-4">Build Smarter. Scale Faster.</h3>
                             <p className="text-white/60 mb-8">
-                                Transform your ideas into powerful web applications with AdmirerX. Let’s build solutions that work as hard as your business does.
+                                Transform your ideas into powerful web applications with AdmirerX. Let's build solutions that work as hard as your business does.
                             </p>
                             <Button asChild size="lg" className="w-full rounded-full bg-blue-600 hover:bg-blue-700 text-white h-12 font-bold shadow-[0_0_20px_rgba(37,99,235,0.3)]">
                                 <Link href="/contact">Start Your Project</Link>

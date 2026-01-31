@@ -3,17 +3,17 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { 
-  Headphones, 
-  CheckCircle, 
-  ArrowRight, 
-  Globe, 
-  Bot, 
-  Users, 
-  Zap, 
-  Target, 
-  ShieldCheck, 
-  Clock, 
+import {
+  Headphones,
+  CheckCircle,
+  ArrowRight,
+  Globe,
+  Bot,
+  Users,
+  Zap,
+  Target,
+  ShieldCheck,
+  Clock,
   Activity,
   MessageSquare,
   Mail,
@@ -26,7 +26,7 @@ const quickValues = [
   {
     icon: MessageSquare,
     title: "Omnichannel Service",
-    description: "Seamless support across voice, email, live chat, social media (Facebook, Twitter, Instagram), WhatsApp, SMS and Video chat. Unified customer history ensures consistent experiences regardless of channel with intelligent routing based on customer value and issue complexity."
+    description: "Seamless support across voice, email, live chat, social media (Facebook, Twitter, Instagram), WhatsApp, SMS, and Video chat. Unified customer history ensures consistent experiences regardless of channel with intelligent routing based on customer value and issue complexity."
   },
   {
     icon: Bot,
@@ -116,7 +116,7 @@ export default function CustomerSupportPage() {
                 <Link href="/contact">Start Your Project <ArrowRight className="ml-2 w-5 h-5" /></Link>
               </Button>
             </div>
-            
+
             <div className="flex flex-wrap justify-center gap-8 md:gap-16">
               <div className="flex items-center gap-2 text-white/50 text-sm font-bold">
                 <ShieldCheck className="w-5 h-5 text-blue-500" />
@@ -241,7 +241,7 @@ export default function CustomerSupportPage() {
               Our omnichannel platform provides unified customer experiences across all touchpoints. When customers transition from chat to phone to email, agents have complete conversation history, previous interaction sentiment, product usage data, and purchase history. This 360° view enables personalized, contextual service that makes customers feel valued and understood.
             </p>
             <p>
-              The AdmirerX Hybrid AI-Human approach delivers optimal efficiency without sacrificing quality. Our AI chatbots and virtual assistants leverage natural language understanding to handle routine inquiries instantly—order tracking, account changes, password resets, FAQs. When issues require judgment, empathy, or complex problem-solving, seamless handoffs to human agents ensure.
+              The AdmirerX Hybrid AI-Human approach delivers optimal efficiency without sacrificing quality. Our AI chatbots and virtual assistants leverage natural language understanding to handle routine inquiries instantly—order tracking, account changes, password resets, FAQs. When issues require judgment, empathy, or complex problem-solving, seamless handoffs to human agents ensure resolution.
             </p>
             <p>
               Our contact center operations are COPC certified, following industry best practices for customer experience management. We maintain ISO 9001 quality management certification and ISO 27001 information security certification. All facilities feature redundant infrastructure, disaster recovery capabilities, and business continuity planning ensuring uninterrupted service delivery.
@@ -256,7 +256,7 @@ export default function CustomerSupportPage() {
               Performance transparency is fundamental. Real-time dashboards display key metrics including service level, average handling time, first-call resolution, CSAT, Net Promoter Score (NPS), and agent occupancy. Monthly business reviews analyze trends, celebrate successes, identify improvement opportunities, and align strategies with evolving business goals.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
             <div className="glass-card p-4 text-center">
               <ShieldCheck className="w-5 h-5 text-blue-500 mx-auto mb-2" />
@@ -300,7 +300,7 @@ export default function CustomerSupportPage() {
           </motion.div>
         </div>
       </section>
-      
+
       {/* Mini Form Section */}
       <section className="py-20 bg-[#020205]">
         <div className="max-w-3xl mx-auto px-4">
@@ -309,7 +309,7 @@ export default function CustomerSupportPage() {
             <h2 className="text-3xl md:text-4xl font-bold font-display mb-4 text-gradient">Let&apos;s Build Something Remarkable</h2>
             <p className="text-white/40">Our team will respond within 24 hours.</p>
           </div>
-          
+
           <form className="space-y-4">
             <div className="grid md:grid-cols-2 gap-4">
               <input type="text" placeholder="Full Name" className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-sm focus:outline-none focus:border-blue-500/50 transition-colors" />
@@ -324,7 +324,7 @@ export default function CustomerSupportPage() {
               * Your information is secure and will never be shared.
             </p>
           </form>
-          
+
           <div className="flex justify-center gap-10 mt-16  opacity-30">
             <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest">
               <Clock className="w-4 h-4" /> 24-Hour response time

@@ -62,7 +62,7 @@ const services = [
   {
     icon: Calculator,
     title: "Finance & Accounting Outsourcing",
-    description: "Finance and accounting outsourcing India with affordable BPO services for small businesses. Our specialists ensure accuracy, compliance, and transparency across all functions.",
+    description: "Finance and accounting outsourcing in India with affordable BPO services for small businesses. Our specialists ensure accuracy, compliance, and transparency across all functions.",
     features: [
       "Bookkeeping & ledger maintenance",
       "Accounts payable / receivable",
@@ -75,7 +75,7 @@ const services = [
   {
     icon: Users,
     title: "Human Resources Outsourcing (HRO)",
-    description: "HR outsourcing company India offering staffing agency services, contract staffing solutions, and recruitment services. We support your HR operations and reduce administrative workload.",
+    description: "HR outsourcing company in India offering staffing agency services, contract staffing solutions, and recruitment services. We support your HR operations and reduce administrative workload.",
     features: [
       "Recruitment & onboarding",
       "Payroll processing",
