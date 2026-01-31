@@ -138,7 +138,7 @@ export function Navbar() {
                         <div className="grid grid-cols-4 gap-6 relative z-10">
                           {services.map((section, idx) => (
                             <div key={idx} className="flex flex-col h-full">
-                              <h3 className="text-white font-semibold text-base border-b border-white/20 pb-2 mb-3 min-h-[40px] flex items-center">
+                              <h3 className="text-white font-semibold text-base border-b border-white/20 pb-2 mb-3 min-h-[60px] flex items-center">
                                 {section.category}
                               </h3>
                               <ul className="space-y-1 flex-1">
