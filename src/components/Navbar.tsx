@@ -42,7 +42,7 @@ const services = [
     items: [
       { name: "Custom Website Development", href: "/services/custom-website-development" },
       { name: "Full-Stack Development", href: "/services/full-stack-development" },
-      { name: "Web Application Development", href: "/services" },
+      { name: "Web Application Development", href: "/services/web-application-development" },
     ],
   },
   {
