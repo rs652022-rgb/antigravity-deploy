@@ -17,7 +17,7 @@ const connectLinks = [
 ];
 
 const socialLinks = [
-  { href: "https://linkedin.com", icon: Linkedin, label: "LinkedIn" },
+  { href: "https://www.linkedin.com/company/admirerx/", icon: Linkedin, label: "LinkedIn" },
   { href: "https://instagram.com", icon: Instagram, label: "Instagram" },
   { href: "https://twitter.com", icon: Twitter, label: "Twitter" },
 ];
