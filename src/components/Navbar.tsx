@@ -20,42 +20,42 @@ const services = [
   {
     category: "BPO Services",
     items: [
-      "Call Center Solution",
-      "Cloud Contact Center",
-      "Blended Call Center",
-      "Outbound Call Center",
-      "Inbound Call Center",
-      "Automated Telemarketing",
+      { name: "Call Center Solution", href: "/services" },
+      { name: "Cloud Contact Center", href: "/services" },
+      { name: "Blended Call Center", href: "/services" },
+      { name: "Outbound Call Center", href: "/services" },
+      { name: "Inbound Call Center", href: "/services" },
+      { name: "Automated Telemarketing", href: "/services" },
     ],
   },
   {
     category: "Recruitment & Hiring Services",
     items: [
-      "End-to-End Recruitment",
-      "Mass Hiring",
-      "Executive Search",
-      "IT & Technical Recruitment",
-      "Temporary & Contract Staffing",
-      "Background Verification",
-      "Onboarding Support",
+      { name: "End-to-End Recruitment", href: "/services" },
+      { name: "Mass Hiring", href: "/services" },
+      { name: "Executive Search", href: "/services" },
+      { name: "IT & Technical Recruitment", href: "/services" },
+      { name: "Temporary & Contract Staffing", href: "/services" },
+      { name: "Background Verification", href: "/services" },
+      { name: "Onboarding Support", href: "/services" },
     ],
   },
   {
     category: "Web Development Services",
     items: [
-      "Custom Website Development",
-      "Full-Stack Development",
-      "CMS Development",
-      "Web Application Development",
-      "Progressive Web Apps",
+      { name: "Custom Website Development", href: "/services" },
+      { name: "Full-Stack Development", href: "/services" },
+      { name: "CMS Development", href: "/services" },
+      { name: "Web Application Development", href: "/services" },
+      { name: "Progressive Web Apps", href: "/services" },
     ],
   },
   {
     category: "AI Bots & AI Integrations",
     items: [
-      "AI Chatbots & Voice Agents",
-      "AI Integrations",
-      "Automated Workflows",
+      { name: "AI Chatbots & Voice Agents", href: "/services" },
+      { name: "AI Integrations", href: "/services" },
+      { name: "Automated Workflows", href: "/services" },
     ],
   },
 ];
@@ -64,6 +64,7 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  const [isServicesHovered, setIsServicesHovered] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -118,7 +119,13 @@ export function Navbar() {
 
               if (link.label === "Our Services") {
                 return (
-                  <div key={link.href} className="relative group">
+
+                  <div
+                    key={link.href}
+                    className="relative"
+                    onMouseEnter={() => setIsServicesHovered(true)}
+                    onMouseLeave={() => setIsServicesHovered(false)}
+                  >
                     <button
                       className={cn(
                         "flex items-center gap-1 px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full relative outline-none",
@@ -128,11 +135,18 @@ export function Navbar() {
                       )}
                     >
                       {link.label}
-                      <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
+                      <ChevronDown className={cn("w-4 h-4 transition-transform duration-300", isServicesHovered ? "rotate-180" : "")} />
                     </button>
 
                     {/* Dropdown Menu */}
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-auto max-w-[90vw] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
+                    <div
+                      className={cn(
+                        "absolute top-full left-1/2 -translate-x-1/2 pt-4 w-auto max-w-[90vw] transition-all duration-300 transform",
+                        isServicesHovered
+                          ? "opacity-100 visible translate-y-0"
+                          : "opacity-0 invisible translate-y-2 pointer-events-none"
+                      )}
+                    >
                       <div className="bg-black backdrop-blur-[80px] saturate-[1.8] border border-white/20 rounded-3xl p-6 shadow-[0_40px_80px_rgba(0,0,0,0.6)] overflow-hidden min-w-[800px] ring-1 ring-white/10">
                         <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-white/5 to-transparent pointer-events-none" />
                         <div className="grid grid-cols-4 gap-6 relative z-10">
@@ -145,10 +159,11 @@ export function Navbar() {
                                 {section.items.map((item, itemIdx) => (
                                   <li key={itemIdx}>
                                     <Link
-                                      href="/services"
+                                      href={item.href}
                                       className="text-white/90 hover:text-white text-sm transition-colors duration-200 block py-1.5"
+                                      onClick={() => setIsServicesHovered(false)}
                                     >
-                                      {item}
+                                      {item.name}
                                     </Link>
                                   </li>
                                 ))}
@@ -267,11 +282,11 @@ export function Navbar() {
                                       {section.items.map((item, itemIdx) => (
                                         <li key={itemIdx}>
                                           <Link
-                                            href="/services"
+                                            href={item.href}
                                             className="text-white/60 hover:text-white text-sm block py-1"
                                             onClick={() => setIsOpen(false)}
                                           >
-                                            {item}
+                                            {item.name}
                                           </Link>
                                         </li>
                                       ))}
