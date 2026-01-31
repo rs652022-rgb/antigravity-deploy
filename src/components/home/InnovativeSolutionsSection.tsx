@@ -147,7 +147,7 @@ export default function InnovativeSolutionsSection() {
                         </div>
                         <div className="solution-image-container">
                             <Image
-                                src="/images/pexels-leeloothefirst-7887821.jpg"
+                                src="/images/continuous-innovation-robot.jpg"
                                 alt="Innovation"
                                 fill
                                 className="object-cover"
