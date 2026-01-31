@@ -19,7 +19,7 @@ const industries = [
         badgeBottom: "AVAILABLE",
         title: "E-Commerce & Retail",
         desc: "Comprehensive solutions for the modern landscape.",
-        image: "/images/pexels-fauxels-3184302.jpg",
+        image: "/images/e-commerce-traffic-light.jpg",
     },
     {
         icon: Landmark,
