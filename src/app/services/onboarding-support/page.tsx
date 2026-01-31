@@ -178,7 +178,7 @@ export default function OnboardingSupportPage() {
                             Onboarding Support is a structured service that helps organizations guide new hires, customers, or partners through their initial journey with clarity and efficiency.
                         </p>
                         <p className="text-white/60 leading-relaxed">
-                            AdmirerX’s onboarding support covers end-to-end assistance — welcome communications, document collection, system setup, training coordination, task tracking, and ongoing support — ensuring a seamless transition and faster productivity.
+                            AdmirerX’s onboarding support covers end-to-end assistance welcome communications, document collection, system setup, training coordination, task tracking, and ongoing support ensuring a seamless transition and faster productivity.
                         </p>
                     </div>
                 </div>
