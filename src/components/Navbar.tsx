@@ -50,7 +50,7 @@ const services = [
     items: [
       { name: "AI Chatbots & Voice Agents", href: "/services/ai-chatbots-voice-agents" },
       { name: "AI Integrations", href: "/services/ai-integrations" },
-      { name: "Automated Workflows", href: "/services" },
+      { name: "Automated Workflows", href: "/services/automated-workflow" },
     ],
   },
 ];
