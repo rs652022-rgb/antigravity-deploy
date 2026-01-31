@@ -81,8 +81,8 @@ export default function CustomWebsiteDevelopmentPage() {
                             Digital Excellence
                         </Badge>
                         <h1 className="text-4xl md:text-6xl font-bold font-display leading-tight mb-8">
-                            Custom Website Development <br />
-                            <span className="text-gradient">by AdmirerX</span>
+                            Our Custom Website Development <br />
+                            <span className="text-gradient">Services</span>
                         </h1>
                         <p className="text-xl text-white/60 max-w-3xl mx-auto mb-12 font-medium leading-relaxed">
                             Fast, scalable, secure, and designed to convert.
