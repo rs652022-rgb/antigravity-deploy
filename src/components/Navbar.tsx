@@ -48,7 +48,7 @@ const services = [
   {
     category: "AI Bots & AI Integrations",
     items: [
-      { name: "AI Chatbots & Voice Agents", href: "/services" },
+      { name: "AI Chatbots & Voice Agents", href: "/services/ai-chatbots-voice-agents" },
       { name: "AI Integrations", href: "/services" },
       { name: "Automated Workflows", href: "/services" },
     ],
