@@ -21,7 +21,7 @@ const services = [
     category: "BPO Services",
     items: [
       { name: "Call Center Solution", href: "/services" },
-      { name: "Cloud Contact Center", href: "/services" },
+      { name: "Cloud Contact Center", href: "/services/cloud-contact-center" },
       { name: "Blended Call Center", href: "/services" },
       { name: "Outbound Call Center", href: "/services" },
       { name: "Inbound Call Center", href: "/services" },
@@ -31,7 +31,7 @@ const services = [
   {
     category: "Recruitment & Hiring Services",
     items: [
-      { name: "End-to-End Recruitment", href: "/services" },
+      { name: "End-to-End Recruitment", href: "/services/recruitment-rpo" },
       { name: "Mass Hiring", href: "/services" },
       { name: "Executive Search", href: "/services" },
       { name: "IT & Technical Recruitment", href: "/services" },
