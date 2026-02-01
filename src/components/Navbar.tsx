@@ -88,13 +88,12 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-4 py-4 sm:px-6 lg:px-8",
-        scrolled ? "pt-4" : "pt-6"
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-4 pb-4 sm:px-6 lg:px-8 pt-0"
       )}
     >
       <nav
         className={cn(
-          "max-w-7xl mx-auto rounded-full transition-all duration-500 px-4 sm:px-6 py-2 backdrop-blur-2xl saturate-[1.8] shadow-2xl",
+          "max-w-7xl mx-auto rounded-full transition-all duration-500 px-4 sm:px-6 py-2 backdrop-blur-2xl saturate-[1.8] shadow-2xl mt-0",
           (scrolled || isOpen)
             ? "bg-black/60 border border-white/20 backdrop-blur-3xl"
             : "bg-white/[0.03] border border-white/10"
@@ -263,25 +262,26 @@ export function Navbar() {
                           {isMobileServicesOpen && (
                             <motion.div
                               initial={{ height: 0, opacity: 0 }}
-                              animate={{ height: "auto", opacity: 1 }}
-                              exit={{ height: 0, opacity: 0 }}
-                              className="overflow-hidden bg-white/5"
+                              animate={{ height: "auto", opacity: 1, transition: { duration: 0.3, ease: [0.23, 1, 0.32, 1] } }}
+                              exit={{ height: 0, opacity: 0, transition: { duration: 0.2 } }}
+                              className="overflow-hidden bg-white/[0.02]"
                             >
-                              <div className="px-6 py-4 space-y-6">
+                              <div className="px-4 py-3 pb-5">
                                 {services.map((section, idx) => (
-                                  <div key={idx} className="space-y-3">
-                                    <h4 className="text-white font-medium text-sm border-b border-white/10 pb-2">
+                                  <div key={idx} className="first:mt-0 mt-5">
+                                    <h4 className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/30 pl-3 mb-2">
                                       {section.category}
                                     </h4>
-                                    <ul className="space-y-2 ml-2 border-l border-white/10 pl-3">
+                                    <ul className="space-y-0.5">
                                       {section.items.map((item, itemIdx) => (
                                         <li key={itemIdx}>
                                           <Link
                                             href={item.href}
-                                            className="text-white/60 hover:text-white text-sm block py-1"
+                                            className="flex items-center gap-3 py-2.5 px-3 rounded-lg active:bg-white/5 text-white/70 hover:text-white transition-colors duration-200"
                                             onClick={() => setIsOpen(false)}
                                           >
-                                            {item.name}
+                                            <span className="w-1 h-1 rounded-full bg-indigo-500/80" />
+                                            <span className="text-sm font-medium">{item.name}</span>
                                           </Link>
                                         </li>
                                       ))}

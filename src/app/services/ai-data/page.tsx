@@ -3,16 +3,16 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { 
-  CheckCircle, 
-  ArrowRight, 
-  Globe, 
-  Bot, 
-  Users, 
-  Zap, 
-  Target, 
-  ShieldCheck, 
-  Clock, 
+import {
+  CheckCircle,
+  ArrowRight,
+  Globe,
+  Bot,
+  Users,
+  Zap,
+  Target,
+  ShieldCheck,
+  Clock,
   Activity,
   Database,
   Search,
@@ -92,7 +92,7 @@ const expectations = [
 
 export default function AIDataServicesPage() {
   return (
-    <main className="min-h-screen bg-[#020205] text-white pt-20">
+    <main className="min-h-screen bg-[#020205] text-white">
       {/* Hero Section */}
       <section className="relative py-20 md:py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-purple-600/10 via-transparent to-transparent opacity-50" />
@@ -117,7 +117,7 @@ export default function AIDataServicesPage() {
                 <Link href="/contact">Start Your Project <ArrowRight className="ml-2 w-5 h-5" /></Link>
               </Button>
             </div>
-            
+
             <div className="flex flex-wrap justify-center gap-8 md:gap-16">
               <div className="flex items-center gap-2 text-white/50 text-sm font-bold">
                 <ShieldCheck className="w-5 h-5 text-purple-500" />
@@ -257,7 +257,7 @@ export default function AIDataServicesPage() {
               Ethical AI development guides our approach. We actively work to identify and mitigate bias in training datasets through diverse annotator demographics, bias detection algorithms, and balanced sampling strategies. Our goal is helping clients build fair, transparent, and accountable AI systems that perform reliably in the real world.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
             <div className="glass-card p-4 text-center">
               <ShieldCheck className="w-5 h-5 text-purple-500 mx-auto mb-2" />
@@ -301,7 +301,7 @@ export default function AIDataServicesPage() {
           </motion.div>
         </div>
       </section>
-      
+
       {/* Mini Form Section */}
       <section className="py-20 bg-[#020205]">
         <div className="max-w-3xl mx-auto px-4">
@@ -310,7 +310,7 @@ export default function AIDataServicesPage() {
             <h2 className="text-3xl md:text-4xl font-bold font-display mb-4 text-gradient">Let&apos;s Build Something Remarkable</h2>
             <p className="text-white/40">Our team will respond within 24 hours.</p>
           </div>
-          
+
           <form className="space-y-4">
             <div className="grid md:grid-cols-2 gap-4">
               <input type="text" placeholder="Full Name" className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-sm focus:outline-none focus:border-purple-500/50 transition-colors" />
@@ -325,7 +325,7 @@ export default function AIDataServicesPage() {
               * Your information is secure and will never be shared.
             </p>
           </form>
-          
+
           <div className="flex justify-center gap-10 mt-16  opacity-30">
             <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest">
               <Clock className="w-4 h-4" /> 24-Hour response time

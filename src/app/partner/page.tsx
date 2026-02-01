@@ -145,7 +145,7 @@ export default function PartnerPage() {
 
   return (
     <main className="min-h-screen bg-black">
-      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden pt-20">
+      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop"
           alt="BPO Strategic Partnership"

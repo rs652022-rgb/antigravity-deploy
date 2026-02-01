@@ -105,7 +105,7 @@ const whyChoose = [
     icon: Clock,
     title: "24/7 Operations",
     description: "Round-the-clock service delivery across all time zones with consistent quality.",
-    image: "/images/nascent_remix.png",
+    image: "/24-7-operations-update.jpg",
   },
   {
     icon: Award,

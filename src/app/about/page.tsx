@@ -84,7 +84,7 @@ const stats = [
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-black">
-      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden pt-20">
+      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
           alt="BPO Team Collaboration"

@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -68,8 +69,19 @@ const benefits = [
 
 export default function AutomatedTelemarketingPage() {
     return (
-        <main className="min-h-screen bg-[#020205] text-white pt-20">
+        <main className="min-h-screen bg-[#020205] text-white">
             <section className="relative py-20 md:py-24 overflow-hidden">
+                <div className="absolute inset-0 z-0 pointer-events-none">
+                    <Image
+                        src="https://images.unsplash.com/photo-1555421689-d68471e189f2?q=80&w=2070&auto=format&fit=crop"
+                        alt="Background"
+                        fill
+                        className="object-cover opacity-40"
+                        priority
+                        quality={90}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/90" />
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-b from-blue-600/10 via-transparent to-transparent opacity-50" />
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <motion.div

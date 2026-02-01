@@ -89,7 +89,7 @@ const expectations = [
 
 export default function FinanceAccountingPage() {
   return (
-    <main className="min-h-screen bg-[#020205] text-white pt-20">
+    <main className="min-h-screen bg-[#020205] text-white">
       {/* Hero Section */}
       <section className="relative py-20 md:py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-indigo-600/10 via-transparent to-transparent opacity-50" />
@@ -114,7 +114,7 @@ export default function FinanceAccountingPage() {
                 <Link href="/contact">Start Your Project <ArrowRight className="ml-2 w-5 h-5" /></Link>
               </Button>
             </div>
-            
+
             <div className="flex flex-wrap justify-center gap-8 md:gap-16">
               <div className="flex items-center gap-2 text-white/50 text-sm font-bold">
                 <Calculator className="w-5 h-5 text-indigo-500" />
@@ -237,7 +237,7 @@ export default function FinanceAccountingPage() {
             <span className="text-indigo-500 font-bold uppercase tracking-widest text-[10px] mb-4 block">Why Choose Us</span>
             <h2 className="text-3xl md:text-5xl font-bold font-display mb-4">Why Choose AdmirerX for <span className="text-gradient">Finance & Accounting</span></h2>
           </div>
-          
+
           <div className="space-y-8 text-white/60 leading-relaxed text-sm text-center md:text-left">
             <p>
               Our service portfolio encompasses finance and accounting operations including accounts payable, accounts receivable, general ledger maintenance, expense management, payroll processing, tax support, and financial reporting. We process invoices, purchase orders, credit memos, and payment transactions with exceptional accuracy and efficiency.
@@ -255,7 +255,7 @@ export default function FinanceAccountingPage() {
               Transparent reporting provides real-time visibility. Client portals display processing status, volume metrics, quality scores, and SLA compliance. Automated alerts notify stakeholders of exceptions requiring attention. Monthly business reviews analyze trends and identify optimization opportunities.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
             <div className="glass-card p-4 text-center">
               <ShieldCheck className="w-5 h-5 text-indigo-500 mx-auto mb-2" />
@@ -299,7 +299,7 @@ export default function FinanceAccountingPage() {
           </motion.div>
         </div>
       </section>
-      
+
       {/* Form Section */}
       <section className="py-20 bg-[#020205]">
         <div className="max-w-3xl mx-auto px-4">
@@ -308,7 +308,7 @@ export default function FinanceAccountingPage() {
             <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">Let&apos;s Build Something <span className="text-gradient">Remarkable</span></h2>
             <p className="text-white/40">Our finance experts will respond within 24 hours.</p>
           </div>
-          
+
           <form className="space-y-4">
             <div className="grid md:grid-cols-2 gap-4">
               <input type="text" placeholder="Full Name *" className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-sm focus:outline-none focus:border-indigo-500/50 transition-colors text-white" />
@@ -319,14 +319,14 @@ export default function FinanceAccountingPage() {
               <input type="tel" placeholder="Phone Number" className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-sm focus:outline-none focus:border-indigo-500/50 transition-colors text-white" />
             </div>
             <textarea placeholder="Tell us about your finance needs" rows={4} className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-sm focus:outline-none focus:border-indigo-500/50 transition-colors resize-none text-white"></textarea>
-            
+
             <div className="glass-card p-4 border-dashed">
               <div className="flex items-center justify-center gap-2 text-white/40 text-sm">
                 <Upload className="w-4 h-4" />
                 <span>Click to upload Financial Docs/Brief - Max 10 MB</span>
               </div>
             </div>
-            
+
             <Button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl h-14 font-bold">
               Submit Inquiry
             </Button>
@@ -334,7 +334,7 @@ export default function FinanceAccountingPage() {
               * Your information is secure and will never be shared.
             </p>
           </form>
-          
+
           <div className="flex justify-center gap-10 mt-16  opacity-30">
             <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest">
               <Clock className="w-4 h-4" /> 24-Hour response time

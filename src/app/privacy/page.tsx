@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function PrivacyPage() {
   return (
-    <main className="min-h-screen bg-black pt-20">
+    <main className="min-h-screen bg-black">
       <section className="relative py-24 overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <motion.div

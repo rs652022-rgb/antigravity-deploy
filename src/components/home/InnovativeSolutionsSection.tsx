@@ -60,7 +60,7 @@ export default function InnovativeSolutionsSection() {
                         </div>
                         <div className="solution-image-container">
                             <Image
-                                src="/images/pexels-agk42-2599244.jpg"
+                                src="/ai-intelligence-v2.png"
                                 alt="AI"
                                 fill
                                 className="object-cover"
@@ -89,7 +89,7 @@ export default function InnovativeSolutionsSection() {
                         </div>
                         <div className="solution-image-container">
                             <Image
-                                src="/images/pexels-tima-miroshnichenko-6615233.jpg"
+                                src="/lightning-fast-update.png"
                                 alt="Speed"
                                 fill
                                 className="object-cover"
@@ -118,7 +118,7 @@ export default function InnovativeSolutionsSection() {
                         </div>
                         <div className="solution-image-container">
                             <Image
-                                src="/images/pexels-pixabay-248515.jpg"
+                                src="/enterprise-security-update.png"
                                 alt="Security"
                                 fill
                                 className="object-cover"
@@ -147,7 +147,7 @@ export default function InnovativeSolutionsSection() {
                         </div>
                         <div className="solution-image-container">
                             <Image
-                                src="/images/continuous-innovation-robot.jpg"
+                                src="/continuous-innovation-update.png"
                                 alt="Innovation"
                                 fill
                                 className="object-cover"

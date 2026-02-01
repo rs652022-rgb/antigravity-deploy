@@ -91,7 +91,7 @@ const expectations = [
 
 export default function SalesLeadGenerationPage() {
   return (
-    <main className="min-h-screen bg-[#020205] text-white pt-20">
+    <main className="min-h-screen bg-[#020205] text-white">
       {/* Hero Section */}
       <section className="relative py-20 md:py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-emerald-600/10 via-transparent to-transparent opacity-50" />
