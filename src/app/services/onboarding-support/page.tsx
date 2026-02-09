@@ -93,7 +93,7 @@ export default function OnboardingSupportPage() {
             <section className="relative py-20 md:py-24 overflow-hidden">
                 <div className="absolute inset-0 z-0 pointer-events-none">
                     <Image
-                        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2070&auto=format&fit=crop"
+                        src="https://images.unsplash.com/photo-1559523182-a284c3fb7cff?q=80&w=2070&auto=format&fit=crop"
                         alt="Background"
                         fill
                         className="object-cover opacity-40"

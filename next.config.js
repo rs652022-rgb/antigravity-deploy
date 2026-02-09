@@ -15,6 +15,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "images.unsplash.com",
       },
+      {
+        protocol: "https",
+        hostname: "plus.unsplash.com",
+      },
     ],
   },
   async headers() {
@@ -29,6 +33,17 @@ const nextConfig = {
         ],
       },
     ];
+  },
+  experimental: {
+    optimizePackageImports: [
+      "lucide-react",
+      "date-fns",
+      "framer-motion",
+      "@radix-ui/react-dropdown-menu",
+      "@radix-ui/react-select",
+      "@radix-ui/react-slot",
+      "lodash",
+    ],
   },
 };
 

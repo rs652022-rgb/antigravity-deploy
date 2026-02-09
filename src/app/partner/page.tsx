@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useCallback } from "react";
-import { motion } from "framer-motion";
+import { useState, useCallback, useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useDropzone } from "react-dropzone";
@@ -37,7 +37,7 @@ const benefits = [
     icon: TrendingUp,
     title: "Accelerated Growth",
     description: "Access to cutting-edge AI solutions and global talent that drive measurable business outcomes.",
-    image: "/images/pexels-leeloothefirst-7887821.jpg",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2070&auto=format&fit=crop",
   },
   {
     icon: Shield,
@@ -55,7 +55,7 @@ const benefits = [
     icon: Globe,
     title: "Global Reach",
     description: "24/7 operations across multiple time zones with multilingual support capabilities.",
-    image: "/images/global-reach-bpo.png",
+    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2070&auto=format&fit=crop",
   },
   {
     icon: Users,
@@ -143,182 +143,240 @@ export default function PartnerPage() {
     setIsSubmitting(false);
   };
 
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"]
+  });
+
+
   return (
-    <main className="min-h-screen bg-black">
-      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
-        <Image
-          src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop"
-          alt="BPO Strategic Partnership"
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black z-0" />
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/10 to-transparent z-0" />
+    <main ref={containerRef} className="min-h-screen bg-[#020205] text-white overflow-hidden selection:bg-white/20 selection:text-white">
+      {/* Ambient Background Effects */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] rounded-full bg-blue-900/10 blur-[120px]" />
+        <div className="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] rounded-full bg-purple-900/10 blur-[120px]" />
+        <div className="absolute top-[40%] left-[20%] w-[40%] h-[40%] rounded-full bg-cyan-900/5 blur-[100px]" />
+        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.02] mix-blend-overlay" />
+      </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-
-            <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold font-display leading-[1.1] mb-10 text-white">
-              Partner With
-              <br />
-              <span className="text-gradient">AdmirerX</span>
-            </h1>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto mb-16 font-medium leading-relaxed">
-              Transform your business with AI-powered solutions and world-class talent. Let&apos;s build the future together.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button
-                asChild
-                size="lg"
-                className="bg-white hover:bg-white/90 text-black font-bold rounded-full px-12 h-16 text-lg transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(255,255,255,0.2)]"
-              >
-                <a href="#inquiry">
-                  Start a Conversation
-                  <ArrowRight className="ml-2 w-6 h-6" />
-                </a>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-white/20 hover:bg-white/10 rounded-full px-12 h-16 text-lg transition-all duration-300 glass text-white"
-              >
-                <Link href="/services">View Our Services</Link>
-              </Button>
-            </div>
-          </motion.div>
+      {/* Hero Section */}
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop"
+            alt="BPO Strategic Partnership"
+            fill
+            className="object-cover"
+            priority
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#020205]" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-black/80 via-transparent to-black/80" />
         </div>
-      </section>
 
-      <section className="py-24 bg-[#050505]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center pt-20">
+
+
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+            className="text-5xl sm:text-7xl md:text-9xl font-bold font-display leading-[1.1] mb-10 tracking-tighter"
+          >
+            <span className="block text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-white/40 drop-shadow-2xl">
+              Partner With
+            </span>
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-200 via-white to-purple-200">
+              AdmirerX
+            </span>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.4 }}
+            className="text-lg sm:text-xl md:text-2xl text-white/60 max-w-3xl mx-auto mb-16 font-light leading-relaxed"
+          >
+            Transform your business with AI-powered solutions and world-class talent. Let&apos;s build the future together.
+          </motion.p>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-
-            className="text-center mb-16"
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.6 }}
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
           >
-            <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold font-display mb-8">
-              Partnership <span className="text-gradient">Benefits</span>
-            </h2>
-            <p className="text-white/50 max-w-2xl mx-auto text-xl font-medium">
-              Experience the advantages of working with a trusted global leader in AI-driven BPO solutions.
-            </p>
+            <Button
+              asChild
+              size="lg"
+              className="bg-white hover:bg-white/90 text-black font-bold rounded-full px-12 h-16 text-lg transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(255,255,255,0.2)]"
+            >
+              <a href="#inquiry">
+                Start a Conversation
+                <ArrowRight className="ml-2 w-6 h-6" />
+              </a>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-white/20 hover:bg-white/10 rounded-full px-12 h-16 text-lg transition-all duration-300 backdrop-blur-md text-white"
+            >
+              <Link href="/services">View Our Services</Link>
+            </Button>
           </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="glass-card p-10 group"
-              >
-                <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 border border-white/10">
-                  <benefit.icon className="w-7 h-7 text-white/70" />
-                </div>
-                <h3 className="text-xl font-bold mb-4 font-display">{benefit.title}</h3>
-                <div className="relative h-40 w-full rounded-2xl overflow-hidden mb-6 border border-white/5">
-                  <Image
-                    src={benefit.image}
-                    alt={benefit.title}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                </div>
-                <p className="text-white/50 font-medium leading-relaxed">{benefit.description}</p>
-              </motion.div>
-            ))}
-          </div>
         </div>
+
+
       </section>
 
-      <section className="py-24 how-we-partner-section">
-        {/* Optimized Background Image */}
-        <Image
-          src="/images/partnership-bg-premium-v2.jpg"
-          alt="Abstract Partner Background"
-          fill
-          className="object-cover z-0 pointer-events-none"
-          sizes="100vw"
-          quality={85}
-        />
+      {/* Benefits Section */}
+      <section className="py-32 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
-
-            className="text-center mb-16"
+            className="text-center mb-24"
           >
-            <span className="inline-block px-4 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 text-[10px] font-bold uppercase tracking-widest mb-6">The Methodology</span>
-            <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold font-display mb-8">
-              How We <span className="text-gradient">Partner</span>
+            <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold font-display mb-8 tracking-tight">
+              Partnership <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Benefits</span>
             </h2>
-            <p className="text-white/50 max-w-2xl mx-auto text-xl font-medium">
-              Our proven four-step process ensures a smooth and successful partnership journey.
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-8" />
+            <p className="text-white/60 max-w-2xl mx-auto text-xl font-light leading-relaxed">
+              Experience the advantages of working with a trusted global leader in AI-driven BPO solutions.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-4 gap-4">
-            {process.map((step, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
               <motion.div
-                key={step.step}
-                initial={{ opacity: 0, y: 20 }}
+                key={benefit.title}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="glass-card p-10 group"
+                className="group relative p-8 rounded-[2rem] bg-white/[0.02] border border-white/5 hover:bg-white/[0.05] hover:border-white/10 transition-all duration-500 hover:-translate-y-2"
               >
-                <span className="text-6xl font-bold text-white/5 font-display group-hover:text-white/10 transition-colors duration-500">{step.step}</span>
-                <h3 className="text-2xl font-bold mt-6 mb-4 font-display">{step.title}</h3>
-                <p className="text-white/50 font-medium leading-relaxed">{step.description}</p>
+                <div className="absolute inset-0 bg-gradient-to-br from-white/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[2rem]" />
+
+                <div className="relative z-10">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-white/10 to-transparent flex items-center justify-center mb-8 border border-white/10 group-hover:scale-110 transition-transform duration-500 shadow-lg shadow-black/20">
+                    <benefit.icon className="w-8 h-8 text-white group-hover:text-blue-200 transition-colors" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 font-display text-white group-hover:text-blue-100 transition-colors">{benefit.title}</h3>
+
+                  <div className="relative h-48 w-full rounded-xl overflow-hidden mb-6 border border-white/5 transition-all duration-500">
+                    <Image
+                      src={benefit.image}
+                      alt={benefit.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
+                  </div>
+
+                  <p className="text-white/50 font-light leading-relaxed group-hover:text-white/70 transition-colors">{benefit.description}</p>
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="inquiry" className="py-24 bg-[#050505]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16">
+      {/* Methodology Section */}
+      <section className="py-32 relative bg-[#010103] overflow-hidden how-we-partner-section">
+        {/* Optimized Background Image */}
+        <div className="absolute inset-0 z-0 opacity-30 pointer-events-none">
+          <Image
+            src="/images/partnership-bg-premium-v2.jpg"
+            alt="Abstract Partner Background"
+            fill
+            className="object-cover section-bg-animate"
+            sizes="100vw"
+            quality={85}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#020205] via-[#020205]/90 to-transparent" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            className="text-center mb-24"
+          >
+            <span className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-white/90 text-xs font-bold uppercase tracking-[0.2em] mb-6">The Methodology</span>
+            <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold font-display mb-8 tracking-tight">
+              How We <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Partner</span>
+            </h2>
+            <p className="text-white/60 max-w-2xl mx-auto text-xl font-light">
+              Our proven four-step process ensures a smooth and successful partnership journey.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-4 gap-6">
+            {process.map((step, index) => (
+              <motion.div
+                key={step.step}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="group relative p-8 rounded-3xl bg-white/[0.02] border border-white/5 backdrop-blur-sm hover:bg-white/[0.05] hover:border-white/20 transition-all duration-300"
+              >
+                <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <span className="relative z-10 block text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-white/10 to-transparent font-display mb-4 group-hover:from-white/20 transition-all duration-500">{step.step}</span>
+                <h3 className="relative z-10 text-2xl font-bold mb-4 font-display text-white">{step.title}</h3>
+                <p className="relative z-10 text-white/50 font-light leading-relaxed group-hover:text-white/70 transition-colors">{step.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Inquiry Form Section */}
+      <section id="inquiry" className="py-32 bg-[#020205] relative overflow-hidden">
+        {/* Decorative Grid */}
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-10 pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-20 items-start">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl sm:text-5xl font-bold font-display mb-8 leading-tight">
-                Let&apos;s Start the <br /><span className="text-gradient">Conversation</span>
+              <h2 className="text-4xl sm:text-6xl font-bold font-display mb-8 leading-tight tracking-tight">
+                Let&apos;s Start the <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Conversation</span>
               </h2>
-              <p className="text-white/50 text-lg mb-12 font-medium leading-relaxed">
+              <p className="text-white/60 text-xl mb-12 font-light leading-relaxed">
                 Share your business needs with us, and our partnership team will reach out within 24 hours to discuss how we can help you achieve your goals.
               </p>
 
-              <div className="space-y-8">
+              <div className="space-y-10">
                 {[
                   { title: "Tailored Solutions", desc: "Custom proposals designed for your unique business requirements." },
                   { title: "Expert Consultation", desc: "Connect with industry experts who understand your challenges." },
                   { title: "No Commitment", desc: "Explore partnership opportunities with no obligation." }
-                ].map((item) => (
-                  <div key={item.title} className="flex items-start gap-6 group/item">
-                    <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover/item:scale-110 transition-transform">
-                      <CheckCircle className="w-6 h-6 text-white" />
+                ].map((item, i) => (
+                  <motion.div
+                    key={item.title}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.1 }}
+                    className="flex items-start gap-6 group/item"
+                  >
+                    <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover/item:scale-110 transition-transform duration-300 shadow-[0_0_20px_rgba(255,255,255,0.05)]">
+                      <CheckCircle className="w-6 h-6 text-white/70 group-hover/item:text-white transition-colors" />
                     </div>
                     <div>
-                      <h4 className="font-bold mb-1 font-display tracking-tight text-lg">{item.title}</h4>
-                      <p className="text-white/50 font-medium">{item.desc}</p>
+                      <h4 className="font-bold mb-2 font-display tracking-tight text-xl text-white">{item.title}</h4>
+                      <p className="text-white/50 font-light text-lg">{item.desc}</p>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
@@ -327,17 +385,19 @@ export default function PartnerPage() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
+              className="relative"
             >
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 blur-3xl -z-10 rounded-[3rem]" />
+
               {submitted ? (
-                <div className="glass-card p-12 md:p-20 text-center h-full flex flex-col items-center justify-center relative overflow-hidden">
-                  <div className="absolute inset-0 bg-linear-to-br from-white/5 to-transparent" />
+                <div className="glass-card p-12 md:p-20 text-center h-full flex flex-col items-center justify-center relative overflow-hidden rounded-[3rem] border border-white/10 bg-white/[0.03]">
                   <div className="relative z-10">
-                    <div className="w-20 h-20 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mx-auto mb-10">
-                      <CheckCircle className="w-10 h-10 text-white" />
+                    <div className="w-24 h-24 rounded-full bg-green-500/10 border border-green-500/20 flex items-center justify-center mx-auto mb-10 shadow-[0_0_30px_rgba(34,197,94,0.2)]">
+                      <CheckCircle className="w-10 h-10 text-green-400" />
                     </div>
-                    <h3 className="text-3xl font-bold mb-6 font-display">Inquiry Submitted!</h3>
-                    <p className="text-white/50 text-lg mb-12 font-medium">
-                      Thank you for your interest in partnering with AdmirerX. Our team will review your inquiry and get back to you within 24 hours.
+                    <h3 className="text-3xl font-bold mb-6 font-display text-white">Inquiry Received!</h3>
+                    <p className="text-white/60 text-lg mb-12 font-light">
+                      Thank you for your interest. We will be in touch shortly.
                     </p>
                     <Button
                       onClick={() => {
@@ -353,19 +413,19 @@ export default function PartnerPage() {
                         setFile(null);
                       }}
                       variant="outline"
-                      className="border-white/20 hover:bg-white/10 rounded-full px-10 h-14 font-bold glass"
+                      className="border-white/20 hover:bg-white/10 rounded-full px-10 h-14 font-bold text-white backdrop-blur-md"
                     >
                       Submit Another Inquiry
                     </Button>
                   </div>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="glass-card p-8 md:p-12 relative group">
-                  <div className="absolute inset-0 bg-linear-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+                <form onSubmit={handleSubmit} className="p-8 md:p-12 relative group rounded-[3rem] bg-white/[0.02] border border-white/10 backdrop-blur-md shadow-2xl">
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000 rounded-[3rem]" />
                   <div className="relative z-10 space-y-8">
                     <div className="grid md:grid-cols-2 gap-8">
                       <div className="space-y-3">
-                        <Label htmlFor="companyName" className="text-xs font-bold uppercase tracking-widest text-white/50 ml-1">
+                        <Label htmlFor="companyName" className="text-xs font-bold uppercase tracking-widest text-white/40 ml-1">
                           Company Name *
                         </Label>
                         <Input
@@ -375,12 +435,12 @@ export default function PartnerPage() {
                             setFormData({ ...formData, companyName: e.target.value })
                           }
                           required
-                          className="h-14 rounded-2xl bg-white/5 border-white/10 focus:border-white/30 text-white placeholder:text-white/20"
-                          placeholder="Your company name"
+                          className="h-14 rounded-2xl bg-white/5 border-white/10 focus:border-white/30 text-white placeholder:text-white/20 px-5"
+                          placeholder="Acme Corp"
                         />
                       </div>
                       <div className="space-y-3">
-                        <Label htmlFor="contactName" className="text-xs font-bold uppercase tracking-widest text-white/50 ml-1">
+                        <Label htmlFor="contactName" className="text-xs font-bold uppercase tracking-widest text-white/40 ml-1">
                           Contact Name *
                         </Label>
                         <Input
@@ -390,15 +450,15 @@ export default function PartnerPage() {
                             setFormData({ ...formData, contactName: e.target.value })
                           }
                           required
-                          className="h-14 rounded-2xl bg-white/5 border-white/10 focus:border-white/30 text-white placeholder:text-white/20"
-                          placeholder="Your full name"
+                          className="h-14 rounded-2xl bg-white/5 border-white/10 focus:border-white/30 text-white placeholder:text-white/20 px-5"
+                          placeholder="John Doe"
                         />
                       </div>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-8">
                       <div className="space-y-3">
-                        <Label htmlFor="email" className="text-xs font-bold uppercase tracking-widest text-white/50 ml-1">
+                        <Label htmlFor="email" className="text-xs font-bold uppercase tracking-widest text-white/40 ml-1">
                           Email Address *
                         </Label>
                         <Input
@@ -409,12 +469,12 @@ export default function PartnerPage() {
                             setFormData({ ...formData, email: e.target.value })
                           }
                           required
-                          className="h-14 rounded-2xl bg-white/5 border-white/10 focus:border-white/30 text-white placeholder:text-white/20"
-                          placeholder="your.email@company.com"
+                          className="h-14 rounded-2xl bg-white/5 border-white/10 focus:border-white/30 text-white placeholder:text-white/20 px-5"
+                          placeholder="you@company.com"
                         />
                       </div>
                       <div className="space-y-3">
-                        <Label htmlFor="phone" className="text-xs font-bold uppercase tracking-widest text-white/50 ml-1">
+                        <Label htmlFor="phone" className="text-xs font-bold uppercase tracking-widest text-white/40 ml-1">
                           Phone Number
                         </Label>
                         <Input
@@ -424,14 +484,14 @@ export default function PartnerPage() {
                           onChange={(e) =>
                             setFormData({ ...formData, phone: e.target.value })
                           }
-                          className="h-14 rounded-2xl bg-white/5 border-white/10 focus:border-white/30 text-white placeholder:text-white/20"
-                          placeholder="+91 88269 36399"
+                          className="h-14 rounded-2xl bg-white/5 border-white/10 focus:border-white/30 text-white placeholder:text-white/20 px-5"
+                          placeholder="+1 (555) 000-0000"
                         />
                       </div>
                     </div>
 
                     <div className="space-y-3">
-                      <Label htmlFor="industry" className="text-xs font-bold uppercase tracking-widest text-white/50 ml-1">
+                      <Label htmlFor="industry" className="text-xs font-bold uppercase tracking-widest text-white/40 ml-1">
                         Industry
                       </Label>
                       <Select
@@ -440,14 +500,14 @@ export default function PartnerPage() {
                           setFormData({ ...formData, industry: value })
                         }
                       >
-                        <SelectTrigger className="h-14 rounded-2xl bg-white/5 border-white/10 focus:border-white/30 text-white">
+                        <SelectTrigger className="h-14 rounded-2xl bg-white/5 border-white/10 focus:border-white/30 text-white px-5">
                           <SelectValue placeholder="Select your industry" />
                         </SelectTrigger>
-                        <SelectContent className="bg-[#0a0a0a] border-white/10">
+                        <SelectContent className="bg-[#0a0a0a] border-white/10 rounded-xl p-1">
                           <SelectGroup>
-                            <SelectLabel className="text-white/30 uppercase tracking-widest text-[10px] font-bold">Sectors</SelectLabel>
+                            <SelectLabel className="text-white/30 uppercase tracking-widest text-[10px] font-bold p-2">Sectors</SelectLabel>
                             {industries.map((industry) => (
-                              <SelectItem key={industry} value={industry} className="text-white focus:bg-white/10 focus:text-white">
+                              <SelectItem key={industry} value={industry} className="text-white focus:bg-white/10 focus:text-white rounded-lg cursor-pointer">
                                 {industry}
                               </SelectItem>
                             ))}
@@ -457,7 +517,7 @@ export default function PartnerPage() {
                     </div>
 
                     <div className="space-y-3">
-                      <Label htmlFor="message" className="text-xs font-bold uppercase tracking-widest text-white/50 ml-1">
+                      <Label htmlFor="message" className="text-xs font-bold uppercase tracking-widest text-white/40 ml-1">
                         How can we help? *
                       </Label>
                       <Textarea
@@ -467,27 +527,27 @@ export default function PartnerPage() {
                           setFormData({ ...formData, message: e.target.value })
                         }
                         required
-                        className="min-h-[150px] rounded-2xl bg-white/5 border-white/10 focus:border-white/30 text-white placeholder:text-white/20"
-                        placeholder="Tell us about your business needs and goals..."
+                        className="min-h-[120px] rounded-2xl bg-white/5 border-white/10 focus:border-white/30 text-white placeholder:text-white/20 p-5 text-base"
+                        placeholder="Tell us about your business needs..."
                       />
                     </div>
 
                     <div className="space-y-3">
-                      <Label className="text-xs font-bold uppercase tracking-widest text-white/50 ml-1">
+                      <Label className="text-xs font-bold uppercase tracking-widest text-white/40 ml-1">
                         Attach Document (Optional)
                       </Label>
                       <div
                         {...getRootProps()}
-                        className={`border-2 border-dashed rounded-[2rem] p-8 text-center cursor-pointer transition-all duration-500 ${isDragActive
-                          ? "border-white bg-white/5"
-                          : "border-white/5 hover:border-white/20 hover:bg-white/[0.02]"
+                        className={`border-2 border-dashed rounded-[2rem] p-6 text-center cursor-pointer transition-all duration-300 ${isDragActive
+                          ? "border-blue-400 bg-blue-500/5"
+                          : "border-white/10 hover:border-white/30 hover:bg-white/[0.02]"
                           }`}
                       >
                         <input {...getInputProps()} />
                         {file ? (
-                          <div className="flex items-center justify-center gap-4">
-                            <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center">
-                              <FileText className="w-5 h-5 text-white" />
+                          <div className="flex items-center justify-center gap-3 animate-in fade-in zoom-in">
+                            <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center border border-blue-500/20">
+                              <FileText className="w-5 h-5 text-blue-400" />
                             </div>
                             <span className="font-bold text-white tracking-tight">{file.name}</span>
                             <button
@@ -496,19 +556,18 @@ export default function PartnerPage() {
                                 e.stopPropagation();
                                 setFile(null);
                               }}
-                              className="p-1 hover:bg-white/10 rounded-full transition-colors"
+                              className="p-1 hover:bg-white/10 rounded-full transition-colors ml-2"
                             >
-                              <X className="w-5 h-5 text-white/50" />
+                              <X className="w-5 h-5 text-white/50 hover:text-white" />
                             </button>
                           </div>
                         ) : (
-                          <div className="space-y-2">
-                            <Upload className="w-8 h-8 text-white/30 mx-auto mb-2" />
-                            <p className="text-white font-bold tracking-tight">
-                              Click to upload or drag and drop
-                            </p>
-                            <p className="text-[10px] text-white/30 font-bold uppercase tracking-widest">
-                              PDF, DOC, or DOCX (Max 10 MB)
+                          <div className="flex flex-col items-center gap-2">
+                            <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
+                              <Upload className="w-5 h-5 text-white/40" />
+                            </div>
+                            <p className="text-white/80 font-medium text-sm">
+                              Click or drag file to upload
                             </p>
                           </div>
                         )}
@@ -518,9 +577,9 @@ export default function PartnerPage() {
                     <Button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full bg-white hover:bg-white/90 text-black font-bold rounded-full h-16 text-lg transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-[0_0_30px_rgba(255,255,255,0.1)]"
+                      className="w-full bg-white hover:bg-white/90 text-black font-bold rounded-full h-16 text-lg transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-[0_0_30px_rgba(255,255,255,0.15)] disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      {isSubmitting ? "Submitting..." : "Submit Partnership Inquiry"}
+                      {isSubmitting ? "Sending..." : "Submit Partnership Inquiry"}
                       {!isSubmitting && <Send className="ml-2 w-5 h-5" />}
                     </Button>
                   </div>

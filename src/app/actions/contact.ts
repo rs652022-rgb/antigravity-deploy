@@ -1,15 +1,41 @@
 "use server";
 
 import { Resend } from "resend";
+import { z } from "zod";
 
 export async function sendContactEmail(formData: FormData) {
-  const fullName = formData.get("fullName") as string;
-  const email = formData.get("email") as string;
-  const phone = formData.get("phone") as string;
-  const companyName = formData.get("companyName") as string;
-  const service = formData.get("service") as string;
-  const message = formData.get("message") as string;
+  const rawData = {
+    fullName: formData.get("fullName"),
+    email: formData.get("email"),
+    phone: formData.get("phone") || "",
+    companyName: formData.get("companyName") || "",
+    service: formData.get("service"),
+    message: formData.get("message"),
+  };
+
+  // Basic validation schema
+  const schema = z.object({
+    fullName: z.string().min(1, "Full Name is required"),
+    email: z.string().email("Invalid email address"),
+    phone: z.string().optional(),
+    companyName: z.string().optional(),
+    service: z.string().min(1, "Service is required"),
+    message: z.string().min(1, "Message is required"),
+  });
+
+  const validatedFields = schema.safeParse(rawData);
+
+  if (!validatedFields.success) {
+    return { success: false, error: validatedFields.error.issues[0].message };
+  }
+
+  const { fullName, email, phone, companyName, service, message } = validatedFields.data;
   const file = formData.get("attachment") as File | null;
+
+  // Server-side file size check (10MB)
+  if (file && file.size > 10 * 1024 * 1024) {
+    return { success: false, error: "File size exceeds 10MB limit." };
+  }
 
   if (!process.env.RESEND_API_KEY) {
     console.error("RESEND_API_KEY is not configured");

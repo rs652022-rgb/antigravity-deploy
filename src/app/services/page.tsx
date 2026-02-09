@@ -82,7 +82,7 @@ const services = [
       "Employee data management",
       "HR helpdesk & support services",
     ],
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1521791136064-7985c2717883?q=80&w=2070&auto=format&fit=crop",
     href: "/services/recruitment-rpo",
   },
   {
@@ -111,7 +111,7 @@ const whyChoose = [
     icon: Award,
     title: "Proven Track Record",
     description: "Years of experience in delivering successful BPO solutions with measurable results and client satisfaction.",
-    image: "/images/pexels-fauxels-3184302.jpg",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
   },
   {
     icon: Bot,
@@ -265,7 +265,7 @@ export default function ServicesPage() {
 
             className="text-center mb-16"
           >
-            <span className="inline-block px-4 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 text-[10px] font-bold uppercase tracking-widest mb-6">Our Advantages</span>
+
             <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold font-display mb-8">
               Why Choose <span className="text-gradient">AdmirerX</span>
             </h2>
@@ -313,7 +313,7 @@ export default function ServicesPage() {
 
             className="text-center mb-16"
           >
-            <span className="inline-block px-4 py-1 rounded-full bg-white/5 border border-white/10 text-white/70 text-[10px] font-bold uppercase tracking-widest mb-6">The Methodology</span>
+
             <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold font-display mb-8">
               Our <span className="text-gradient">Process</span>
             </h2>

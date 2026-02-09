@@ -27,9 +27,7 @@ export default function InnovativeSolutionsSection() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="flex flex-col lg:flex-row justify-between items-center lg:items-end mb-16 gap-10 text-center lg:text-left">
                     <div className="max-w-3xl">
-                        <span className="inline-block px-4 py-1.5 rounded-full bg-white/[0.03] border border-white/10 text-text-muted text-[11px] font-bold uppercase tracking-widest mb-8 backdrop-blur-md shadow-sm">
-                            INNOVATIVE SOLUTIONS
-                        </span>
+
                         <h2 className="text-4xl md:text-6xl font-bold font-display leading-[1.1] tracking-tight">
                             Human Excellence, <br />
                             <span className="text-white/40">Worldwide Impact</span>
