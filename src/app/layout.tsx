@@ -33,6 +33,7 @@ const fontInter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://admirerx.net'),
   title: "AdmirerX – BPO & AI-Powered Digital Transformation Services in India",
 
   description:

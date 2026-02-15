@@ -142,7 +142,7 @@ export default function InboundCallCenterPage() {
                                     </p>
                                     <div className="p-4 rounded-xl bg-blue-600/10 border border-blue-500/20">
                                         <p className="font-medium text-blue-200">
-                                            "Our expert customer support professionals are empowered with the latest technologies to deliver consistent, high-quality service across every call."
+                                            &quot;Our expert customer support professionals are empowered with the latest technologies to deliver consistent, high-quality service across every call.&quot;
                                         </p>
                                     </div>
                                 </div>

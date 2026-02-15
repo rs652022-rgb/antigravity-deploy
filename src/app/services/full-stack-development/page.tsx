@@ -134,7 +134,7 @@ export default function FullStackDevelopmentPage() {
                                     </p>
                                     <div className="p-4 rounded-xl bg-blue-600/10 border border-blue-500/20">
                                         <p className="font-medium text-blue-200">
-                                            "We build applications that are fast, scalable, and future-ready, ensuring seamless performance across web and mobile platforms."
+                                            &quot;We build applications that are fast, scalable, and future-ready, ensuring seamless performance across web and mobile platforms.&quot;
                                         </p>
                                     </div>
                                 </div>

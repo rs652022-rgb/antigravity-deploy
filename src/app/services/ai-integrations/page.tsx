@@ -132,7 +132,7 @@ export default function AIIntegrationsPage() {
                                     </p>
                                     <div className="p-4 rounded-xl bg-blue-600/10 border border-blue-500/20">
                                         <p className="font-medium text-blue-200">
-                                            "From process automation to predictive intelligence, our solutions are designed to enhance efficiency, accuracy, and decision-making across your organization."
+                                            &quot;From process automation to predictive intelligence, our solutions are designed to enhance efficiency, accuracy, and decision-making across your organization.&quot;
                                         </p>
                                     </div>
                                 </div>
@@ -142,7 +142,7 @@ export default function AIIntegrationsPage() {
                                         <Cpu className="w-16 h-16 text-blue-500 opacity-80" />
                                         <div>
                                             <div className="text-2xl font-bold mb-2">Smart Systems</div>
-                                            <div className="text-white/50 text-sm">Systems that don't just work—they think.</div>
+                                            <div className="text-white/50 text-sm">Systems that don&apos;t just work—they think.</div>
                                         </div>
                                     </div>
                                 </div>

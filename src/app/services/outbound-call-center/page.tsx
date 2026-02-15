@@ -49,7 +49,7 @@ const benefits = [
     {
         icon: Calendar,
         title: "Smart Scheduling",
-        description: "Connect on the customer’s schedule with planned and intelligent outreach."
+        description: "Connect on the customer&apos;s schedule with planned and intelligent outreach."
     },
     {
         icon: Target,
@@ -128,7 +128,7 @@ export default function OutboundCallCenterPage() {
                                     </p>
                                     <div className="p-4 rounded-xl bg-blue-600/10 border border-blue-500/20">
                                         <p className="font-medium text-blue-200">
-                                            "Powered by AI-enabled dialing, smart workflows, and CRM-driven insights, our outbound operations ensure every call is purposeful."
+                                            &quot;Powered by AI-enabled dialing, smart workflows, and CRM-driven insights, our outbound operations ensure every call is purposeful.&quot;
                                         </p>
                                     </div>
                                 </div>

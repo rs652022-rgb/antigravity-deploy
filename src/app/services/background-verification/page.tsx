@@ -132,7 +132,7 @@ export default function BackgroundVerificationPage() {
                                     </p>
                                     <div className="p-4 rounded-xl bg-blue-600/10 border border-blue-500/20">
                                         <p className="font-medium text-blue-200">
-                                            "By combining automation with expert review, we deliver precise verification reports that protect your organization from fraud and compliance issues."
+                                            &quot;By combining automation with expert review, we deliver precise verification reports that protect your organization from fraud and compliance issues.&quot;
                                         </p>
                                     </div>
                                 </div>

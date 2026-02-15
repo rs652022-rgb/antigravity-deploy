@@ -92,7 +92,7 @@ export default function ITTechnicalRecruitmentPage() {
                                         At AdmirerX, we specialize in delivering end-to-end IT & Technical Recruitment solutions that help businesses hire the right talent faster, smarter, and with precision.
                                     </p>
                                     <p className="text-white/60 mb-6 leading-relaxed">
-                                        Our recruitment process combines industry expertise, advanced screening tools, and data-driven hiring strategies to identify professionals who not only meet technical requirements but also align with your company's culture and long-term goals.
+                                        Our recruitment process combines industry expertise, advanced screening tools, and data-driven hiring strategies to identify professionals who not only meet technical requirements but also align with your company&apos;s culture and long-term goals.
                                     </p>
                                     <p className="text-white/60 leading-relaxed">
                                         From startups to enterprises, we help organizations build strong, scalable tech teams without the hiring complexity.

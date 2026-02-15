@@ -117,7 +117,7 @@ export default function CustomWebsiteDevelopmentPage() {
                                     </p>
                                     <div className="p-4 rounded-xl bg-blue-600/10 border border-blue-500/20">
                                         <p className="font-medium text-blue-200">
-                                            "We combine strategy, design, and engineering to deliver websites that don’t just look good but perform exceptionally."
+                                            &quot;We combine strategy, design, and engineering to deliver websites that don&apos;t just look good but perform exceptionally.&quot;
                                         </p>
                                     </div>
                                 </div>

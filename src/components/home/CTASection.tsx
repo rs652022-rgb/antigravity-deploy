@@ -32,13 +32,13 @@ export default function CTASection() {
 
                     <div className="relative z-10 max-w-4xl mx-auto">
                         <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-display mb-8 leading-[1.1] tracking-tight text-white drop-shadow-2xl">
-                            Together, we'll solve <br />
-                            <span className="text-white/40">tomorrow's</span> <br />
+                            Together, we&apos;ll solve <br />
+                            <span className="text-white/40">tomorrow&apos;s</span> <br />
                             challenges <span className="text-white/40">today</span>
                         </h2>
 
                         <p className="text-white/60 text-lg mb-12 font-normal max-w-xl mx-auto text-shadow-sm">
-                            Let's discuss how AdmirerX can transform your business operations and customer experience.
+                            Let&apos;s discuss how AdmirerX can transform your business operations and customer experience.
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

@@ -96,7 +96,7 @@ export default function WebApplicationDevelopmentPage() {
                                     </p>
                                     <div className="p-4 rounded-xl bg-blue-600/10 border border-blue-500/20">
                                         <p className="font-medium text-blue-200">
-                                            "We leverage modern frameworks, cloud technologies, and AI-driven capabilities to build applications that are fast, responsive, and future-ready."
+                                            &quot;We leverage modern frameworks, cloud technologies, and AI-driven capabilities to build applications that are fast, responsive, and future-ready.&quot;
                                         </p>
                                     </div>
                                 </div>

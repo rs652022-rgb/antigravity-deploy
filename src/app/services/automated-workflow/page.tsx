@@ -118,7 +118,7 @@ export default function AutomatedWorkflowPage() {
                                     </p>
                                     <div className="p-4 rounded-xl bg-blue-600/10 border border-blue-500/20">
                                         <p className="font-medium text-blue-200">
-                                            "By reducing repetitive work and human dependency, businesses can focus on strategic growth while maintaining accuracy, speed, and scalability."
+                                            &quot;By reducing repetitive work and human dependency, businesses can focus on strategic growth while maintaining accuracy, speed, and scalability.&quot;
                                         </p>
                                     </div>
                                 </div>
