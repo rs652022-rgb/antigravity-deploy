@@ -32,6 +32,7 @@ import {
   X,
   CheckCircle,
   Send,
+  Facebook,
 } from "lucide-react";
 import { toast } from "sonner";
 import { sendContactEmail } from "@/app/actions/contact";
@@ -65,6 +66,7 @@ const contactInfo = [
 
 const socialLinks = [
   { icon: Linkedin, href: "https://www.linkedin.com/company/admirerx/", label: "LinkedIn" },
+  { icon: Facebook, href: "https://www.facebook.com/share/1JHdrmxz3Z/", label: "Facebook" },
   { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
   { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
 ];

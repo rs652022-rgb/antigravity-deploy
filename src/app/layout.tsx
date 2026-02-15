@@ -33,13 +33,26 @@ const fontInter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "AdmirerX | Elevate Your Operations",
-  description: "Empowering global businesses with AI-driven solutions and exceptional human expertise.",
-  keywords: ["BPO", "Outsourcing", "AI Solutions", "Recruitment", "India BPO"],
+  title: "AdmirerX – BPO & AI-Powered Digital Transformation Services in India",
+
+  description:
+    "AdmirerX delivers BPO and AI-powered digital transformation services, helping businesses scale operations, enhance customer experience, and drive efficiency.",
+
+  keywords: [
+    "BPO services",
+    "AI powered digital transformation",
+    "Call center outsourcing",
+    "Customer experience outsourcing",
+    "AI automation services",
+    "India BPO",
+  ],
+
   authors: [{ name: "AdmirerX" }],
+
   openGraph: {
-    title: "AdmirerX | Elevate Your Operations",
-    description: "Empowering global businesses with AI-driven solutions and exceptional human expertise.",
+    title: "AdmirerX – BPO & AI-Powered Digital Transformation Services in India",
+    description:
+      "BPO and AI-powered digital transformation services to optimize operations, automate workflows, and enhance customer engagement.",
     url: "https://admirerx.net",
     siteName: "AdmirerX",
     images: [
@@ -47,18 +60,21 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "AdmirerX - AI Driven BPO Solutions",
+        alt: "AdmirerX – BPO & AI-Powered Digital Transformation Services",
       },
     ],
-    locale: "en_US",
+    locale: "en_IN",
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "AdmirerX | Elevate Your Operations",
-    description: "Empowering global businesses with AI-driven solutions and exceptional human expertise.",
+    title: "AdmirerX – BPO & AI-Powered Digital Transformation Services",
+    description:
+      "Transform your business with AdmirerX’s BPO and AI-powered digital transformation solutions.",
     images: ["/og-image.png"],
   },
+
   icons: {
     icon: [
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -68,8 +84,10 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
+
   manifest: "/site.webmanifest",
 };
+
 
 // import WhatsAppButtonWrapper from "@/components/WhatsAppButtonWrapper"; // Optional: Uncomment if available/desired
 

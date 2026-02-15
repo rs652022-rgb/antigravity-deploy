@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Linkedin, Instagram, Twitter } from "lucide-react";
+import { Linkedin, Instagram, Twitter, Facebook } from "lucide-react";
 
 const companyLinks = [
   { href: "/", label: "Home" },
@@ -18,6 +18,7 @@ const connectLinks = [
 
 const socialLinks = [
   { href: "https://www.linkedin.com/company/admirerx/", icon: Linkedin, label: "LinkedIn" },
+  { href: "https://www.facebook.com/share/1JHdrmxz3Z/", icon: Facebook, label: "Facebook" },
   { href: "https://instagram.com", icon: Instagram, label: "Instagram" },
   { href: "https://twitter.com", icon: Twitter, label: "Twitter" },
 ];
