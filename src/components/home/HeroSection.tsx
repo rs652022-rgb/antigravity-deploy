@@ -21,11 +21,8 @@ export default function HeroSection() {
                     className="flex flex-col items-center"
                 >
                     <h1 className="font-[family-name:var(--font-inter)] font-bold tracking-[-0.02em] mb-10 text-center text-white max-w-5xl mx-auto">
-                        <span className="block text-5xl sm:text-7xl md:text-[90px] leading-[1.1] mb-4">
-                            Modern BPO & AI
-                        </span>
-                        <span className="block text-3xl sm:text-5xl md:text-[64px] leading-[1.1] text-white/80">
-                            Business Solutions in India
+                        <span className="block text-5xl sm:text-7xl md:text-[90px] leading-[1.1]">
+                            We admire your dreams
                         </span>
                     </h1>
 
