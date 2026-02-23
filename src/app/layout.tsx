@@ -121,6 +121,26 @@ export default function RootLayout({
             gtag('config', 'G-CT06QZHB2R');
           `}
         </Script>
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "AdmirerX",
+              "url": "https://admirerx.net",
+              "description": "AdmirerX provides modern BPO services and AI-powered business solutions in India.",
+              "areaServed": "India",
+              "serviceType": [
+                "BPO Services",
+                "Lead Generation",
+                "Telesales",
+                "AI Services"
+              ]
+            })
+          }}
+        />
       </head>
       <body className={`${fontSans.variable} ${fontDisplay.variable} ${fontInter.variable} bg-black text-white antialiased selection:bg-indigo-500/30 selection:text-indigo-200`}>
         {/* Global Ambient Background */}
