@@ -1,4 +1,4 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
 
 @custom-variant dark (&:is(.dark *));
@@ -196,12 +196,18 @@
   }
 }
 
-.text-shadow-sm {
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-}
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
 
-.bg-radial-gradient {
-  background: radial-gradient(circle, var(--tw-gradient-from), var(--tw-gradient-to));
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .premium-border {
@@ -238,6 +244,13 @@
 }
 
 @media (max-width: 768px) {
+
+  html,
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
 
   /* Responsive Typography */
   h1 {
@@ -314,58 +327,4 @@
   .glass-card {
     border-radius: 1.25rem;
   }
-}
-
-/* Contact Page - Visit Our Headquarters Section */
-
-
-/* How We Partner Section - Premium Background */
-/* How We Partner Section - Premium Background */
-.how-we-partner-section {
-  position: relative;
-  overflow: hidden;
-}
-
-.how-we-partner-section::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  /* Premium Overlay Recipe with seamless top/bottom blending */
-  background:
-    linear-gradient(to bottom,
-      rgba(0, 0, 0, 0.92) 0%,
-      rgba(0, 0, 0, 0.55) 16%,
-      rgba(0, 0, 0, 0.18) 45%,
-      rgba(0, 0, 0, 0.18) 55%,
-      rgba(0, 0, 0, 0.55) 84%,
-      rgba(0, 0, 0, 0.94) 100%),
-    radial-gradient(70% 80% at 50% 45%, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.78));
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* Our Culture & Values Section - Premium Background */
-.culture-values-section {
-  position: relative;
-  overflow: hidden;
-}
-
-.culture-values-section::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  /* Premium Overlay Recipe: Stronger Top Black Fade + Blue tint */
-  background:
-    linear-gradient(to bottom,
-      rgba(0, 0, 0, 0.98) 0%,
-      rgba(0, 0, 0, 0.80) 12%,
-      rgba(0, 0, 0, 0.40) 30%,
-      rgba(0, 0, 0, 0.20) 55%,
-      rgba(0, 0, 0, 0.58) 82%,
-      rgba(0, 0, 0, 0.94) 100%),
-    radial-gradient(70% 80% at 50% 45%, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.78)),
-    radial-gradient(60% 70% at 35% 35%, rgba(80, 160, 255, 0.18), rgba(0, 0, 0, 0) 60%),
-    linear-gradient(135deg, rgba(60, 140, 255, 0.10), rgba(0, 0, 0, 0) 55%);
-  z-index: 1;
-  pointer-events: none;
 }

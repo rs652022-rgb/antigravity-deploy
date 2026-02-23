@@ -1,4 +1,4 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
 
 @custom-variant dark (&:is(.dark *));
@@ -239,49 +239,11 @@
 
 @media (max-width: 768px) {
 
-  /* Responsive Typography */
-  h1 {
-    font-size: clamp(2.5rem, 8vw, 4rem) !important;
-    line-height: 1.1 !important;
-    letter-spacing: -0.02em !important;
-  }
-
-  h2 {
-    font-size: clamp(2rem, 6vw, 2.75rem) !important;
-    line-height: 1.2 !important;
-  }
-
-  h3 {
-    font-size: 1.5rem !important;
-  }
-
-  p {
-    font-size: 0.9375rem !important;
-    line-height: 1.6 !important;
-  }
-
-  /* Section Padding */
-  section {
-    padding-top: 5rem !important;
-    padding-bottom: 5rem !important;
-  }
-
-  .px-4,
-  .px-6,
-  .px-8 {
-    padding-left: 1.25rem !important;
-    padding-right: 1.25rem !important;
-  }
-
-  /* Components */
-  .glass-card {
-    padding: 1.5rem !important;
-  }
-
-  .btn-lg {
-    height: 3.5rem !important;
-    font-size: 1rem !important;
-    width: 100% !important;
+  html,
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
   }
 
   /* Mobile Menu Refinement */
@@ -303,14 +265,6 @@
 }
 
 @media (max-width: 480px) {
-  h1 {
-    font-size: 2.25rem !important;
-  }
-
-  h2 {
-    font-size: 1.875rem !important;
-  }
-
   .glass-card {
     border-radius: 1.25rem;
   }
