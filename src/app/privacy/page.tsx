@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { EmailLink } from "@/components/EmailLink";
 
 export default function PrivacyPage() {
   return (
@@ -125,7 +126,10 @@ export default function PrivacyPage() {
                   <div className="glass p-8 rounded-3xl border border-white/10">
                     <p className="text-xl font-bold mb-4 font-display">AdmirerX</p>
                     <div className="space-y-2 text-white/50 font-medium">
-                      <p>Email: management@admirerx.net</p>
+                      <div className="flex gap-2">
+                        <span>Email:</span>
+                        <EmailLink encodedUser="bWFuYWdlbWVudA==" encodedDomain="YWRtaXJlcmgubmV0" />
+                      </div>
                       <p>Phone: +91 88269 36399</p>
                       <p>Address: Plot No - 761, Noida Sector 21, India</p>
                     </div>

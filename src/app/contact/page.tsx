@@ -34,6 +34,7 @@ import {
   Send,
   Facebook,
 } from "lucide-react";
+import { EmailLink } from "@/components/EmailLink";
 import { toast } from "sonner";
 import { sendContactEmail } from "@/app/actions/contact";
 
@@ -41,8 +42,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "management@admirerx.net",
-    href: "mailto:management@admirerx.net",
+    value: <EmailLink encodedUser="bWFuYWdlbWVudA==" encodedDomain="YWRtaXJlcmgubmV0" />,
+    href: null,
   },
   {
     icon: Phone,
@@ -457,7 +458,9 @@ export default function ContactPage() {
                               {info.value}
                             </a>
                           ) : (
-                            <p className="text-xl font-bold tracking-tight text-white/90">{info.value}</p>
+                            <div className="text-xl font-bold tracking-tight text-white/90">
+                              {info.value}
+                            </div>
                           )}
                         </div>
                       </div>
@@ -547,9 +550,11 @@ export default function ContactPage() {
                   </div>
                   <div className="p-6 rounded-[1.5rem] bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
                     <p className="text-[10px] font-bold uppercase tracking-widest text-white/30 mb-3">Inquiries</p>
-                    <a href="mailto:management@admirerx.net" className="text-lg text-white font-bold hover:text-blue-300 transition-colors break-all">
-                      management@admirerx.net
-                    </a>
+                    <EmailLink
+                      encodedUser="bWFuYWdlbWVudA=="
+                      encodedDomain="YWRtaXJlcmgubmV0"
+                      className="text-lg text-white font-bold hover:text-blue-300 transition-colors break-all"
+                    />
                   </div>
                 </div>
               </div>

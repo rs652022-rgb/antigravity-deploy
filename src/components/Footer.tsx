@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Linkedin, Instagram, Twitter, Facebook } from "lucide-react";
+import { Linkedin, Instagram, Twitter, Facebook, CheckCircle, Send } from "lucide-react";
+import { EmailLink } from "@/components/EmailLink"; // Changed import path as per instruction
 
 const companyLinks = [
   { href: "/", label: "Home" },
@@ -114,9 +115,11 @@ export function Footer() {
                 {/* Email Card */}
                 <div className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-6">
                   <div className="text-[10px] font-bold text-white/30 uppercase tracking-widest mb-2">Email</div>
-                  <a href="mailto:management@admirerx.net" className="text-white text-base font-medium transition-colors block">
-                    management@admirerx.net
-                  </a>
+                  <EmailLink
+                    encodedUser="bWFuYWdlbWVudA=="
+                    encodedDomain="YWRtaXJlcmgubmV0"
+                    className="text-white text-base font-medium transition-colors block"
+                  />
                 </div>
 
                 {/* Phone Card */}
