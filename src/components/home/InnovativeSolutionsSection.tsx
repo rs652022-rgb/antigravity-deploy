@@ -17,7 +17,8 @@ export default function InnovativeSolutionsSection() {
                     fill
                     className="object-cover opacity-40 mix-blend-screen scale-105"
                     sizes="100vw"
-                    quality={60}
+                    quality={50}
+                    priority={false}
                 />
                 {/* Lighter overlay to let image show through */}
                 <div className="absolute inset-0 bg-background/60" />

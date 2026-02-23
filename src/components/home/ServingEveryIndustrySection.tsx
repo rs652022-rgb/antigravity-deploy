@@ -171,7 +171,8 @@ export default function ServingEveryIndustrySection() {
                                     fill
                                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                    quality={75}
+                                    quality={60}
+                                    priority={false}
                                 />
                                 {/* Bottom Shadow Fade */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#151221] via-transparent to-transparent opacity-80" />
