@@ -13,15 +13,15 @@ export default function HeroSection() {
             {/* Background Elements - Unicorn Studio Animation */}
             <UnicornHero />
 
-            <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
+            <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, ease: "easeOut" }}
                     className="flex flex-col items-center"
                 >
-                    <h1 className="font-[family-name:var(--font-inter)] font-bold tracking-[-0.02em] mb-10 text-center text-white max-w-5xl mx-auto">
-                        <span className="block text-5xl sm:text-7xl md:text-[90px] leading-[1.1]">
+                    <h1 className="font-[family-name:var(--font-inter)] font-bold tracking-[-0.02em] mb-10 text-center text-white w-full mx-auto">
+                        <span className="block whitespace-nowrap text-[8.2vw] sm:text-[7.5vw] md:text-[6.8vw] lg:text-[90px] leading-none py-2">
                             We admire your dreams
                         </span>
                     </h1>
