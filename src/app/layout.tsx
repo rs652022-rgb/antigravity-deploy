@@ -4,6 +4,7 @@ import { FooterWrapper } from "@/components/FooterWrapper";
 import { Plus_Jakarta_Sans, Syne, Inter } from "next/font/google";
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
+import Script from "next/script";
 
 const GlobalBackground = dynamic(
   () => import("@/components/GlobalBackground").then((mod) => mod.GlobalBackground),
@@ -100,6 +101,23 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Google Analytics */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-CT06QZHB2R"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-CT06QZHB2R');
+          `}
+        </Script>
+      </head>
       <body className={`${fontSans.variable} ${fontDisplay.variable} ${fontInter.variable} bg-black text-white antialiased selection:bg-indigo-500/30 selection:text-indigo-200`}>
         {/* Global Ambient Background */}
         {/* Global Ambient Background */}
