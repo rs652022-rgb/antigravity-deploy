@@ -34,7 +34,7 @@ const fontInter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://admirerx.net'),
-  title: "AdmirerX – BPO & AI-Powered Digital Transformation Services in India",
+  title: "AdmirerX | BPO & AI Services in India",
 
   description:
     "AdmirerX delivers BPO and AI-powered digital transformation services, helping businesses scale operations, enhance customer experience, and drive efficiency.",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   authors: [{ name: "AdmirerX" }],
 
   openGraph: {
-    title: "AdmirerX – BPO & AI-Powered Digital Transformation Services in India",
+    title: "AdmirerX | BPO & AI Services in India",
     description:
       "BPO and AI-powered digital transformation services to optimize operations, automate workflows, and enhance customer engagement.",
     url: "https://admirerx.net",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "AdmirerX – BPO & AI-Powered Digital Transformation Services",
+    title: "AdmirerX | BPO & AI Services in India",
     description:
       "Transform your business with AdmirerX’s BPO and AI-powered digital transformation solutions.",
     images: ["/og-image.png"],
