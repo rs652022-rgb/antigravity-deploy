@@ -20,8 +20,13 @@ export default function HeroSection() {
                     transition={{ duration: 1, ease: "easeOut" }}
                     className="flex flex-col items-center"
                 >
-                    <h1 className="font-[family-name:var(--font-inter)] text-4xl sm:text-6xl md:text-[80px] font-bold leading-[1.1] tracking-[-0.02em] mb-10 text-center text-white max-w-4xl mx-auto text-balance">
-                        Modern BPO & AI Business Solutions in India
+                    <h1 className="font-[family-name:var(--font-inter)] font-bold tracking-[-0.02em] mb-10 text-center text-white max-w-5xl mx-auto">
+                        <span className="block text-5xl sm:text-7xl md:text-[90px] leading-[1.1] mb-4">
+                            Modern BPO & AI
+                        </span>
+                        <span className="block text-3xl sm:text-5xl md:text-[64px] leading-[1.1] text-white/80">
+                            Business Solutions in India
+                        </span>
                     </h1>
 
                     <p className="text-lg md:text-xl text-text-muted max-w-3xl mx-auto mb-14 font-normal leading-relaxed tracking-wide text-center">
