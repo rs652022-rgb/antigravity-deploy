@@ -29,8 +29,8 @@ export default function InnovativeSolutionsSection() {
                 <div className="flex flex-col lg:flex-row justify-between items-center lg:items-end mb-16 gap-10 text-center lg:text-left">
                     <div className="max-w-3xl">
 
-                        <h2 className="text-4xl md:text-6xl font-bold font-display leading-[1.1] tracking-tight">
-                            Modern <span className="text-white/40">Digital Solutions</span> <br />
+                        <h2 className="text-4xl md:text-6xl font-bold font-display leading-[1.1] tracking-tight text-white">
+                            Modern Digital Solutions <br />
                             for Businesses
                         </h2>
                     </div>
