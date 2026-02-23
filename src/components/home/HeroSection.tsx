@@ -13,23 +13,23 @@ export default function HeroSection() {
             {/* Background Elements - Unicorn Studio Animation */}
             <UnicornHero />
 
-            <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center pt-32 pb-20">
+            <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center pt-44 pb-32">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, ease: "easeOut" }}
                     className="flex flex-col items-center"
                 >
-                    <h1 className="font-[family-name:var(--font-inter)] font-bold tracking-[-0.02em] mb-16 text-center text-white w-full mx-auto">
-                        <span className="block text-5xl sm:text-7xl md:text-8xl lg:text-[100px] leading-[1.1]">
+                    <h1 className="font-[family-name:var(--font-inter)] font-bold tracking-[-0.02em] mb-20 text-center text-white w-full mx-auto">
+                        <span className="block text-6xl sm:text-8xl md:text-9xl lg:text-[120px] leading-[1.05]">
                             We Admire
                         </span>
-                        <span className="block text-5xl sm:text-7xl md:text-8xl lg:text-[100px] leading-[1.1]">
+                        <span className="block text-6xl sm:text-8xl md:text-9xl lg:text-[120px] leading-[1.05]">
                             Your Dreams
                         </span>
                     </h1>
 
-                    <p className="text-lg md:text-xl text-text-muted max-w-[800px] mx-auto mb-16 font-normal leading-relaxed tracking-wide text-center">
+                    <p className="text-lg md:text-xl text-text-muted max-w-[800px] mx-auto mb-20 font-normal leading-relaxed tracking-wide text-center">
                         Leading BPO services in India with trusted outsourcing and modern digital solutions.
                         We provide comprehensive services to simplify business challenges and drive growth.
                     </p>
