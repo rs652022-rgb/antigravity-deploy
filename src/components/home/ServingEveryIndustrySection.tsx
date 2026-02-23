@@ -18,7 +18,7 @@ const industries = [
         badgeTop: "24/7",
         badgeBottom: "AVAILABLE",
         title: "E-Commerce & Retail",
-        desc: "Comprehensive solutions for the modern landscape.",
+        desc: "Modern and comprehensive services for the local landscape.",
         image: "/images/e-commerce-traffic-light.jpg",
     },
     {
@@ -26,7 +26,7 @@ const industries = [
         badgeTop: "Fast",
         badgeBottom: "PROCESSING",
         title: "Financial Services",
-        desc: "Comprehensive solutions for the modern landscape.",
+        desc: "Modern and comprehensive services for the local landscape.",
         image: "/images/pexels-leeloothefirst-7887821.jpg",
     },
     {
@@ -34,7 +34,7 @@ const industries = [
         badgeTop: "Secure",
         badgeBottom: "COMPLIANT",
         title: "Healthcare & Pharma",
-        desc: "Comprehensive solutions for the modern landscape.",
+        desc: "Modern and comprehensive services for the local landscape.",
         image: "/images/pexels-cottonbro-5473960.jpg",
     },
     {
@@ -42,7 +42,7 @@ const industries = [
         badgeTop: "24/7",
         badgeBottom: "SUPPORT",
         title: "Technology & SaaS",
-        desc: "Comprehensive solutions for the modern landscape.",
+        desc: "Modern and comprehensive services for the local landscape.",
         image: "/images/pexels-cottonbro-3825307.jpg",
     },
     {
@@ -50,7 +50,7 @@ const industries = [
         badgeTop: "Fast",
         badgeBottom: "PROCESSING",
         title: "Banking & Insurance",
-        desc: "Comprehensive solutions for the modern landscape.",
+        desc: "Modern and comprehensive services for the local landscape.",
         image: "/images/pexels-rdne-7948038.jpg",
     },
     {
@@ -58,7 +58,7 @@ const industries = [
         badgeTop: "Smart",
         badgeBottom: "SOLUTIONS",
         title: "Education & E-Learning",
-        desc: "Comprehensive solutions for the modern landscape.",
+        desc: "Modern and comprehensive services for the local landscape.",
         image: "/images/pexels-cottonbro-6153345.jpg",
     },
 ];
@@ -114,12 +114,12 @@ export default function ServingEveryIndustrySection() {
                         </span>
 
                         <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold font-display mb-6 tracking-tight text-white leading-[1.1]">
-                            Serving <span className="text-white/40">Every Industry</span>
+                            AI-Powered <span className="text-white/40">Business Services</span> in India
                         </h2>
 
                         <p className="text-text-muted max-w-2xl mx-auto text-lg font-normal leading-relaxed">
-                            Delivering specialized BPO solutions across multiple sectors with proven <br className="hidden md:block" />
-                            results and industry-leading expertise.
+                            Delivering modern and comprehensive business solutions across multiple sectors <br className="hidden md:block" />
+                            with proven results and industry-leading expertise.
                         </p>
                     </motion.div>
                 </div>

@@ -29,8 +29,8 @@ export default function InnovativeSolutionsSection() {
                     <div className="max-w-3xl">
 
                         <h2 className="text-4xl md:text-6xl font-bold font-display leading-[1.1] tracking-tight">
-                            Human Excellence, <br />
-                            <span className="text-white/40">Worldwide Impact</span>
+                            Modern <span className="text-white/40">Digital Solutions</span> <br />
+                            for Businesses
                         </h2>
                     </div>
                     <p className="text-text-muted max-w-sm text-sm font-normal leading-relaxed mb-2">

@@ -14,12 +14,12 @@ export default function ApproachSection() {
                         OUR APPROACH
                     </span>
                     <h2 className="text-4xl md:text-6xl font-bold font-display mb-6 leading-[1.1] tracking-tight">
-                        We bring together people and <br />
-                        <span className="text-white/40">intelligent automation</span>
+                        Our Comprehensive <br />
+                        <span className="text-white/40">BPO and AI Services</span>
                     </h2>
                     <p className="text-text-muted max-w-3xl mx-auto text-lg md:text-xl font-normal leading-relaxed">
-                        Trusted outsourcing partner for businesses seeking affordable BPO services and <br className="hidden md:block" />
-                        staffing solutions in India.
+                        Trusted outsourcing partner delivering modern business solutions and <br className="hidden md:block" />
+                        affordable BPO services in India.
                     </p>
                 </div>
 

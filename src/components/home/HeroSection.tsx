@@ -19,14 +19,14 @@ export default function HeroSection() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, ease: "easeOut" }}
                 >
-                    <h1 className="font-[family-name:var(--font-inter)] text-4xl sm:text-6xl md:text-[96px] font-bold leading-[1.1] tracking-[-0.02em] mb-8 text-center text-white max-w-6xl mx-auto">
-                        <span className="sm:whitespace-nowrap inline-block">Empowering Innovation</span><br />
-                        <span className="inline-block">in the <span className="text-[#B9BCC8]">AI Era</span></span>
+                    <h1 className="font-[family-name:var(--font-inter)] text-4xl sm:text-6xl md:text-[80px] font-bold leading-[1.1] tracking-[-0.02em] mb-8 text-center text-white max-w-6xl mx-auto">
+                        <span className="sm:whitespace-nowrap inline-block">Modern BPO & AI</span><br />
+                        <span className="inline-block">Business <span className="text-[#B9BCC8]">Solutions in India</span></span>
                     </h1>
 
                     <p className="text-lg md:text-xl text-text-muted max-w-3xl mx-auto mb-12 font-normal leading-relaxed tracking-wide">
-                        Leading BPO services in India with trusted outsourcing solutions. <br />
-                        We simplify business challenges and turn possibilities into progress.
+                        Leading BPO services in India with trusted outsourcing and modern digital solutions. <br />
+                        We provide comprehensive services to simplify business challenges and drive growth.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-5">

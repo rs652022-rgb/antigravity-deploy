@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   title: "AdmirerX | BPO & AI Services in India",
 
   description:
-    "AdmirerX delivers BPO and AI-powered digital transformation services, helping businesses scale operations, enhance customer experience, and drive efficiency.",
+    "AdmirerX provides modern and comprehensive BPO and AI services in India. We deliver digital business solutions designed to improve efficiency and business growth.",
 
   keywords: [
     "BPO services",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AdmirerX | BPO & AI Services in India",
     description:
-      "BPO and AI-powered digital transformation services to optimize operations, automate workflows, and enhance customer engagement.",
+      "AdmirerX provides modern and comprehensive BPO and AI services in India. We deliver digital business solutions designed to improve efficiency and business growth.",
     url: "https://admirerx.net",
     siteName: "AdmirerX",
     images: [
