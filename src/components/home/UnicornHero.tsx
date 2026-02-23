@@ -21,7 +21,7 @@ export default function UnicornHero() {
         <>
             <Script
                 src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.0.3/dist/unicornStudio.umd.js"
-                strategy="lazyOnload"
+                strategy="afterInteractive"
                 onLoad={() => {
                     if (window.UnicornStudio && window.UnicornStudio.init) {
                         window.UnicornStudio.init();

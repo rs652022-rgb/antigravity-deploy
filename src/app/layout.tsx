@@ -36,16 +36,15 @@ const fontInter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://admirerx.net'),
   title: "AdmirerX | BPO & AI Services in India",
-
   description:
-    "AdmirerX provides modern and comprehensive BPO and AI services in India. We deliver digital business solutions designed to improve efficiency and business growth.",
+    "AdmirerX provides modern BPO and AI-powered business solutions in India including lead generation, telesales and outsourcing services.",
 
   keywords: [
     "BPO services",
-    "AI powered digital transformation",
-    "Call center outsourcing",
-    "Customer experience outsourcing",
-    "AI automation services",
+    "outsourcing services",
+    "AI services",
+    "lead generation",
+    "telesales",
     "India BPO",
   ],
 
@@ -54,7 +53,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AdmirerX | BPO & AI Services in India",
     description:
-      "AdmirerX provides modern and comprehensive BPO and AI services in India. We deliver digital business solutions designed to improve efficiency and business growth.",
+      "AdmirerX provides modern BPO and AI-powered business solutions in India including lead generation, telesales and outsourcing services.",
     url: "https://admirerx.net",
     siteName: "AdmirerX",
     images: [
@@ -127,17 +126,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "LocalBusiness",
+              "@type": "Organization",
               "name": "AdmirerX",
               "url": "https://admirerx.net",
-              "description": "AdmirerX provides modern BPO services and AI-powered business solutions in India.",
-              "areaServed": "India",
-              "serviceType": [
-                "BPO Services",
-                "Lead Generation",
-                "Telesales",
-                "AI Services"
-              ]
+              "description": "AdmirerX provides BPO and AI services in India including lead generation and telesales solutions."
             })
           }}
         />

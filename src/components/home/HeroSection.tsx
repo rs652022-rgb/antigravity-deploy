@@ -29,7 +29,7 @@ export default function HeroSection() {
                         </span>
                     </h1>
 
-                    <p className="text-lg md:text-xl text-text-muted max-w-3xl mx-auto mb-14 font-normal leading-relaxed tracking-wide text-center">
+                    <p className="text-lg md:text-xl text-text-muted max-w-[800px] mx-auto mb-14 font-normal leading-relaxed tracking-wide text-center">
                         Leading BPO services in India with trusted outsourcing and modern digital solutions.
                         We provide comprehensive services to simplify business challenges and drive growth.
                     </p>

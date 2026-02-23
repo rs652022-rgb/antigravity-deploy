@@ -18,8 +18,8 @@ export default function ApproachSection() {
                         <span className="text-white/40">BPO and AI Services</span>
                     </h2>
                     <p className="text-text-muted max-w-3xl mx-auto text-lg md:text-xl font-normal leading-relaxed">
-                        Trusted outsourcing partner delivering modern business solutions and <br className="hidden md:block" />
-                        affordable BPO services in India.
+                        Trusted outsourcing partner delivering modern business solutions including lead generation,
+                        telesales, and affordable BPO services in India.
                     </p>
                 </div>
 

@@ -52,7 +52,7 @@ export default function InnovativeSolutionsSection() {
                             <div className="solution-icon-chip">
                                 <Bot className="w-5 h-5 text-white" />
                             </div>
-                            <h4 className="solution-title">AI-Powered <br /> Intelligence</h4>
+                            <h3 className="solution-title">AI-Powered <br /> Intelligence</h3>
                             <p className="solution-desc">
                                 Advanced machine learning models that understand context and deliver personalized responses.
                             </p>
@@ -81,7 +81,7 @@ export default function InnovativeSolutionsSection() {
                             <div className="solution-icon-chip">
                                 <Zap className="w-5 h-5 text-white" />
                             </div>
-                            <h4 className="solution-title">Lightning Fast <br /> Response</h4>
+                            <h3 className="solution-title">Lightning Fast <br /> Response</h3>
                             <p className="solution-desc">
                                 Sub-second response times powered by distributed cloud infrastructure.
                             </p>
@@ -110,7 +110,7 @@ export default function InnovativeSolutionsSection() {
                             <div className="solution-icon-chip">
                                 <Shield className="w-5 h-5 text-white" />
                             </div>
-                            <h4 className="solution-title">Enterprise-Grade <br /> Security</h4>
+                            <h3 className="solution-title">Enterprise-Grade <br /> Security</h3>
                             <p className="solution-desc">
                                 ISO 27001 certified with end-to-end encryption and compliance automation.
                             </p>
@@ -139,7 +139,7 @@ export default function InnovativeSolutionsSection() {
                             <div className="solution-icon-chip">
                                 <Activity className="w-5 h-5 text-white" />
                             </div>
-                            <h4 className="solution-title">Continuous <br /> Innovation</h4>
+                            <h3 className="solution-title">Continuous <br /> Innovation</h3>
                             <p className="solution-desc">
                                 Weekly updates with cutting-edge AI features and performance enhancements.
                             </p>
