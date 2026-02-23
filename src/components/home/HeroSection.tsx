@@ -18,22 +18,22 @@ export default function HeroSection() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, ease: "easeOut" }}
+                    className="flex flex-col items-center"
                 >
-                    <h1 className="font-[family-name:var(--font-inter)] text-4xl sm:text-6xl md:text-[80px] font-bold leading-[1.1] tracking-[-0.02em] mb-8 text-center text-white max-w-6xl mx-auto">
-                        <span className="sm:whitespace-nowrap inline-block">Modern BPO & AI</span><br />
-                        <span className="inline-block">Business <span className="text-[#B9BCC8]">Solutions in India</span></span>
+                    <h1 className="font-[family-name:var(--font-inter)] text-4xl sm:text-6xl md:text-[80px] font-bold leading-[1.1] tracking-[-0.02em] mb-10 text-center text-white max-w-4xl mx-auto text-balance">
+                        Modern BPO & AI Business Solutions in India
                     </h1>
 
-                    <p className="text-lg md:text-xl text-text-muted max-w-3xl mx-auto mb-12 font-normal leading-relaxed tracking-wide">
-                        Leading BPO services in India with trusted outsourcing and modern digital solutions. <br />
+                    <p className="text-lg md:text-xl text-text-muted max-w-3xl mx-auto mb-14 font-normal leading-relaxed tracking-wide text-center">
+                        Leading BPO services in India with trusted outsourcing and modern digital solutions.
                         We provide comprehensive services to simplify business challenges and drive growth.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                         <Button
                             asChild
                             size="lg"
-                            className="rounded-full bg-white text-black hover:bg-gray-200 px-8 h-12 font-bold text-[15px] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.4)]"
+                            className="rounded-full bg-white text-black hover:bg-gray-200 px-10 h-14 font-bold text-[16px] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.4)]"
                         >
                             <a
                                 href="https://wa.me/918826936399?text=Hi,%20I'm%20interested%20in%20finding%20out%20more%20about%20your%20services."
@@ -41,14 +41,14 @@ export default function HeroSection() {
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-2"
                             >
-                                Speak With An Expert <ArrowRight className="w-4 h-4" />
+                                Speak With An Expert <ArrowRight className="w-5 h-5" />
                             </a>
                         </Button>
                         <Button
                             asChild
                             size="lg"
                             variant="outline"
-                            className="rounded-full border-white/20 bg-white/5 text-white hover:bg-white/10 px-10 h-12 font-bold text-[15px] backdrop-blur-md transition-all duration-300 hover:scale-105"
+                            className="rounded-full border-white/20 bg-white/5 text-white hover:bg-white/10 px-12 h-14 font-bold text-[16px] backdrop-blur-md transition-all duration-300 hover:scale-105"
                         >
                             <Link href="/services">
                                 Learn More
