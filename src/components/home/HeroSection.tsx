@@ -9,11 +9,11 @@ import UnicornHero from "@/components/home/UnicornHero";
 
 export default function HeroSection() {
     return (
-        <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+        <section className="relative h-screen flex items-center justify-center overflow-hidden">
             {/* Background Elements - Unicorn Studio Animation */}
             <UnicornHero />
 
-            <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center pt-44 pb-32">
+            <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center pt-44 pb-32 translate-y-10">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}

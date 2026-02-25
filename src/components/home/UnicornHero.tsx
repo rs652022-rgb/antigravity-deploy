@@ -20,7 +20,7 @@ export default function UnicornHero() {
     return (
         <>
             <Script
-                src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.0.3/dist/unicornStudio.umd.js"
+                src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.0.5/dist/unicornStudio.umd.js"
                 strategy="afterInteractive"
                 onLoad={() => {
                     if (window.UnicornStudio && window.UnicornStudio.init) {
@@ -30,7 +30,7 @@ export default function UnicornHero() {
             />
             <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden pointer-events-none">
                 <div
-                    data-us-project="0qml7O2SrHq2dw9FglbV"
+                    data-us-project="Rgc66Wgwer1HG25tVgJa"
                     className="w-full h-full scale-105 opacity-80"
                     style={{ width: '100vw', height: '100vh' }}
                 />
