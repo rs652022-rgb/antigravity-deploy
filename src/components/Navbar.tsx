@@ -88,7 +88,7 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "fixed top-[35px] left-0 right-0 z-50 transition-all duration-500 px-4 pb-4 sm:px-6 lg:px-8 pt-0"
+        "fixed top-[10px] left-0 right-0 z-50 transition-all duration-500 px-4 pb-4 sm:px-6 lg:px-8 pt-0"
       )}
     >
       <nav
