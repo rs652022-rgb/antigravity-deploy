@@ -42,7 +42,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: <EmailLink encodedUser="bWFuYWdlbWVudA==" encodedDomain="YWRtaXJlcmgubmV0" />,
+    value: <EmailLink encodedUser="bWFuYWdlbWVudA==" encodedDomain="YWRtaXJlcngubmV0" />,
     href: null,
   },
   {
@@ -552,7 +552,7 @@ export default function ContactPage() {
                     <p className="text-[10px] font-bold uppercase tracking-widest text-white/30 mb-3">Inquiries</p>
                     <EmailLink
                       encodedUser="bWFuYWdlbWVudA=="
-                      encodedDomain="YWRtaXJlcmgubmV0"
+                      encodedDomain="YWRtaXJlcngubmV0"
                       className="text-lg text-white font-bold hover:text-blue-300 transition-colors break-all"
                     />
                   </div>

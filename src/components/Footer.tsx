@@ -117,7 +117,7 @@ export function Footer() {
                   <div className="text-[10px] font-bold text-white/30 uppercase tracking-widest mb-2">Email</div>
                   <EmailLink
                     encodedUser="bWFuYWdlbWVudA=="
-                    encodedDomain="YWRtaXJlcmgubmV0"
+                    encodedDomain="YWRtaXJlcngubmV0"
                     className="text-white text-base font-medium transition-colors block"
                   />
                 </div>

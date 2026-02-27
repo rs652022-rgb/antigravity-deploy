@@ -128,7 +128,7 @@ export default function PrivacyPage() {
                     <div className="space-y-2 text-white/50 font-medium">
                       <div className="flex gap-2">
                         <span>Email:</span>
-                        <EmailLink encodedUser="bWFuYWdlbWVudA==" encodedDomain="YWRtaXJlcmgubmV0" />
+                        <EmailLink encodedUser="bWFuYWdlbWVudA==" encodedDomain="YWRtaXJlcngubmV0" />
                       </div>
                       <p>Phone: +91 88269 36399</p>
                       <p>Address: Plot No - 761, Noida Sector 21, India</p>
