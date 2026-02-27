@@ -29,10 +29,10 @@ export default function ReadyToDeliverSection() {
 
                     {/* Left Content */}
                     <div className="text-center lg:text-left">
-                        <h2 className="text-5xl md:text-6xl font-bold font-display mb-8 leading-[1.1] tracking-tight">
-                            Ready to <span className="text-white/40">Deliver <br /> Excellence</span>
+                        <h2 className="text-5xl md:text-6xl font-bold font-display mb-8 leading-[1.1] tracking-tight text-[#ffffff]">
+                            Ready to <span className="text-[#ffffff]">Deliver <br /> Excellence</span>
                         </h2>
-                        <p className="text-text-muted text-lg mb-16 max-w-md mx-auto lg:mx-0 font-normal leading-relaxed">
+                        <p className="text-[#ffffff] text-lg mb-16 max-w-md mx-auto lg:mx-0 font-normal leading-relaxed">
                             Empowering your business with exceptional talent and unwavering commitment.
                         </p>
 

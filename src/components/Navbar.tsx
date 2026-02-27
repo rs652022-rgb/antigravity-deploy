@@ -101,8 +101,8 @@ export function Navbar() {
       >
         <div className="flex items-center justify-between h-14">
           <Link href="/" className="flex items-center gap-2 group">
-            <span className="text-xl sm:text-2xl font-bold font-display tracking-tight text-white">
-              Admirer<span className="text-white/40 group-hover:text-white transition-colors duration-500">X</span>
+            <span className="text-xl sm:text-2xl font-bold font-display tracking-tight text-[#FFFFFF]">
+              Admirer<span className="text-[#FFFFFF] group-hover:text-[#FFFFFF] transition-colors duration-500">X</span>
             </span>
           </Link>
 

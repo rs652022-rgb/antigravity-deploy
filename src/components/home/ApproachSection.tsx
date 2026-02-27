@@ -13,11 +13,11 @@ export default function ApproachSection() {
                     <span className="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/[0.03] text-text-muted text-[11px] font-bold uppercase tracking-[0.2em] mb-8 shadow-sm backdrop-blur-md">
                         OUR APPROACH
                     </span>
-                    <h2 className="text-4xl md:text-6xl font-bold font-display mb-6 leading-[1.1] tracking-tight">
+                    <h2 className="text-4xl md:text-6xl font-bold font-display mb-6 leading-[1.1] tracking-tight text-[#ffffff]">
                         Our Comprehensive <br />
-                        <span className="text-white/40">BPO and AI Services</span>
+                        <span className="text-[#ffffff]">BPO and AI Services</span>
                     </h2>
-                    <p className="text-text-muted max-w-3xl mx-auto text-lg md:text-xl font-normal leading-relaxed">
+                    <p className="text-[#ffffff] max-w-3xl mx-auto text-lg md:text-xl font-normal leading-relaxed">
                         Trusted outsourcing partner delivering modern business solutions including lead generation,
                         telesales, and affordable BPO services in India.
                     </p>

@@ -34,7 +34,7 @@ export default function InnovativeSolutionsSection() {
                             for Businesses
                         </h2>
                     </div>
-                    <p className="text-text-muted max-w-sm text-sm font-normal leading-relaxed mb-2">
+                    <p className="text-[#ffffff] max-w-sm text-sm font-normal leading-relaxed mb-2">
                         Experience the future of business process outsourcing with our cutting-edge AI technology and intelligent automation.
                     </p>
                 </div>

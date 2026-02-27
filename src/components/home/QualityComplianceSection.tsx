@@ -46,11 +46,11 @@ export default function QualityComplianceSection() {
                             transition={{ duration: 0.8, ease: "easeOut" }}
                             className="mb-8 md:mb-12"
                         >
-                            <span className="inline-block px-4 py-1.5 rounded-full bg-white/[0.03] border border-white/[0.15] text-white/70 text-[10px] font-bold uppercase tracking-[0.2em] mb-6 md:mb-8 backdrop-blur-md shadow-sm">
+                            <span className="inline-block px-4 py-1.5 rounded-full bg-white/[0.03] border border-white/[0.15] text-[#ffffff] text-[10px] font-bold uppercase tracking-[0.2em] mb-6 md:mb-8 backdrop-blur-md shadow-sm">
                                 TRUSTED & CERTIFIED
                             </span>
                             <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold font-display leading-[1.1] text-white tracking-tight drop-shadow-xl">
-                                Quality & <span className="text-white/60">Compliance</span>
+                                Quality & <span className="text-[#ffffff]">Compliance</span>
                             </h2>
                         </motion.div>
 
@@ -74,7 +74,7 @@ export default function QualityComplianceSection() {
                                     </div>
                                     <div>
                                         <h4 className="text-lg font-bold text-white mb-1 group-hover:text-purple-200 transition-colors tracking-tight text-shadow-sm">{item.title}</h4>
-                                        <p className="text-white/70 text-sm leading-relaxed">{item.desc}</p>
+                                        <p className="text-[#ffffff] text-sm leading-relaxed">{item.desc}</p>
                                     </div>
                                 </motion.div>
                             ))}
@@ -96,16 +96,16 @@ export default function QualityComplianceSection() {
                             <div className="absolute inset-0 bg-gradient-to-br from-white/[0.05] via-transparent to-transparent pointer-events-none" />
 
                             <div className="relative z-10">
-                                <span className="inline-block px-4 py-1.5 rounded-full bg-white/[0.03] border border-white/[0.15] text-white/70 text-[10px] font-bold uppercase tracking-[0.2em] mb-12 backdrop-blur-md shadow-sm">
+                                <span className="inline-block px-4 py-1.5 rounded-full bg-white/[0.03] border border-white/[0.15] text-[#ffffff] text-[10px] font-bold uppercase tracking-[0.2em] mb-12 backdrop-blur-md shadow-sm">
                                     OUR PROMISE
                                 </span>
 
                                 <h3 className="text-3xl sm:text-5xl md:text-6xl font-bold font-display mb-8 leading-[1.05] text-white tracking-tight drop-shadow-lg">
                                     Built for <br />
-                                    <span className="text-white/60">Performance</span>
+                                    <span className="text-[#ffffff]">Performance</span>
                                 </h3>
 
-                                <p className="text-white/70 text-[16px] leading-relaxed mb-16 max-w-sm font-medium">
+                                <p className="text-[#ffffff] text-[16px] leading-relaxed mb-16 max-w-sm font-medium">
                                     State-of-the-art infrastructure ready to deliver exceptional results.
                                 </p>
 
@@ -113,19 +113,19 @@ export default function QualityComplianceSection() {
                                     {/* Metric 1 */}
                                     <div>
                                         <div className="text-4xl sm:text-5xl md:text-6xl font-bold font-display text-white mb-2 tracking-tight drop-shadow-md">100%</div>
-                                        <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/60">Commitment to Excellence</div>
+                                        <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#ffffff]">Commitment to Excellence</div>
                                     </div>
 
                                     {/* Metric 2 */}
                                     <div>
                                         <div className="text-4xl sm:text-5xl md:text-6xl font-bold font-display text-white mb-2 tracking-tight drop-shadow-md">&lt;30s</div>
-                                        <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/60">Target Response Time</div>
+                                        <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#ffffff]">Target Response Time</div>
                                     </div>
 
                                     {/* Metric 3 */}
                                     <div>
                                         <div className="text-4xl sm:text-5xl md:text-6xl font-bold font-display text-white mb-2 tracking-tight drop-shadow-md">24/7</div>
-                                        <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/60">Global Support</div>
+                                        <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#ffffff]">Global Support</div>
                                     </div>
                                 </div>
                             </div>

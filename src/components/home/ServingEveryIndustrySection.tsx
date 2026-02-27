@@ -113,13 +113,13 @@ export default function ServingEveryIndustrySection() {
                             INDUSTRY EXPERTISE
                         </span>
 
-                        <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold font-display mb-6 tracking-tight text-white leading-[1.1]">
-                            AI-Powered <span className="text-white/40">Business Services</span> in India
+                        <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold font-display mb-6 tracking-tight text-[#ffffff] leading-[1.1]">
+                            AI-Powered <span className="text-[#ffffff]">Business Services</span> in India
                         </h2>
 
-                        <p className="text-text-muted max-w-2xl mx-auto text-lg font-normal leading-relaxed">
-                            Delivering modern and comprehensive business solutions across multiple sectors <br className="hidden md:block" />
-                            with proven results and industry-leading expertise.
+                        <p className="text-[#ffffff] max-w-2xl mx-auto text-lg font-normal leading-relaxed flex flex-col items-center">
+                            <span className="whitespace-nowrap">Delivering modern and comprehensive business solutions across multiple sectors</span>
+                            <span className="whitespace-nowrap">with proven results and industry-leading expertise.</span>
                         </p>
                     </motion.div>
                 </div>
