@@ -1,151 +1,197 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { EmailLink } from "@/components/EmailLink";
 
-export default function PrivacyPage() {
+export default function PrivacyPolicyPage() {
   return (
-    <main className="min-h-screen bg-black">
-      <section className="relative py-24 overflow-hidden">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-5xl sm:text-6xl font-bold font-display leading-tight mb-6 text-center">
-              Privacy <span className="text-gradient">Policy</span>
-            </h1>
-            <p className="text-white/40 text-center mb-16 font-bold uppercase tracking-widest text-xs">
-              Last updated: January 2025
-            </p>
+    <main className="min-h-screen bg-[#0d0b16] pt-32 pb-24 relative overflow-hidden">
+      {/* Background Texture/Gradient matching the theme */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 left-1/4 w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-[150px]" />
+      </div>
 
-            <div className="glass-card p-10 md:p-16 space-y-12 relative group">
-              <div className="absolute inset-0 bg-linear-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
-              <div className="relative z-10">
-                <section>
-                  <h2 className="text-2xl font-bold mb-6 font-display">1. Introduction</h2>
-                  <p className="text-white/60 leading-relaxed font-medium">
-                    AdmirerX (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.
-                  </p>
-                </section>
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Hero Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-center mb-16"
+        >
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-display text-white tracking-tight mb-6">
+            Privacy Policy
+          </h1>
+          <p className="text-white/70 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed">
+            Your privacy and trust are important to AdmirerX Private Limited.
+          </p>
+        </motion.div>
 
-                <section className="mt-12">
-                  <h2 className="text-2xl font-bold mb-6 font-display">2. Information We Collect</h2>
-                  <p className="text-white/60 leading-relaxed mb-6 font-medium">
-                    We may collect information about you in a variety of ways. The information we may collect on the Site includes:
-                  </p>
-                  <ul className="space-y-4 text-white/60 font-medium">
-                    <li className="flex gap-4">
-                      <span className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
-                      <span><strong className="text-white">Personal Data:</strong> Name, email address, phone number, company name, and other contact information you voluntarily provide.</span>
-                    </li>
-                    <li className="flex gap-4">
-                      <span className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
-                      <span><strong className="text-white">Resume/CV Data:</strong> Employment history, education, skills, and other professional information submitted through our careers portal.</span>
-                    </li>
-                    <li className="flex gap-4">
-                      <span className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
-                      <span><strong className="text-white">Usage Data:</strong> Information about how you use our website, including IP address, browser type, pages visited, and time spent on pages.</span>
-                    </li>
-                    <li className="flex gap-4">
-                      <span className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
-                      <span><strong className="text-white">Communication Data:</strong> Messages, inquiries, and feedback you send to us through our contact forms or email.</span>
-                    </li>
-                  </ul>
-                </section>
+        {/* Premium Glass Container */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          style={{
+            background: "rgba(20,20,25,0.6)",
+            backdropFilter: "blur(12px)",
+            WebkitBackdropFilter: "blur(12px)",
+            borderRadius: "20px",
+            border: "1px solid rgba(255,255,255,0.08)",
+            boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)",
+          }}
+          className="p-8 md:p-12 lg:p-14"
+        >
+          <div className="space-y-12 text-white/80" style={{ lineHeight: 1.8 }}>
+            {/* Section 1 */}
+            <motion.section
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5 }}
+            >
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 font-display tracking-tight">Introduction</h2>
+              <p className="mb-4">
+                At AdmirerX Private Limited, we prioritize the protection of your personal information. This Privacy Policy details the types of information we collect when you use our website and services, and how we safeguard that data. By using our platform, you consent to the data practices described in this document.
+              </p>
+            </motion.section>
 
-                <section className="mt-12">
-                  <h2 className="text-2xl font-bold mb-6 font-display">3. How We Use Your Information</h2>
-                  <p className="text-white/60 leading-relaxed mb-6 font-medium">
-                    We use the information we collect for various purposes, including:
-                  </p>
-                  <ul className="space-y-4 text-white/60 font-medium">
-                    <li className="flex gap-4">
-                      <span className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
-                      <span>To provide, maintain, and improve our services</span>
-                    </li>
-                    <li className="flex gap-4">
-                      <span className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
-                      <span>To process job applications and recruitment activities</span>
-                    </li>
-                    <li className="flex gap-4">
-                      <span className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
-                      <span>To respond to your inquiries and customer service requests</span>
-                    </li>
-                    <li className="flex gap-4">
-                      <span className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
-                      <span>To send you marketing and promotional communications (with your consent)</span>
-                    </li>
-                    <li className="flex gap-4">
-                      <span className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
-                      <span>To analyze website usage and improve user experience</span>
-                    </li>
-                    <li className="flex gap-4">
-                      <span className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 shrink-0" />
-                      <span>To comply with legal obligations and protect our rights</span>
-                    </li>
-                  </ul>
-                </section>
+            {/* Section 2 */}
+            <motion.section
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5 }}
+            >
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 font-display tracking-tight">Information We Collect</h2>
+              <p className="mb-4">
+                The information we collect may include:
+              </p>
+              <ul className="list-disc pl-6 space-y-2 mb-4">
+                <li><strong>Personal Identification Data:</strong> Your name, email address (e.g., when you contact management@admirerx.net), phone number, and company details.</li>
+                <li><strong>Usage Data:</strong> Information on how you interact with our website, such as IP addresses, browser types, and navigation paths.</li>
+                <li><strong>Communication Records:</strong> Messages, queries, or complaints sent to our team.</li>
+              </ul>
+            </motion.section>
 
-                <section className="mt-12">
-                  <h2 className="text-2xl font-bold mb-6 font-display">4. Data Security</h2>
-                  <p className="text-white/60 leading-relaxed font-medium">
-                    We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.
-                  </p>
-                </section>
+            {/* Section 3 */}
+            <motion.section
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5 }}
+            >
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 font-display tracking-tight">How We Use Information</h2>
+              <p className="mb-4">
+                AdmirerX Private Limited uses your submitted data strictly to:
+              </p>
+              <ul className="list-disc pl-6 space-y-2 mb-4">
+                <li>Provide, operate, and maintain our premium BPO and AI services.</li>
+                <li>Enhance, personalize, and expand our offerings based on analytics.</li>
+                <li>Communicate with you regarding updates, support, and administrative matters.</li>
+                <li>Prevent and address technical or security issues.</li>
+              </ul>
+            </motion.section>
 
-                <section className="mt-12">
-                  <h2 className="text-2xl font-bold mb-6 font-display">5. Data Retention</h2>
-                  <p className="text-white/60 leading-relaxed font-medium">
-                    We retain your personal information only for as long as necessary to fulfill the purposes for which it was collected, including to satisfy any legal, accounting, or reporting requirements. The retention period may vary depending on the context of the processing and our legal obligations.
-                  </p>
-                </section>
+            {/* Section 4 */}
+            <motion.section
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5 }}
+            >
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 font-display tracking-tight">Data Protection</h2>
+              <p className="mb-4">
+                We hold ourselves to strict data protection standards. We do not sell, rent, or trade your personal information to outside parties. Your data is only shared with trusted third parties who assist us in operating our website, conducting our business, or servicing you, so long as those parties agree to keep this information confidential.
+              </p>
+            </motion.section>
 
-                <section className="mt-12">
-                  <h2 className="text-2xl font-bold mb-6 font-display">6. Your Rights</h2>
-                  <p className="text-white/60 leading-relaxed mb-6 font-medium">
-                    Depending on your location, you may have certain rights regarding your personal information:
-                  </p>
-                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-white/60 font-medium">
-                    <li className="glass p-4 rounded-2xl border border-white/5">Right to access your personal data</li>
-                    <li className="glass p-4 rounded-2xl border border-white/5">Right to rectify inaccurate data</li>
-                    <li className="glass p-4 rounded-2xl border border-white/5">Right to erasure (&quot;right to be forgotten&quot;)</li>
-                    <li className="glass p-4 rounded-2xl border border-white/5">Right to restrict processing</li>
-                    <li className="glass p-4 rounded-2xl border border-white/5">Right to data portability</li>
-                    <li className="glass p-4 rounded-2xl border border-white/5">Right to withdraw consent</li>
-                  </ul>
-                </section>
+            {/* Section 5 */}
+            <motion.section
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5 }}
+            >
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 font-display tracking-tight">Cookies Policy</h2>
+              <p className="mb-4">
+                Our website uses "cookies" to enhance user experience. A cookie is a small text file placed on your device to gather standard internet log information and visitor behavior information. You can configure your browser to decline cookies, but this may limit your ability to use certain features of our site effectively.
+              </p>
+            </motion.section>
 
-                <section className="mt-12 pt-12 border-t border-white/10">
-                  <h2 className="text-2xl font-bold mb-6 font-display">7. Contact Us</h2>
-                  <p className="text-white/60 leading-relaxed mb-8 font-medium">
-                    If you have any questions about this Privacy Policy or our data practices, please contact us at:
-                  </p>
-                  <div className="glass p-8 rounded-3xl border border-white/10">
-                    <p className="text-xl font-bold mb-4 font-display">AdmirerX</p>
-                    <div className="space-y-2 text-white/50 font-medium">
-                      <div className="flex gap-2">
-                        <span>Email:</span>
-                        <EmailLink encodedUser="bWFuYWdlbWVudA==" encodedDomain="YWRtaXJlcngubmV0" />
-                      </div>
-                      <p>Phone: +91 88269 36399</p>
-                      <p>Address: Plot No - 761, Noida Sector 21, India</p>
-                    </div>
+            {/* Section 6 */}
+            <motion.section
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5 }}
+            >
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 font-display tracking-tight">Third-Party Services</h2>
+              <p className="mb-4">
+                Occasionally, at our discretion, we may include or offer third-party products or services on our website. These third-party sites have separate and independent privacy policies. We, therefore, have no responsibility or liability for the content and activities of these linked sites. Let it be known, nonetheless, that we seek to protect the integrity of our site and welcome any feedback about these external links.
+              </p>
+            </motion.section>
+
+            {/* Section 7 */}
+            <motion.section
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5 }}
+            >
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 font-display tracking-tight">Data Security</h2>
+              <p className="mb-4">
+                AdmirerX Private Limited employs state-of-the-art enterprise-grade security measures to safeguard against unauthorized access, alteration, disclosure, or destruction of your personal processing data. Security is paramount to the services we provide across the globe.
+              </p>
+            </motion.section>
+
+            {/* Section 8 */}
+            <motion.section
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5 }}
+            >
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 font-display tracking-tight">Your Rights</h2>
+              <p className="mb-4">
+                Depending on your regional jurisdiction, you may possess specific rights related to your personal data, including the right to request access, correction, or deletion of your information. Contact our administration if you wish to exercise these rights.
+              </p>
+            </motion.section>
+
+            {/* Section 9 */}
+            <motion.section
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5 }}
+              className="pt-8 border-t border-white/10 mt-12"
+            >
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 font-display tracking-tight">Contact Information</h2>
+              <p className="mb-6">
+                If you have any questions regarding this Privacy Policy, please get in touch with us at:
+              </p>
+              <div className="bg-black/30 p-6 rounded-xl border border-white/5">
+                <p className="font-bold text-white mb-2 text-xl">AdmirerX Private Limited</p>
+                <div className="flex flex-col gap-2">
+                  <div className="flex gap-2 items-center">
+                    <span className="text-white/60">Email:</span>
+                    <EmailLink encodedUser="bWFuYWdlbWVudA==" encodedDomain="YWRtaXJlcngubmV0" className="text-purple-400 hover:text-purple-300 transition-colors" />
                   </div>
-                </section>
+                </div>
               </div>
-            </div>
+            </motion.section>
+          </div>
+        </motion.div>
 
-            <div className="text-center mt-12">
-              <Link href="/" className="inline-flex items-center gap-2 text-white/40 hover:text-white transition-colors font-bold uppercase tracking-widest text-[10px]">
-                <span>←</span> Back to Home
-              </Link>
-            </div>
-          </motion.div>
+        <div className="text-center mt-12 mb-8">
+          <Link href="/" className="inline-flex items-center gap-2 text-white/50 hover:text-white transition-colors font-bold uppercase tracking-widest text-xs">
+            <span>←</span> Return to Home
+          </Link>
         </div>
-      </section>
+      </div>
     </main>
   );
 }
