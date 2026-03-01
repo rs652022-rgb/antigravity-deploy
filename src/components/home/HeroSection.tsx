@@ -60,6 +60,19 @@ export default function HeroSection() {
                             </Link>
                         </Button>
                     </div>
+
+                    <div className="mt-16 flex flex-col items-center animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300 fill-mode-both">
+                        <p className="text-white/40 text-xs font-bold uppercase tracking-[0.2em] mb-4">Company Pages</p>
+                        <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-3">
+                            <Link href="/elevate-your-operations" className="text-white/70 hover:text-white hover:text-shadow-sm transition-all text-sm font-medium tracking-wide">BPO Services</Link>
+                            <span className="text-white/20 text-xs hidden sm:inline">•</span>
+                            <Link href="/about" className="text-white/70 hover:text-white hover:text-shadow-sm transition-all text-sm font-medium tracking-wide">About Us</Link>
+                            <span className="text-white/20 text-xs hidden sm:inline">•</span>
+                            <Link href="/contact-us" className="text-white/70 hover:text-white hover:text-shadow-sm transition-all text-sm font-medium tracking-wide">Contact Us</Link>
+                            <span className="text-white/20 text-xs hidden sm:inline">•</span>
+                            <Link href="/careers" className="text-white/70 hover:text-white hover:text-shadow-sm transition-all text-sm font-medium tracking-wide">Careers</Link>
+                        </div>
+                    </div>
                 </motion.div>
             </div>
         </section>

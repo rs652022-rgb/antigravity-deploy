@@ -7,18 +7,23 @@
 </url>
 
 <url>
+<loc>https://admirerx.net/elevate-your-operations</loc>
+<priority>0.9</priority>
+</url>
+
+<url>
 <loc>https://admirerx.net/about</loc>
-<priority>0.8</priority>
+<priority>0.9</priority>
 </url>
 
 <url>
-<loc>https://admirerx.net/services</loc>
-<priority>0.8</priority>
+<loc>https://admirerx.net/contact-us</loc>
+<priority>0.9</priority>
 </url>
 
 <url>
-<loc>https://admirerx.net/contact</loc>
-<priority>0.7</priority>
+<loc>https://admirerx.net/careers</loc>
+<priority>0.9</priority>
 </url>
 
 </urlset>

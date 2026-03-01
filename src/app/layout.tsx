@@ -38,6 +38,13 @@ export const metadata: Metadata = {
   title: "AdmirerX | BPO & AI Services in India",
   description:
     "AdmirerX provides modern BPO and AI-powered business solutions in India including lead generation, telesales and outsourcing services.",
+  alternates: {
+    canonical: 'https://admirerx.net/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 
   keywords: [
     "BPO services",
@@ -130,6 +137,28 @@ export default function RootLayout({
               "name": "AdmirerX",
               "url": "https://admirerx.net",
               "description": "AdmirerX provides BPO and AI services in India including lead generation and telesales solutions."
+            })
+          }}
+        />
+        {/* Sitelinks Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SiteNavigationElement",
+              "name": [
+                "BPO Services",
+                "About Us",
+                "Contact Us",
+                "Careers"
+              ],
+              "url": [
+                "https://admirerx.net/elevate-your-operations",
+                "https://admirerx.net/about",
+                "https://admirerx.net/contact-us",
+                "https://admirerx.net/careers"
+              ]
             })
           }}
         />

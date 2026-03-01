@@ -68,6 +68,18 @@ const nextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return [
+      {
+        source: '/contact-us',
+        destination: '/contact',
+      },
+      {
+        source: '/elevate-your-operations',
+        destination: '/services',
+      },
+    ];
+  },
   experimental: {
     optimizePackageImports: [
       "lucide-react",
