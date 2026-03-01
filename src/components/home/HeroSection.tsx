@@ -9,18 +9,18 @@ import UnicornHero from "@/components/home/UnicornHero";
 
 export default function HeroSection() {
     return (
-        <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <section className="relative min-h-[500px] sm:min-h-[600px] lg:min-h-[750px] h-screen flex items-center justify-center overflow-hidden pt-[60px] md:pt-[80px] lg:pt-[100px]">
             {/* Background Elements - Unicorn Studio Animation */}
             <UnicornHero />
 
-            <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center pt-44 pb-32 translate-y-10">
+            <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center pb-12 sm:pb-24 lg:pb-32 flex flex-col justify-center translate-y-0 lg:translate-y-10">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, ease: "easeOut" }}
-                    className="flex flex-col items-center"
+                    className="flex flex-col items-center mt-8 sm:mt-12 lg:mt-0"
                 >
-                    <h1 className="font-[family-name:var(--font-inter)] font-bold tracking-[-0.02em] mb-20 text-center text-white w-full mx-auto">
+                    <h1 className="font-[family-name:var(--font-inter)] font-bold tracking-[-0.02em] mb-6 lg:mb-8 text-center text-white w-full mx-auto">
                         <span className="block text-6xl sm:text-8xl md:text-9xl lg:text-[120px] leading-[1.05]">
                             We Admire
                         </span>
@@ -29,7 +29,7 @@ export default function HeroSection() {
                         </span>
                     </h1>
 
-                    <p className="text-lg md:text-xl text-[#ffffff] max-w-[800px] mx-auto mb-20 font-normal leading-relaxed tracking-wide text-center">
+                    <p className="text-lg md:text-xl text-[#ffffff] max-w-[800px] mx-auto mb-8 sm:mb-9 font-normal leading-relaxed tracking-wide text-center">
                         Leading BPO services in India with trusted outsourcing and modern digital solutions.
                         We provide comprehensive services to simplify business challenges and drive growth.
                     </p>
@@ -61,7 +61,7 @@ export default function HeroSection() {
                         </Button>
                     </div>
 
-                    <div className="mt-16 flex flex-col items-center animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300 fill-mode-both">
+                    <div className="mt-12 sm:mt-16 flex flex-col items-center animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300 fill-mode-both">
                         <p className="text-white/40 text-xs font-bold uppercase tracking-[0.2em] mb-4">Company Pages</p>
                         <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-3">
                             <Link href="/elevate-your-operations" className="text-white/70 hover:text-white hover:text-shadow-sm transition-all text-sm font-medium tracking-wide">BPO Services</Link>
