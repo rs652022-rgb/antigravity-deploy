@@ -13,7 +13,7 @@ export default function HeroSection() {
             {/* Background Elements - Unicorn Studio Animation */}
             <UnicornHero />
 
-            <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center pb-12 sm:pb-24 lg:pb-32 flex flex-col justify-center translate-y-0 lg:translate-y-10">
+            <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col justify-center">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -59,19 +59,6 @@ export default function HeroSection() {
                                 Learn More
                             </Link>
                         </Button>
-                    </div>
-
-                    <div className="mt-12 sm:mt-16 flex flex-col items-center animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300 fill-mode-both">
-                        <p className="text-white/40 text-xs font-bold uppercase tracking-[0.2em] mb-4">Company Pages</p>
-                        <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-3">
-                            <Link href="/elevate-your-operations" className="text-white/70 hover:text-white hover:text-shadow-sm transition-all text-sm font-medium tracking-wide">BPO Services</Link>
-                            <span className="text-white/20 text-xs hidden sm:inline">•</span>
-                            <Link href="/about" className="text-white/70 hover:text-white hover:text-shadow-sm transition-all text-sm font-medium tracking-wide">About Us</Link>
-                            <span className="text-white/20 text-xs hidden sm:inline">•</span>
-                            <Link href="/contact-us" className="text-white/70 hover:text-white hover:text-shadow-sm transition-all text-sm font-medium tracking-wide">Contact Us</Link>
-                            <span className="text-white/20 text-xs hidden sm:inline">•</span>
-                            <Link href="/careers" className="text-white/70 hover:text-white hover:text-shadow-sm transition-all text-sm font-medium tracking-wide">Careers</Link>
-                        </div>
                     </div>
                 </motion.div>
             </div>
