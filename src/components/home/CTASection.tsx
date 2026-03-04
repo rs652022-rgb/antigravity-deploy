@@ -47,7 +47,7 @@ export default function CTASection() {
                                 className="rounded-full bg-white text-black hover:bg-gray-100 px-8 h-12 font-bold text-[15px] transition-transform hover:scale-105 shadow-[0_0_20px_-5px_rgba(255,255,255,0.3)]"
                             >
                                 <Link href="/contact" className="flex items-center gap-2">
-                                    Get Started Today <ArrowRight className="w-4 h-4" />
+                                    Contact Us <ArrowRight className="w-4 h-4" />
                                 </Link>
                             </Button>
                             <Button

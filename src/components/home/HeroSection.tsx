@@ -40,14 +40,12 @@ export default function HeroSection() {
                             size="lg"
                             className="rounded-full bg-white text-black hover:bg-gray-200 px-10 h-14 font-bold text-[16px] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.4)]"
                         >
-                            <a
-                                href="https://wa.me/918826936399?text=Hi,%20I'm%20interested%20in%20finding%20out%20more%20about%20your%20services."
-                                target="_blank"
-                                rel="noopener noreferrer"
+                            <Link
+                                href="/careers"
                                 className="flex items-center gap-2"
                             >
-                                Speak With An Expert <ArrowRight className="w-5 h-5" />
-                            </a>
+                                Explore Careers at AdmirerX <ArrowRight className="w-5 h-5" />
+                            </Link>
                         </Button>
                         <Button
                             asChild
@@ -55,8 +53,8 @@ export default function HeroSection() {
                             variant="outline"
                             className="rounded-full border-white/20 bg-white/5 text-white hover:bg-white/10 px-12 h-14 font-bold text-[16px] backdrop-blur-md transition-all duration-300 hover:scale-105"
                         >
-                            <Link href="/services">
-                                Learn More
+                            <Link href="/about">
+                                Learn More About AdmirerX
                             </Link>
                         </Button>
                     </div>
