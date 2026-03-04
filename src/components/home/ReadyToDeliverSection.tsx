@@ -10,7 +10,7 @@ export default function ReadyToDeliverSection() {
             {/* Background Image Layer */}
             <div className="absolute inset-0 z-0 pointer-events-none">
                 <Image
-                    src="/images/ready-bg-v3.jpg"
+                    src="/images/ready-bg.jpg"
                     alt="Ready Background"
                     fill
                     className="object-cover opacity-60 mix-blend-screen blur-[5px] scale-105"

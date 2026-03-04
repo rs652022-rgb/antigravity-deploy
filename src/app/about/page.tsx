@@ -319,7 +319,7 @@ export default function AboutPage() {
       <section className="relative py-40 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/partner-bg.jpg"
+            src="/images/partnership-benefits-bg.jpg"
             alt="Partner Background"
             fill
             className="object-cover opacity-20 scale-110"

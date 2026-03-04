@@ -74,7 +74,7 @@ export default function ApproachSection() {
                         </div>
                         <div className="relative h-72 w-full mt-auto overflow-hidden">
                             <Image
-                                src="/images/pexels-michelangelo-buonarroti-8728380.jpg"
+                                src="/images/pexels-agk42-2599244.jpg"
                                 alt="Smarter Technology"
                                 fill
                                 className="object-cover group-hover:scale-[1.03] transition-transform duration-700 opacity-90 group-hover:opacity-100"
@@ -105,7 +105,7 @@ export default function ApproachSection() {
                         </div>
                         <div className="relative h-72 w-full mt-auto overflow-hidden">
                             <Image
-                                src="/images/pexels-cottonbro-5473960.jpg"
+                                src="/images/pexels-cottonbro-3825307.jpg"
                                 alt="Safer Operations"
                                 fill
                                 className="object-cover group-hover:scale-[1.03] transition-transform duration-700 opacity-90 group-hover:opacity-100"

@@ -291,7 +291,7 @@ export default function PartnerPage() {
         {/* Optimized Background Image */}
         <div className="absolute inset-0 z-0 opacity-30 pointer-events-none">
           <Image
-            src="/images/partnership-bg-premium-v2.jpg"
+            src="/images/partnership-benefits-bg.jpg"
             alt="Abstract Partner Background"
             fill
             className="object-cover section-bg-animate"

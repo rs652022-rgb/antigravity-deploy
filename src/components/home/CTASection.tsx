@@ -12,7 +12,7 @@ export default function CTASection() {
             {/* Full Section Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/images/cta-blackhole-bg.png"
+                    src="/images/hero-bg-glow.png"
                     alt="CTA Background"
                     fill
                     className="object-cover blur-[8px]"
