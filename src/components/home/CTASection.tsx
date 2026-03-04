@@ -31,12 +31,13 @@ export default function CTASection() {
                     <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-transparent pointer-events-none" />
 
                     <div className="relative z-10 max-w-4xl mx-auto">
-                        <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-display mb-8 leading-[1.2] tracking-tight text-white drop-shadow-2xl max-w-3xl mx-auto">
+                        <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-display mb-8 leading-[1.1] tracking-tight text-white drop-shadow-2xl">
                             Together, we&apos;ll solve <br />
-                            <span className="text-white font-semibold">tomorrow&apos;s</span> challenges <span className="text-white font-semibold">today</span>
+                            <span className="text-white/40">tomorrow&apos;s</span> <br />
+                            challenges <span className="text-white/40">today</span>
                         </h2>
 
-                        <p className="text-[#ffffff] text-lg mb-12 font-normal max-w-xl mx-auto text-shadow-sm">
+                        <p className="text-white/60 text-lg mb-12 font-normal max-w-xl mx-auto text-shadow-sm">
                             Let&apos;s discuss how AdmirerX can transform your business operations and customer experience.
                         </p>
 
