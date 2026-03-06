@@ -6,14 +6,8 @@ import { Metadata } from "next";
 import dynamic from "next/dynamic";
 import Script from "next/script";
 
-const GlobalBackground = dynamic(
-  () => import("@/components/GlobalBackground").then((mod) => mod.GlobalBackground),
-  { ssr: false }
-);
-
-const WhatsAppButton = dynamic(() => import("@/components/WhatsAppButton"), {
-  ssr: false,
-});
+import { GlobalBackground } from "@/components/GlobalBackground";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const fontSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -128,7 +122,8 @@ export default function RootLayout({
           `}
         </Script>
         {/* Structured Data */}
-        <script
+        <Script
+          id="structured-data-organization"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -141,7 +136,8 @@ export default function RootLayout({
           }}
         />
         {/* Sitelinks Structured Data */}
-        <script
+        <Script
+          id="structured-data-sitelinks"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({

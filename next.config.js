@@ -5,6 +5,7 @@ const nextConfig = {
   swcMinify: true,
   compress: true,
   poweredByHeader: false,
+  optimizeFonts: false,
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
   },

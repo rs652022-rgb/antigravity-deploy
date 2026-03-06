@@ -10,52 +10,60 @@ export default function CTASection() {
     return (
         <section className="py-24 relative overflow-hidden">
             {/* Full Section Background Image */}
-            <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 z-0 bg-[#050505]">
                 <Image
-                    src="/images/hero-bg-glow.png"
+                    src="/images/cta-bg-new.jpg"
                     alt="CTA Background"
                     fill
-                    className="object-cover blur-[8px]"
+                    className="object-cover object-center"
                     sizes="100vw"
                     quality={70}
                 />
-                {/* Subtle overlay to ensure text readability if needed, but keeping it minimal for richness */}
-                <div className="absolute inset-0 bg-black/10 mix-blend-overlay" />
+
+                {/* Subtle overlay to ensure text readability bringing in a slightly darker tone */}
+                <div className="absolute inset-0 bg-black/50 mix-blend-overlay" />
+                <div className="absolute inset-0 bg-black/40" />
+
+                {/* Top Fade (Merging effect with preceding section) */}
+                <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#050505] to-transparent z-10" />
+
+                {/* Bottom Fade (Merging effect with Footer/succeeding section) */}
+                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#050505] to-transparent z-10" />
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                {/* Glass Card - Made transparent to let the background shine through (Mirror Effect) */}
-                <div className="relative rounded-[2.5rem] overflow-hidden bg-white/[0.01] border border-white/[0.05] p-16 md:p-24 text-center backdrop-blur-[10px] group hover:border-white/[0.1] transition-colors duration-500">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+                {/* Premium Glass Card - Matching global theme border, blur and shadow */}
+                <div className="relative rounded-[2.5rem] p-10 md:p-14 overflow-hidden border border-white/[0.12] bg-white/[0.01] backdrop-blur-[12px] shadow-2xl group hover:border-white/[0.2] transition-all duration-500 text-center">
 
                     {/* Inner Glows/Reflections */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-transparent pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/[0.05] via-transparent to-transparent pointer-events-none" />
 
                     <div className="relative z-10 max-w-4xl mx-auto">
                         <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-display mb-8 leading-[1.1] tracking-tight text-white drop-shadow-2xl">
                             Together, we&apos;ll solve <br />
-                            <span className="text-white/40">tomorrow&apos;s</span> <br />
-                            challenges <span className="text-white/40">today</span>
+                            <span className="text-[#ffffff]">tomorrow&apos;s</span> <br />
+                            challenges <span className="text-[#ffffff]">today</span>
                         </h2>
 
-                        <p className="text-white/60 text-lg mb-12 font-normal max-w-xl mx-auto text-shadow-sm">
+                        <p className="text-[#ffffff] text-[16px] leading-relaxed mb-12 font-medium max-w-xl mx-auto text-shadow-sm">
                             Let&apos;s discuss how AdmirerX can transform your business operations and customer experience.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                             <Button
                                 asChild
                                 size="lg"
-                                className="rounded-full bg-white text-black hover:bg-gray-100 px-8 h-12 font-bold text-[15px] transition-transform hover:scale-105 shadow-[0_0_20px_-5px_rgba(255,255,255,0.3)]"
+                                className="rounded-full bg-white text-black hover:bg-gray-200 px-10 h-14 font-bold text-[16px] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.4)]"
                             >
                                 <Link href="/contact" className="flex items-center gap-2">
-                                    Contact Us <ArrowRight className="w-4 h-4" />
+                                    Contact Us <ArrowRight className="w-5 h-5" />
                                 </Link>
                             </Button>
                             <Button
                                 asChild
                                 size="lg"
                                 variant="outline"
-                                className="rounded-full border-white/10 bg-white/[0.03] text-white hover:bg-white/[0.08] px-8 h-12 font-bold text-[15px] backdrop-blur-md transition-transform hover:scale-105"
+                                className="rounded-full border-white/20 bg-white/5 text-white hover:bg-white/10 px-12 h-14 font-bold text-[16px] backdrop-blur-md transition-all duration-300 hover:scale-105"
                             >
                                 <Link href="/contact">
                                     Partner With Us
