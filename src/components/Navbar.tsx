@@ -125,7 +125,7 @@ export function Navbar() {
                         "flex items-center gap-1 px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full relative outline-none",
                         isActive
                           ? "text-white bg-white/10"
-                          : "text-white/60 hover:text-white hover:bg-white/5 py-4"
+                          : "text-white hover:text-white hover:bg-white/5 py-4"
                       )}
                     >
                       {link.label}
@@ -154,7 +154,7 @@ export function Navbar() {
                                   <li key={itemIdx}>
                                     <Link
                                       href={item.href}
-                                      className="text-white/90 hover:text-white text-sm transition-colors duration-200 block py-1.5"
+                                      className="text-white hover:text-white text-sm transition-colors duration-200 block py-1.5"
                                       onClick={() => setIsServicesHovered(false)}
                                     >
                                       {item.name}
@@ -179,7 +179,7 @@ export function Navbar() {
                     "px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full relative",
                     isActive
                       ? "text-white bg-white/10"
-                      : "text-white/60 hover:text-white hover:bg-white/5"
+                      : "text-white hover:text-white hover:bg-white/5"
                   )}
                 >
                   {link.label}
@@ -246,7 +246,7 @@ export function Navbar() {
                             "mobile-nav-link flex items-center justify-between w-full",
                             isActive || isMobileServicesOpen
                               ? "text-white bg-white/10"
-                              : "text-white/70 hover:text-white"
+                              : "text-white hover:text-white"
                           )}
                         >
                           {link.label}
@@ -269,7 +269,7 @@ export function Navbar() {
                               <div className="px-4 py-3 pb-5">
                                 {services.map((section, idx) => (
                                   <div key={idx} className="first:mt-0 mt-5">
-                                    <h4 className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/30 pl-3 mb-2">
+                                    <h4 className="text-[10px] uppercase tracking-[0.2em] font-bold text-white pl-3 mb-2">
                                       {section.category}
                                     </h4>
                                     <ul className="space-y-0.5">
@@ -277,7 +277,7 @@ export function Navbar() {
                                         <li key={itemIdx}>
                                           <Link
                                             href={item.href}
-                                            className="flex items-center gap-3 py-2.5 px-3 rounded-lg active:bg-white/5 text-white/70 hover:text-white transition-colors duration-200"
+                                            className="flex items-center gap-3 py-2.5 px-3 rounded-lg active:bg-white/5 text-white hover:text-white transition-colors duration-200"
                                             onClick={() => setIsOpen(false)}
                                           >
                                             <span className="w-1 h-1 rounded-full bg-indigo-500/80" />
@@ -304,7 +304,7 @@ export function Navbar() {
                         "mobile-nav-link",
                         isActive
                           ? "text-white bg-white/10"
-                          : "text-white/70 hover:text-white"
+                          : "text-white hover:text-white"
                       )}
                       onClick={() => setIsOpen(false)}
                     >

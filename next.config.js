@@ -5,7 +5,7 @@ const nextConfig = {
   swcMinify: true,
   compress: true,
   poweredByHeader: false,
-  optimizeFonts: false,
+  optimizeFonts: true,
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
   },
@@ -84,13 +84,11 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: [
       "lucide-react",
-      "date-fns",
       "framer-motion",
       "@radix-ui/react-dropdown-menu",
       "@radix-ui/react-select",
       "@radix-ui/react-slot",
-      "lodash",
-      "@tabler/icons-react",
+      "lodash"
     ],
   },
 };
