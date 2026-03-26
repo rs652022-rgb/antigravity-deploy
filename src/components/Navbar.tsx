@@ -101,16 +101,8 @@ export function Navbar() {
         )}
       >
         <div className="flex items-center justify-between h-14">
-          <Link href="/" className="flex items-center gap-3 group">
-            <Image 
-              src="/logo.png" 
-              alt="AdmirerX" 
-              width={38} 
-              height={38} 
-              className="object-contain transition-transform duration-500 group-hover:scale-105" 
-              priority
-            />
-            <span className="text-xl sm:text-2xl font-bold font-display tracking-tight text-white hidden sm:block">
+          <Link href="/" className="flex items-center gap-2 group">
+            <span className="text-xl sm:text-2xl font-bold font-display tracking-tight text-white">
               Admirer<span className="text-white/40 group-hover:text-white transition-colors duration-500">X</span>
             </span>
           </Link>
