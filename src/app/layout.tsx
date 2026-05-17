@@ -101,6 +101,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Favicon Meta Tags */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        
         {/* Connection hints */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
