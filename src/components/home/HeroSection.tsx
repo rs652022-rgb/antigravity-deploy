@@ -5,13 +5,23 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import UnicornHero from "@/components/home/UnicornHero";
+import FloatingLines from "@/app/FloatingLines";
 
 export default function HeroSection() {
     return (
         <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-            {/* Background Elements - Unicorn Studio Animation */}
-            <UnicornHero />
+            {/* Background Elements - Floating Lines Animation */}
+            <div className="absolute inset-0 z-0">
+                <FloatingLines 
+                    enabledWaves={['top', 'middle', 'bottom']}
+                    lineCount={[10, 15, 20]}
+                    lineDistance={[8, 6, 4]}
+                    bendRadius={5.0}
+                    bendStrength={-0.5}
+                    interactive={true}
+                    parallax={true}
+                />
+            </div>
 
             <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center pt-44 pb-32">
                 <motion.div
