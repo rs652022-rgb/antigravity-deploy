@@ -5,21 +5,21 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import FloatingLines from "@/app/FloatingLines";
+import dynamic from "next/dynamic";
+
+const Silk = dynamic(() => import("@/app/Silk"), { ssr: false });
 
 export default function HeroSection() {
     return (
         <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-            {/* Background Elements - Floating Lines Animation */}
+            {/* Background Elements - Silk Animation */}
             <div className="absolute inset-0 z-0">
-                <FloatingLines 
-                    enabledWaves={['top', 'middle', 'bottom']}
-                    lineCount={[10, 15, 20]}
-                    lineDistance={[8, 6, 4]}
-                    bendRadius={5.0}
-                    bendStrength={-0.5}
-                    interactive={true}
-                    parallax={true}
+                <Silk 
+                    speed={5}
+                    scale={1}
+                    color="#7B7481"
+                    noiseIntensity={1.5}
+                    rotation={0}
                 />
             </div>
 
