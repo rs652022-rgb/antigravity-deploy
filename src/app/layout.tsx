@@ -141,7 +141,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${fontSans.variable} ${fontDisplay.variable} ${fontInter.variable} bg-[var(--surface-canvas)] text-[var(--color-ink)] antialiased selection:bg-blue-500/10 selection:text-blue-600`}>
+      <body className={`${fontSans.variable} ${fontDisplay.variable} ${fontInter.variable} bg-black text-white antialiased selection:bg-indigo-500/30 selection:text-indigo-200`}>
         {/* Global Ambient Background */}
         {/* Global Ambient Background */}
         <GlobalBackground />

@@ -86,17 +86,6 @@ export function Navbar() {
     };
   }, [isOpen]);
 
-  const isHome = pathname === "/";
-  const activeLinks = isHome
-    ? [
-        { href: "#home", label: "Home" },
-        { href: "#about", label: "About Us" },
-        { href: "#practices", label: "Practices" },
-        { href: "#testimonials", label: "Testimonials" },
-        { href: "#faq", label: "FAQ" }
-      ]
-    : navLinks;
-
   return (
     <header
       className={cn(
@@ -112,26 +101,20 @@ export function Navbar() {
         )}
       >
         <div className="flex items-center justify-between h-14">
-          <div className="flex items-center gap-6">
-            <Link href="/" className="flex items-center gap-2 group">
-              <span className="text-xl sm:text-2xl font-bold font-display tracking-tight text-white">
-                Admirer<span className="text-white/40 group-hover:text-white transition-colors duration-500">X</span>
-              </span>
-            </Link>
-            {isHome && (
-              <span className="hidden md:inline text-[11px] text-white/50 font-light border-l border-white/10 pl-6">
-                Download our special daily meditation app
-              </span>
-            )}
-          </div>
- 
+          <Link href="/" className="flex items-center gap-2 group">
+            <span className="text-xl sm:text-2xl font-bold font-display tracking-tight text-white">
+              Admirer<span className="text-white/40 group-hover:text-white transition-colors duration-500">X</span>
+            </span>
+          </Link>
+
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-2">
-            {activeLinks.map((link) => {
+            {navLinks.map((link) => {
               const isActive = pathname === link.href;
- 
-              if (!isHome && link.label === "Our Services") {
+
+              if (link.label === "Our Services") {
                 return (
+
                   <div
                     key={link.href}
                     className="relative"
@@ -149,7 +132,7 @@ export function Navbar() {
                       {link.label}
                       <ChevronDown className={cn("w-4 h-4 transition-transform duration-300", isServicesHovered ? "rotate-180" : "")} />
                     </button>
- 
+
                     {/* Dropdown Menu */}
                     <div
                       className={cn(
@@ -188,7 +171,7 @@ export function Navbar() {
                   </div>
                 );
               }
- 
+
               return (
                 <Link
                   key={link.href}
@@ -212,31 +195,24 @@ export function Navbar() {
               );
             })}
           </div>
- 
+
           <div className="hidden lg:flex items-center">
             <Button
               asChild
               className="bg-white hover:bg-white/90 text-black font-bold rounded-full px-6 h-10 text-sm transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_25px_rgba(255,255,255,0.5)]"
             >
-              {isHome ? (
-                <a href="#contact" className="flex items-center gap-2">
-                  Get started now
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              ) : (
-                <a
-                  href="https://wa.me/918826936399?text=Hi%2C%20I%27m%20interested%20in%20finding%20out%20more%20about%20your%20services."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2"
-                >
-                  Book Appointment
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              )}
+              <a
+                href="https://wa.me/918826936399?text=Hi%2C%20I%27m%20interested%20in%20finding%20out%20more%20about%20your%20services."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
+                Book Appointment
+                <ArrowRight className="w-4 h-4" />
+              </a>
             </Button>
           </div>
- 
+
           {/* Mobile Menu Button */}
           <button
             className="lg:hidden w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 text-white"
@@ -247,7 +223,7 @@ export function Navbar() {
           </button>
         </div>
       </nav>
- 
+
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -259,10 +235,10 @@ export function Navbar() {
           >
             <div className="mobile-menu-panel rounded-[2.5rem] overflow-hidden">
               <div className="flex flex-col py-4">
-                {activeLinks.map((link) => {
+                {navLinks.map((link) => {
                   const isActive = pathname === link.href;
- 
-                  if (!isHome && link.label === "Our Services") {
+
+                  if (link.label === "Our Services") {
                     return (
                       <div key={link.href} className="flex flex-col">
                         <button
@@ -282,7 +258,7 @@ export function Navbar() {
                             )}
                           />
                         </button>
- 
+
                         <AnimatePresence>
                           {isMobileServicesOpen && (
                             <motion.div
@@ -320,7 +296,7 @@ export function Navbar() {
                       </div>
                     );
                   }
- 
+
                   return (
                     <Link
                       key={link.href}
@@ -338,33 +314,22 @@ export function Navbar() {
                   );
                 })}
               </div>
- 
+
               <div className="p-6 pt-2 pb-8">
                 <Button
                   asChild
                   className="w-full bg-white hover:bg-white/90 text-black font-bold rounded-2xl h-14 text-base shadow-xl"
                 >
-                  {isHome ? (
-                    <a
-                      href="#contact"
-                      onClick={() => setIsOpen(false)}
-                      className="flex items-center justify-center gap-2"
-                    >
-                      Get started now
-                      <ArrowRight className="w-5 h-5" />
-                    </a>
-                  ) : (
-                    <a
-                      href="https://wa.me/918826936399?text=Hi%2C%20I%27m%20interested%20in%20finding%20out%20more%20about%20your%20services."
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={() => setIsOpen(false)}
-                      className="flex items-center justify-center gap-2"
-                    >
-                      Book Appointment
-                      <ArrowRight className="w-5 h-5" />
-                    </a>
-                  )}
+                  <a
+                    href="https://wa.me/918826936399?text=Hi%2C%20I%27m%20interested%20in%20finding%20out%20more%20about%20your%20services."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsOpen(false)}
+                    className="flex items-center justify-center gap-2"
+                  >
+                    Book Appointment
+                    <ArrowRight className="w-5 h-5" />
+                  </a>
                 </Button>
               </div>
             </div>
