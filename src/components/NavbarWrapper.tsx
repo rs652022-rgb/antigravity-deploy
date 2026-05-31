@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 
 const Navbar = dynamic(() => import("./Navbar").then((mod) => mod.Navbar), {
-  ssr: true,
+  ssr: false,
 });
 
 export function NavbarWrapper() {

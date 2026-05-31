@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 
 const Footer = dynamic(() => import("./Footer").then((mod) => mod.Footer), {
-  ssr: true,
+  ssr: false,
 });
 
 export function FooterWrapper() {
