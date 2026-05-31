@@ -2,8 +2,11 @@
 
 /* eslint-disable react/no-unknown-property */
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import React, { forwardRef, useRef, useMemo, useLayoutEffect } from 'react';
+import React, { forwardRef, useRef, useMemo, useLayoutEffect, useEffect, useState } from 'react';
 import { Color } from 'three';
+
+// Safe Layout Effect for SSR environments like Next.js
+const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
 const hexToNormalizedRGB = (hex: string): [number, number, number] => {
   hex = hex.replace('#', '');
@@ -85,7 +88,7 @@ interface SilkPlaneProps {
 const SilkPlane = forwardRef<any, SilkPlaneProps>(function SilkPlane({ uniforms }, ref: any) {
   const { viewport } = useThree();
 
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     if (ref.current) {
       ref.current.scale.set(viewport.width, viewport.height, 1);
     }
@@ -116,6 +119,11 @@ interface SilkProps {
 
 const Silk = ({ speed = 5, scale = 1, color = '#7B7481', noiseIntensity = 1.5, rotation = 0 }: SilkProps) => {
   const meshRef = useRef<any>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const uniforms = useMemo(
     () => ({
@@ -128,6 +136,11 @@ const Silk = ({ speed = 5, scale = 1, color = '#7B7481', noiseIntensity = 1.5, r
     }),
     [speed, scale, noiseIntensity, color, rotation]
   );
+
+  // Return a transparent fallback during Server-Side Rendering (hydration guard)
+  if (!mounted) {
+    return <div className="absolute inset-0 bg-transparent" />;
+  }
 
   return (
     <Canvas dpr={[1, 2]} frameloop="always">
