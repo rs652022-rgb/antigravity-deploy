@@ -24,6 +24,7 @@
         "@radix-ui/react-tabs": "^1.1.12",
         "@tabler/icons-react": "^3.35.0",
         "@tailwindcss/typography": "^0.5.19",
+        "@types/three": "^0.184.1",
         "class-variance-authority": "^0.7.1",
         "clsx": "^2.1.1",
         "date-fns": "^4.1.0",
@@ -45,6 +46,7 @@
         "sonner": "^2.0.6",
         "tailwind-merge": "^3.3.1",
         "tailwindcss-animate": "^1.0.7",
+        "three": "^0.184.0",
         "vercel": "^50.5.0",
         "zod": "^4.1.12"
     },
