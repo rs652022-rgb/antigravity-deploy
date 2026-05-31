@@ -442,6 +442,27 @@ p, body {
   will-change: transform, box-shadow;
 }
 
+@keyframes float-cinematic {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -8px, 0);
+  }
+}
+
+.glass-card {
+  animation: float-cinematic 9s ease-in-out infinite;
+}
+
+.solution-card {
+  animation: float-cinematic 12s ease-in-out infinite;
+}
+
+.industry-card {
+  animation: float-cinematic 15s ease-in-out infinite;
+}
+
 .glass-card:hover,
 .solution-card:hover,
 .industry-card:hover {
@@ -452,6 +473,7 @@ p, body {
     0 30px 60px rgba(0, 0, 0, 0.55),
     0 0 25px rgba(255, 255, 255, 0.05),
     inset 0 1px 1px 0 rgba(255, 255, 255, 0.18) !important;
+  animation-play-state: paused !important;
 }
 
 /* Frosted Liquid Glass Navigation Bar */

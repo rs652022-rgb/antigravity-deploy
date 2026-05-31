@@ -6,9 +6,23 @@ import { useEffect, useState } from "react";
 export function GlobalBackground() {
     const pathname = usePathname();
     const [mounted, setMounted] = useState(false);
+    const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
     useEffect(() => {
         setMounted(true);
+
+        const handleMouseMove = (e: MouseEvent) => {
+            const { clientWidth, clientHeight } = document.documentElement;
+            // Get normalized mouse position (-1 to 1)
+            const x = (e.clientX / clientWidth) * 2 - 1;
+            const y = (e.clientY / clientHeight) * 2 - 1;
+            setMousePos({ x, y });
+        };
+
+        window.addEventListener("mousemove", handleMouseMove, { passive: true });
+        return () => {
+            window.removeEventListener("mousemove", handleMouseMove);
+        };
     }, []);
 
     if (!mounted || !pathname) return null;
@@ -16,13 +30,29 @@ export function GlobalBackground() {
     const isHome = pathname === "/";
 
     if (isHome) {
-        // Original Home Page Background (Unchanged)
         return (
-            <div className="fixed inset-0 z-[-1] pointer-events-none">
+            <div className="fixed inset-0 z-[-1] pointer-events-none bg-black overflow-hidden">
+                {/* Global Fixed Background Video */}
+                <video
+                    src="/bg-video.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="absolute inset-0 w-full h-full object-cover opacity-25 pointer-events-none select-none"
+                    style={{ 
+                      filter: "brightness(0.35) contrast(1.1) saturate(0.8)",
+                      transform: `translate3d(${mousePos.x * -15}px, ${mousePos.y * -15}px, 0) scale(1.05)`,
+                      transition: "transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
+                      willChange: "transform"
+                    }}
+                />
                 <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-purple-900/10 blur-[120px]" />
                 <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-indigo-900/10 blur-[120px]" />
                 <div className="absolute top-[40%] left-[50%] -translate-x-1/2 w-[60%] h-[60%] rounded-full bg-blue-900/5 blur-[150px]" />
                 <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-[0.03] mix-blend-overlay" />
+                {/* Cinematic dark vignette overlay for focus */}
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent,30%,rgba(12,13,18,0.75)_100%)] pointer-events-none" />
             </div>
         );
     }
@@ -131,10 +161,27 @@ export function GlobalBackground() {
     };
 
     return (
-        <div className="fixed inset-0 z-[-1] pointer-events-none overflow-hidden">
+        <div className="fixed inset-0 z-[-1] pointer-events-none overflow-hidden bg-black">
+            {/* Global Fixed Background Video */}
+            <video
+                src="/bg-video.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover opacity-25 pointer-events-none select-none"
+                style={{ 
+                  filter: "brightness(0.35) contrast(1.1) saturate(0.8)",
+                  transform: `translate3d(${mousePos.x * -15}px, ${mousePos.y * -15}px, 0) scale(1.05)`,
+                  transition: "transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
+                  willChange: "transform"
+                }}
+            />
             {getTheme()}
             {/* Consistent Global Noise Overlay for texture */}
             <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-[0.02] mix-blend-overlay pointer-events-none" />
+            {/* Cinematic dark vignette overlay for focus */}
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,rgba(12,13,18,0.75)_100%)] pointer-events-none" />
         </div>
     );
 }
