@@ -314,110 +314,110 @@ body, body *, html, main, section, p, span, h1, h2, h3, h4, h5, h6, a, div {
   text-shadow: none !important;
 }
 
-/* Base Canvas & Backgrounds */
-body,
-body main,
-body section,
-body .bg-black,
-body .bg-background,
-body .bg-\[\#020205\],
-body .bg-\[\#02040a\],
-body .bg-\[\#030508\],
-body .bg-\[\#0b0c15\],
-body .bg-\[\#050505\],
-body .bg-\[\#050507\],
-body .bg-\[\#08080a\],
-body .bg-\[\#0d0b16\],
-body .bg-\[\#1c182d\],
-body .bg-slate-950,
-body .bg-zinc-950,
-body .bg-slate-900,
-body .bg-zinc-900 {
+/* Base Canvas & Backgrounds (Apply on subpages only) */
+body:not(:has(.homepage)),
+body:not(:has(.homepage)) main,
+body:not(:has(.homepage)) section,
+body:not(:has(.homepage)) .bg-black,
+body:not(:has(.homepage)) .bg-background,
+body:not(:has(.homepage)) .bg-\[\#020205\],
+body:not(:has(.homepage)) .bg-\[\#02040a\],
+body:not(:has(.homepage)) .bg-\[\#030508\],
+body:not(:has(.homepage)) .bg-\[\#0b0c15\],
+body:not(:has(.homepage)) .bg-\[\#050505\],
+body:not(:has(.homepage)) .bg-\[\#050507\],
+body:not(:has(.homepage)) .bg-\[\#08080a\],
+body:not(:has(.homepage)) .bg-\[\#0d0b16\],
+body:not(:has(.homepage)) .bg-\[\#1c182d\],
+body:not(:has(.homepage)) .bg-slate-950,
+body:not(:has(.homepage)) .bg-zinc-950,
+body:not(:has(.homepage)) .bg-slate-900,
+body:not(:has(.homepage)) .bg-zinc-900 {
   background-color: var(--surface-canvas) !important;
   color: var(--color-ink) !important;
 }
 
-/* Alternating Section Backgrounds */
-body section:nth-of-type(even),
-body section.bg-white {
+/* Alternating Section Backgrounds (Apply on subpages only) */
+body:not(:has(.homepage)) section:nth-of-type(even),
+body:not(:has(.homepage)) section.bg-white {
   background-color: var(--surface-card) !important;
 }
 
-/* Overrides for text color */
-body .text-white, 
-body .text-white\/90, 
-body .text-white\/80,
-body .text-white\/70,
-body .text-white\/60,
-body .text-white\/50,
-body .text-slate-200,
-body .text-slate-300,
-body .text-slate-400,
-body .text-zinc-200,
-body .text-zinc-300,
-body .text-zinc-400,
-body .text-gray-200,
-body .text-gray-300,
-body .text-gray-400,
-body .text-text-muted {
+/* Overrides for text color (Apply on subpages only) */
+body:not(:has(.homepage)) .text-white, 
+body:not(:has(.homepage)) .text-white\/90, 
+body:not(:has(.homepage)) .text-white\/80,
+body:not(:has(.homepage)) .text-white\/70,
+body:not(:has(.homepage)) .text-white\/60,
+body:not(:has(.homepage)) .text-white\/50,
+body:not(:has(.homepage)) .text-slate-200,
+body:not(:has(.homepage)) .text-slate-300,
+body:not(:has(.homepage)) .text-slate-400,
+body:not(:has(.homepage)) .text-zinc-200,
+body:not(:has(.homepage)) .text-zinc-300,
+body:not(:has(.homepage)) .text-zinc-400,
+body:not(:has(.homepage)) .text-gray-200,
+body:not(:has(.homepage)) .text-gray-300,
+body:not(:has(.homepage)) .text-gray-400,
+body:not(:has(.homepage)) .text-text-muted {
   color: var(--color-ink) !important;
 }
 
-body .text-white\/60,
-body .text-white\/50,
-body .text-slate-400,
-body .text-zinc-400,
-body .text-gray-400,
-body .text-text-muted,
-body p {
+body:not(:has(.homepage)) .text-white\/60,
+body:not(:has(.homepage)) .text-white\/50,
+body:not(:has(.homepage)) .text-slate-400,
+body:not(:has(.homepage)) .text-zinc-400,
+body:not(:has(.homepage)) .text-gray-400,
+body:not(:has(.homepage)) .text-text-muted,
+body:not(:has(.homepage)) p {
   color: var(--color-graphite) !important;
 }
 
-body .text-white\/40,
-body .text-white\/30,
-body .text-white\/20,
-body .text-slate-300,
-body .text-zinc-300,
-body .text-gray-300 {
+body:not(:has(.homepage)) .text-white\/40,
+body:not(:has(.homepage)) .text-white\/30,
+body:not(:has(.homepage)) .text-white\/20,
+body:not(:has(.homepage)) .text-slate-300,
+body:not(:has(.homepage)) .text-zinc-300,
+body:not(:has(.homepage)) .text-gray-300 {
   color: var(--color-slate) !important;
 }
 
-/* Neutralize and Clean Decorative Dark Background Overlays & Scanlines */
-body .industry-section > div:first-child,
-body section > div[class*="pointer-events-none"] {
+/* Neutralize and Clean Decorative Dark Background Overlays & Scanlines (Apply on subpages only) */
+body:not(:has(.homepage)) .industry-section > div:first-child,
+body:not(:has(.homepage)) section > div[class*="pointer-events-none"] {
   opacity: 0 !important;
   pointer-events: none !important;
   display: none !important;
 }
 
-/* Restore the specific backgrounds we need to hide */
-body div[class*="bg-black/60"],
-body div[class*="bg-black/50"],
-body div[class*="bg-gradient-to-b"],
-body div[class*="bg-gradient-to-t"],
-body div[class*="bg-gradient-to-r"] {
+/* Restore the specific backgrounds we need to hide (Apply on subpages only) */
+body:not(:has(.homepage)) div[class*="bg-black/60"],
+body:not(:has(.homepage)) div[class*="bg-black/50"],
+body:not(:has(.homepage)) div[class*="bg-gradient-to-b"],
+body:not(:has(.homepage)) div[class*="bg-gradient-to-t"],
+body:not(:has(.homepage)) div[class*="bg-gradient-to-r"] {
   background: transparent !important;
   background-image: none !important;
 }
 
-/* Text Gradient & Clip overrides - solid Ink color for typography */
-body .text-transparent.bg-clip-text,
-body [class*="bg-clip-text"],
-body .text-gradient {
+/* Text Gradient & Clip overrides (Apply on subpages only) */
+body:not(:has(.homepage)) .text-transparent.bg-clip-text,
+body:not(:has(.homepage)) [class*="bg-clip-text"],
+body:not(:has(.homepage)) .text-gradient {
   background-image: none !important;
   background-clip: border-box !important;
   -webkit-background-clip: border-box !important;
   color: var(--color-ink) !important;
 }
 
-/* Card components overrides - clean gallery white with no shadows */
-body .glass-card,
-body .glass-premium,
-body .solution-card,
-body .industry-card,
-body .mobile-menu-panel,
-body .bg-\[\#0a0a0a\],
-body .bg-\[\#1c182d\]\/80 {
+/* Card components overrides (Apply on subpages only) */
+body:not(:has(.homepage)) .glass-card,
+body:not(:has(.homepage)) .glass-premium,
+body:not(:has(.homepage)) .solution-card,
+body:not(:has(.homepage)) .industry-card,
+body:not(:has(.homepage)) .mobile-menu-panel,
+body:not(:has(.homepage)) .bg-\[\#0a0a0a\],
+body:not(:has(.homepage)) .bg-\[\#1c182d\]\/80 {
   background-color: var(--surface-card) !important;
   background: var(--surface-card) !important;
   border: 1px solid var(--color-glass-border) !important;
@@ -426,10 +426,10 @@ body .bg-\[\#1c182d\]\/80 {
   color: var(--color-ink) !important;
 }
 
-body .glass-card:hover,
-body .glass-premium:hover,
-body .solution-card:hover,
-body .industry-card:hover {
+body:not(:has(.homepage)) .glass-card:hover,
+body:not(:has(.homepage)) .glass-premium:hover,
+body:not(:has(.homepage)) .solution-card:hover,
+body:not(:has(.homepage)) .industry-card:hover {
   background-color: var(--surface-card) !important;
   background: var(--surface-card) !important;
   border-color: var(--color-azure) !important;
@@ -437,86 +437,86 @@ body .industry-card:hover {
   box-shadow: none !important;
 }
 
-/* Card text & description overrides */
-body .glass-card h3,
-body .glass-premium h3,
-body .solution-card h3,
-body .solution-title,
-body .industry-card h3 {
+/* Card text & description overrides (Apply on subpages only) */
+body:not(:has(.homepage)) .glass-card h3,
+body:not(:has(.homepage)) .glass-premium h3,
+body:not(:has(.homepage)) .solution-card h3,
+body:not(:has(.homepage)) .solution-title,
+body:not(:has(.homepage)) .industry-card h3 {
   color: var(--color-ink) !important;
 }
 
-body .glass-card p,
-body .glass-premium p,
-body .solution-card p,
-body .solution-desc,
-body .industry-card p {
+body:not(:has(.homepage)) .glass-card p,
+body:not(:has(.homepage)) .glass-premium p,
+body:not(:has(.homepage)) .solution-card p,
+body:not(:has(.homepage)) .solution-desc,
+body:not(:has(.homepage)) .industry-card p {
   color: var(--color-graphite) !important;
 }
 
-/* Icon chip override */
-body .approach-icon-chip,
-body .solution-icon-chip,
-body div[class*="w-12 h-12 rounded-xl bg-white"] {
+/* Icon chip override (Apply on subpages only) */
+body:not(:has(.homepage)) .approach-icon-chip,
+body:not(:has(.homepage)) .solution-icon-chip,
+body:not(:has(.homepage)) div[class*="w-12 h-12 rounded-xl bg-white"] {
   background-color: var(--color-fog) !important;
   border: 1px solid var(--color-glass-border) !important;
   color: var(--color-ink) !important;
 }
 
-body .approach-icon-chip svg,
-body .solution-icon-chip svg,
-body div[class*="w-12 h-12 rounded-xl bg-white"] svg {
+body:not(:has(.homepage)) .approach-icon-chip svg,
+body:not(:has(.homepage)) .solution-icon-chip svg,
+body:not(:has(.homepage)) div[class*="w-12 h-12 rounded-xl bg-white"] svg {
   stroke: var(--color-ink) !important;
   color: var(--color-ink) !important;
 }
 
-/* Navbar overrides */
-body header nav {
+/* Navbar overrides (Apply on subpages only) */
+body:not(:has(.homepage)) header nav {
   background-color: rgba(255, 255, 255, 0.72) !important;
   border-color: rgba(0, 0, 0, 0.08) !important;
   backdrop-filter: blur(20px) !important;
   -webkit-backdrop-filter: blur(20px) !important;
 }
 
-body header nav span,
-body header nav a,
-body header nav button {
+body:not(:has(.homepage)) header nav span,
+body:not(:has(.homepage)) header nav a,
+body:not(:has(.homepage)) header nav button {
   color: var(--color-ink) !important;
 }
 
-/* Active Nav Border Indicator */
-body header nav .border-white\/20 {
+/* Active Nav Border Indicator (Apply on subpages only) */
+body:not(:has(.homepage)) header nav .border-white\/20 {
   border-color: rgba(0, 0, 0, 0.08) !important;
 }
 
-/* Footer overrides */
-body footer {
+/* Footer overrides (Apply on subpages only) */
+body:not(:has(.homepage)) footer {
   background-color: var(--color-fog) !important;
   border-top: 1px solid var(--color-silver-mist) !important;
 }
 
-body footer span,
-body footer a,
-body footer h4,
-body footer p {
+body:not(:has(.homepage)) footer span,
+body:not(:has(.homepage)) footer a,
+body:not(:has(.homepage)) footer h4,
+body:not(:has(.homepage)) footer p {
   color: var(--color-ink) !important;
 }
 
-body footer a:hover {
+body:not(:has(.homepage)) footer a:hover {
   color: var(--color-azure) !important;
 }
 
-body footer .border-white\/10,
-body footer .border-white\/5,
-body footer .border-white\/\[0\.08\] {
+body:not(:has(.homepage)) footer .border-white\/10,
+body:not(:has(.homepage)) footer .border-white\/5,
+body:not(:has(.homepage)) footer .border-white\/\[0\.08\] {
   border-color: var(--color-silver-mist) !important;
 }
 
-/* Primary Azure Pill CTA Button */
-body .bg-white.text-black,
-body button.bg-white,
-body .bg-blue-600,
-body button.bg-blue-600 {
+/* Primary Azure Pill CTA Button (Apply on subpages only) */
+body:not(:has(.homepage)) .bg-white.text-black,
+body:not(:has(.homepage)) button.bg-white,
+body:not(:has(.homepage)) .bg-blue-600,
+body:not(:has(.homepage)) button.bg-blue-600 {
   background-color: var(--color-azure) !important;
   color: var(--color-snow) !important;
   border-color: var(--color-azure) !important;
@@ -524,39 +524,39 @@ body button.bg-blue-600 {
   box-shadow: none !important;
 }
 
-body .bg-white.text-black *,
-body button.bg-white *,
-body .bg-blue-600 *,
-body button.bg-blue-600 * {
+body:not(:has(.homepage)) .bg-white.text-black *,
+body:not(:has(.homepage)) button.bg-white *,
+body:not(:has(.homepage)) .bg-blue-600 *,
+body:not(:has(.homepage)) button.bg-blue-600 * {
   color: var(--color-snow) !important;
 }
 
-body .bg-white.text-black:hover,
-body button.bg-white:hover,
-body .bg-blue-600:hover,
-body button.bg-blue-600:hover {
+body:not(:has(.homepage)) .bg-white.text-black:hover,
+body:not(:has(.homepage)) button.bg-white:hover,
+body:not(:has(.homepage)) .bg-blue-600:hover,
+body:not(:has(.homepage)) button.bg-blue-600:hover {
   background-color: var(--color-cobalt-link) !important;
   transform: scale(1.02);
 }
 
-/* Secondary/Outline Button */
-body .border-white\/20.bg-white\/5.text-white,
-body .border-white\/10.bg-white\/\[0\.03\].text-white,
-body button[class*="border-white"] {
+/* Secondary/Outline Button (Apply on subpages only) */
+body:not(:has(.homepage)) .border-white\/20.bg-white\/5.text-white,
+body:not(:has(.homepage)) .border-white\/10.bg-white\/\[0\.03\].text-white,
+body:not(:has(.homepage)) button[class*="border-white"] {
   border-color: var(--color-silver-mist) !important;
   background-color: var(--color-silver-mist) !important;
   color: var(--color-ink) !important;
   border-radius: 999px !important;
 }
 
-body .border-white\/20.bg-white\/5.text-white *,
-body .border-white\/10.bg-white\/\[0\.03\].text-white *,
-body button[class*="border-white"] * {
+body:not(:has(.homepage)) .border-white\/20.bg-white\/5.text-white *,
+body:not(:has(.homepage)) .border-white\/10.bg-white\/\[0\.03\].text-white *,
+body:not(:has(.homepage)) button[class*="border-white"] * {
   color: var(--color-ink) !important;
 }
 
-body .border-white\/20.bg-white\/5.text-white:hover,
-body .border-white\/10.bg-white\/\[0\.03\].text-white:hover {
+body:not(:has(.homepage)) .border-white\/20.bg-white\/5.text-white:hover,
+body:not(:has(.homepage)) .border-white\/10.bg-white\/\[0\.03\].text-white:hover {
   background-color: var(--color-fog) !important;
   transform: scale(1.02);
 }
