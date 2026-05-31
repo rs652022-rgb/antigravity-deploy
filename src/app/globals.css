@@ -403,20 +403,31 @@ p, body {
   background-color: #0c0d12 !important;
 }
 
-/* Unified Liquid-Glass Panels & Cards */
+/* Unified Liquid-Glass Panels & Cards - Optimized blurs to reduce fill-rate cost and GPU workload */
 .glass,
-.glass-premium,
 .glass-card,
 .solution-card,
-.industry-card,
-.mobile-menu-panel {
+.industry-card {
   background-color: rgba(22, 23, 29, 0.45) !important;
-  backdrop-filter: blur(28px) !important;
-  -webkit-backdrop-filter: blur(28px) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
   border: 1px solid rgba(255, 255, 255, 0.06) !important;
   box-shadow: 
     0 20px 50px rgba(0, 0, 0, 0.35),
     inset 0 1px 1px 0 rgba(255, 255, 255, 0.08) !important;
+  border-radius: 2rem !important;
+}
+
+/* Sparse Premium Glass & Overlay Panels */
+.glass-premium,
+.mobile-menu-panel {
+  background-color: rgba(22, 23, 29, 0.65) !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 
+    0 25px 60px rgba(0, 0, 0, 0.45),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.12) !important;
   border-radius: 2rem !important;
 }
 
@@ -446,8 +457,8 @@ p, body {
 /* Frosted Liquid Glass Navigation Bar */
 header nav {
   background-color: rgba(22, 23, 29, 0.45) !important;
-  backdrop-filter: blur(28px) !important;
-  -webkit-backdrop-filter: blur(28px) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
   border: 1px solid rgba(255, 255, 255, 0.06) !important;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
 }
@@ -455,10 +466,34 @@ header nav {
 /* Services Dropdown Menu Panel */
 header nav .bg-black {
   background-color: rgba(12, 13, 18, 0.85) !important;
-  backdrop-filter: blur(40px) !important;
-  -webkit-backdrop-filter: blur(40px) !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Homepage specific styling overrides to clean inline tags and resolve hydration mismatch */
+body.home-page-active * {
+  color: #ffffff !important;
+}
+
+body.home-page-active .bg-white,
+body.home-page-active .bg-white * {
+  color: #000000 !important;
+}
+
+/* Hero Section Video & Canvas Container Layout fix */
+[data-us-project],
+[data-us-project] > div,
+[data-us-project] canvas,
+[data-us-project] video {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  object-fit: cover !important;
 }
 
 /* CTA and Action Button Overrides (Making them premium liquid-glass) */

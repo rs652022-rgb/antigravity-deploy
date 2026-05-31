@@ -4,6 +4,7 @@
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import React, { forwardRef, useRef, useMemo, useLayoutEffect, useEffect, useState } from 'react';
 import { Color } from 'three';
+import { useInView } from 'react-intersection-observer';
 
 // Safe Layout Effect for SSR environments like Next.js
 const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
@@ -120,6 +121,11 @@ interface SilkProps {
 const Silk = ({ speed = 5, scale = 1, color = '#7B7481', noiseIntensity = 1.5, rotation = 0 }: SilkProps) => {
   const meshRef = useRef<any>(null);
   const [mounted, setMounted] = useState(false);
+  const { ref, inView } = useInView({
+    threshold: 0,
+    triggerOnce: false,
+    initialInView: true,
+  });
 
   useEffect(() => {
     setMounted(true);
@@ -143,9 +149,11 @@ const Silk = ({ speed = 5, scale = 1, color = '#7B7481', noiseIntensity = 1.5, r
   }
 
   return (
-    <Canvas dpr={[1, 2]} frameloop="always">
-      <SilkPlane ref={meshRef} uniforms={uniforms} />
-    </Canvas>
+    <div ref={ref} className="w-full h-full">
+      <Canvas dpr={[1, 1.5]} frameloop={inView ? 'always' : 'never'}>
+        <SilkPlane ref={meshRef} uniforms={uniforms} />
+      </Canvas>
+    </div>
   );
 };
 

@@ -5,43 +5,21 @@ import ApproachSection from "@/components/home/ApproachSection";
 import ReadyToDeliverSection from "@/components/home/ReadyToDeliverSection";
 import QualityComplianceSection from "@/components/home/QualityComplianceSection";
 import CTASection from "@/components/home/CTASection";
+import { HomeBodyClass } from "@/components/home/HomeBodyClass";
 
 export default function Home() {
   return (
     <>
-      <style dangerouslySetInnerHTML={{ __html: `
-        /* Overrides absolutely all text to white on the homepage */
-        body * { color: #ffffff !important; }
-        
-        /* Ensures buttons with white backgrounds remain legible */
-        body .bg-white, body .bg-white * { 
-          color: #000000 !important; 
-        }
-
-        /* --------------------- NEW FIXES --------------------- */
-        /* Part 1: Hero Section Video Fix */
-        [data-us-project],
-        [data-us-project] > div,
-        [data-us-project] canvas,
-        [data-us-project] video {
-            width: 100% !important;
-            height: 100% !important;
-            max-width: none !important;
-            max-height: none !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            object-fit: cover !important;
-        }
-      `}} />
+      <HomeBodyClass />
       <main className="min-h-screen bg-black">
-      <HeroSection />
-      <InnovativeSolutionsSection />
-      <ServingEveryIndustrySection />
-      <ApproachSection />
-      <ReadyToDeliverSection />
-      <QualityComplianceSection />
-      <CTASection />
-    </main>
+        <HeroSection />
+        <InnovativeSolutionsSection />
+        <ServingEveryIndustrySection />
+        <ApproachSection />
+        <ReadyToDeliverSection />
+        <QualityComplianceSection />
+        <CTASection />
+      </main>
     </>
   );
 }
