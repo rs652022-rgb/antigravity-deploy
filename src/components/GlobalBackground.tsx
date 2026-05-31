@@ -27,21 +27,21 @@ export function GlobalBackground() {
         );
     }
 
-    // Determine theme based on path
+    // Determine theme based on path (Apple Light Theme Canvases)
     const getTheme = () => {
         if (pathname.startsWith("/services")) {
             if (pathname.includes("ai-")) {
-                // AI & Tech: Deep Violet/Blue Cybernetic feel
+                // AI & Tech: Light premium violet/blue glow on fog canvas
                 return (
                     <>
-                        <div className="absolute inset-0 bg-[#02040a]" />
-                        <div className="absolute top-0 inset-x-0 h-[500px] bg-gradient-to-b from-indigo-950/40 via-purple-900/10 to-transparent blur-3xl" />
-                        <div className="absolute top-[20%] right-[10%] w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-[120px] mix-blend-screen opacity-40" />
-                        <div className="absolute bottom-[20%] left-[10%] w-[500px] h-[500px] bg-violet-600/10 rounded-full blur-[100px] mix-blend-screen opacity-30" />
+                        <div className="absolute inset-0 bg-[#f5f5f7]" />
+                        <div className="absolute top-0 inset-x-0 h-[500px] bg-gradient-to-b from-indigo-500/5 via-purple-500/3 to-transparent blur-3xl" />
+                        <div className="absolute top-[20%] right-[10%] w-[600px] h-[600px] bg-indigo-500/5 rounded-full blur-[120px] mix-blend-multiply opacity-40" />
+                        <div className="absolute bottom-[20%] left-[10%] w-[500px] h-[500px] bg-violet-500/4 rounded-full blur-[100px] mix-blend-multiply opacity-30" />
                         <div
-                            className="absolute inset-0 opacity-[0.15]"
+                            className="absolute inset-0 opacity-[0.08]"
                             style={{
-                                backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0)`,
+                                backgroundImage: `radial-gradient(circle at 1px 1px, rgba(0,0,0,0.15) 1px, transparent 0)`,
                                 backgroundSize: '40px 40px',
                                 maskImage: 'linear-gradient(to bottom, black, transparent)'
                             }}
@@ -49,17 +49,17 @@ export function GlobalBackground() {
                     </>
                 );
             }
-            // Standard Services: Professional Tech Blue
+            // Standard Services: Light Professional Tech Blue on fog canvas
             return (
                 <>
-                    <div className="absolute inset-0 bg-[#030508]" />
-                    <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-[#050810] to-[#020305]" />
-                    <div className="absolute top-[-20%] left-[20%] w-[800px] h-[800px] bg-blue-900/10 rounded-full blur-[130px] opacity-40" />
-                    <div className="absolute bottom-[10%] right-[-10%] w-[600px] h-[600px] bg-cyan-900/5 rounded-full blur-[100px] opacity-30" />
+                    <div className="absolute inset-0 bg-[#f5f5f7]" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#ffffff] via-[#f5f5f7] to-[#e8e8ed]" />
+                    <div className="absolute top-[-20%] left-[20%] w-[800px] h-[800px] bg-blue-500/5 rounded-full blur-[130px] opacity-40" />
+                    <div className="absolute bottom-[10%] right-[-10%] w-[600px] h-[600px] bg-cyan-500/4 rounded-full blur-[100px] opacity-30" />
                     <div
-                        className="absolute inset-0 opacity-[0.07]"
+                        className="absolute inset-0 opacity-[0.03]"
                         style={{
-                            backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)`,
+                            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px)`,
                             backgroundSize: '100px 100px'
                         }}
                     />
@@ -68,48 +68,48 @@ export function GlobalBackground() {
         }
 
         if (pathname === "/about") {
-            // About Us: Trustworthy, Deep Navy/Slate, Calm
+            // About Us: Trustworthy, Clean Navy/Slate/Lavender tints on white/fog
             return (
                 <>
-                    <div className="absolute inset-0 bg-[#0b0c15]" />
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-slate-800/20 via-[#0b0c15] to-[#050508]" />
-                    <div className="absolute top-[10%] left-[10%] w-[700px] h-[700px] bg-indigo-950/30 rounded-full blur-[120px] opacity-50" />
-                    <div className="absolute bottom-0 right-0 w-full h-[50%] bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
+                    <div className="absolute inset-0 bg-[#f5f5f7]" />
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-slate-200/40 via-[#f5f5f7] to-[#ffffff]" />
+                    <div className="absolute top-[10%] left-[10%] w-[700px] h-[700px] bg-indigo-500/4 rounded-full blur-[120px] opacity-50" />
+                    <div className="absolute bottom-0 right-0 w-full h-[50%] bg-gradient-to-t from-[#ffffff] via-transparent to-transparent opacity-80" />
                 </>
             );
         }
 
         if (pathname === "/careers") {
-            // Careers: Energetic, Growth, subtle Orange/Gold hints in dark
+            // Careers: Energetic, Growth, subtle Orange/Gold tints on fog
             return (
                 <>
-                    <div className="absolute inset-0 bg-[#050505]" />
-                    <div className="absolute bottom-0 left-0 right-0 h-[80vh] bg-gradient-to-t from-indigo-950/20 via-transparent to-transparent opacity-40" />
-                    <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-purple-900/10 rounded-full blur-[100px] mix-blend-screen" />
-                    <div className="absolute bottom-[-10%] left-[20%] w-[500px] h-[500px] bg-orange-900/5 rounded-full blur-[120px] mix-blend-screen opacity-60" /> {/* Subtle warmth */}
+                    <div className="absolute inset-0 bg-[#f5f5f7]" />
+                    <div className="absolute bottom-0 left-0 right-0 h-[80vh] bg-gradient-to-t from-indigo-500/3 via-transparent to-transparent opacity-40" />
+                    <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-purple-500/4 rounded-full blur-[100px] mix-blend-multiply" />
+                    <div className="absolute bottom-[-10%] left-[20%] w-[500px] h-[500px] bg-orange-400/3 rounded-full blur-[120px] mix-blend-multiply opacity-60" />
                 </>
             );
         }
 
         if (pathname === "/contact" || pathname === "/partner") {
-            // Contact/Partner: Welcoming, Central Focus
+            // Contact/Partner: Welcoming, Central Focus on light canvas
             return (
                 <>
-                    <div className="absolute inset-0 bg-[#050507]" />
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-950/20 via-[#050507] to-[#000000]" />
-                    <div className="absolute top-0 left-0 w-full h-full bg-[url('/noise.svg')] opacity-[0.02]" />
-                    <div className="absolute bottom-0 inset-x-0 h-[300px] bg-gradient-to-t from-black via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-[#f5f5f7]" />
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#ffffff] via-[#f5f5f7] to-[#e8e8ed]" />
+                    <div className="absolute top-0 left-0 w-full h-full bg-[url('/noise.svg')] opacity-[0.01]" />
+                    <div className="absolute bottom-0 inset-x-0 h-[300px] bg-gradient-to-t from-[#ffffff] via-transparent to-transparent" />
                 </>
             );
         }
 
         if (pathname === "/privacy" || pathname === "/terms") {
-            // Legal: Clean, Minimal, Slate
+            // Legal: Clean, Minimal, Slate tints
             return (
                 <>
-                    <div className="absolute inset-0 bg-[#08080a]" />
-                    <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-                    <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(rgba(255,255,255,0.03) 1px, transparent 0)', backgroundSize: '32px 32px' }} />
+                    <div className="absolute inset-0 bg-[#ffffff]" />
+                    <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-black/5 to-transparent" />
+                    <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(rgba(0,0,0,0.015) 1px, transparent 0)', backgroundSize: '32px 32px' }} />
                 </>
             );
         }
@@ -117,15 +117,15 @@ export function GlobalBackground() {
         // Default Fallback for other sub-pages
         return (
             <>
-                <div className="fixed inset-0 z-[-1] pointer-events-none bg-[#030305]" />
-                <div className="absolute inset-0 opacity-[0.15]"
+                <div className="fixed inset-0 z-[-1] pointer-events-none bg-[#f5f5f7]" />
+                <div className="absolute inset-0 opacity-[0.05]"
                     style={{
-                        backgroundImage: `linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)`,
+                        backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px)`,
                         backgroundSize: '4rem 4rem',
                         maskImage: 'radial-gradient(ellipse 60% 50% at 50% 0%, black 40%, transparent 100%)'
                     }}
                 />
-                <div className="absolute top-0 left-0 right-0 h-[600px] bg-gradient-to-b from-indigo-950/20 via-slate-900/10 to-transparent blur-3xl" />
+                <div className="absolute top-0 left-0 right-0 h-[600px] bg-gradient-to-b from-indigo-500/3 via-slate-200/5 to-transparent blur-3xl" />
             </>
         );
     };

@@ -1,27 +1,23 @@
-/* Solution Card - Iteration 6: Unified Reference Design (Synced with Approach) */
+/* Solution Card — Apple Light Style Reference */
 
 .solution-card {
     position: relative;
-    backdrop-filter: blur(32px);
-    -webkit-backdrop-filter: blur(32px);
-    background: rgba(15, 15, 15, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 2rem;
+    background: var(--surface-card);
+    border: 1px solid var(--color-glass-border);
+    border-radius: 28px;
     overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.3);
+    transition: all 0.344s ease;
+    box-shadow: none;
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
 .solution-card:hover {
-    background: rgba(15, 15, 15, 0.6);
-    border-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-4px);
-    box-shadow:
-        0 25px 50px -12px rgba(0, 0, 0, 0.6),
-        inset 0 0 20px rgba(255, 255, 255, 0.02);
+    background: var(--surface-card);
+    border-color: var(--color-azure);
+    transform: translateY(-2px);
+    box-shadow: none;
 }
 
 .solution-card-content {
@@ -37,20 +33,20 @@
 .solution-icon-chip {
     width: 3rem;
     height: 3rem;
-    border-radius: 1rem;
-    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    background: var(--color-fog);
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
+    border: 1px solid var(--color-glass-border);
+    transition: all 0.1s ease;
 }
 
 .solution-card:hover .solution-icon-chip {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.3);
-    transform: scale(1.05);
+    background: var(--color-silver-mist);
+    border-color: var(--color-azure);
+    transform: scale(1.02);
 }
 
 .solution-title {
@@ -58,12 +54,12 @@
     font-weight: 700;
     margin-bottom: 1.25rem;
     line-height: 1.2;
-    color: #fff;
+    color: var(--color-ink);
     letter-spacing: -0.02em;
 }
 
 .solution-desc {
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--color-graphite);
     font-size: 0.9375rem;
     line-height: 1.6;
     margin-bottom: 2.5rem;
@@ -90,23 +86,15 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(to bottom,
-            rgba(0, 0, 0, 0) 0%,
-            rgba(0, 0, 0, 0.2) 30%,
-            rgba(0, 0, 0, 0.8) 100%);
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.2) 30%,
+            rgba(255, 255, 255, 1) 100%);
     pointer-events: none;
     z-index: 1;
 }
 
 .solution-card:hover .solution-image-container img {
     transform: scale(1.03);
-}
-
-/* Specific Card Glows (optional but kept as placeholders) */
-.card-glow-indigo,
-.card-glow-cyan,
-.card-glow-purple,
-.card-glow-emerald {
-    /* Base style remains inherited from .solution-card */
 }
 
 /* Cleanup */

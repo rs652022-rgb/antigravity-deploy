@@ -10,14 +10,6 @@ export default function Home() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: `
-        /* Overrides absolutely all text to white on the homepage */
-        body * { color: #ffffff !important; }
-        
-        /* Ensures buttons with white backgrounds remain legible */
-        body .bg-white, body .bg-white * { 
-          color: #000000 !important; 
-        }
-
         /* --------------------- NEW FIXES --------------------- */
         /* Part 1: Hero Section Video Fix */
         [data-us-project],
