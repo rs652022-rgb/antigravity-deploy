@@ -482,6 +482,23 @@ body.home-page-active .bg-white * {
   color: #000000 !important;
 }
 
+/* Specificity override for Navbar 'Book Appointment' buttons to enforce pure white text permanently */
+header button a[href*="wa.me"],
+header button a[href*="wa.me"] *,
+header button a[href*="wa.me"]:hover,
+header button a[href*="wa.me"]:active,
+header button a[href*="wa.me"]:focus,
+header button a[href*="wa.me"]:visited,
+body.home-page-active header button a[href*="wa.me"],
+body.home-page-active header button a[href*="wa.me"] *,
+body.home-page-active header button a[href*="wa.me"]:hover,
+body.home-page-active header button a[href*="wa.me"]:active,
+body.home-page-active header button a[href*="wa.me"]:focus,
+body.home-page-active header button a[href*="wa.me"]:visited {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
 /* Hero Section Video & Canvas Container Layout fix */
 [data-us-project],
 [data-us-project] > div,
