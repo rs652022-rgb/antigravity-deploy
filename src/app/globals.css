@@ -15,7 +15,7 @@
   --color-glass-border: rgba(255, 255, 255, 0.08);
   --color-glass-surface: rgba(255, 255, 255, 0.02);
   --color-glass-highlight: rgba(255, 255, 255, 0.08);
-  --color-text-muted: rgba(255, 255, 255, 0.60);
+  --color-text-muted: rgba(255, 255, 255, 0.75);
 
   /* Existing vars mapped */
   --color-sidebar: var(--sidebar);
@@ -55,17 +55,17 @@
 :root {
   --radius: 1.5rem;
   --background: #070707;
-  --foreground: rgba(255, 255, 255, 0.95);
+  --foreground: #ffffff;
   --card: rgba(255, 255, 255, 0.02);
-  --card-foreground: rgba(255, 255, 255, 0.95);
+  --card-foreground: #ffffff;
   --popover: #070707;
-  --popover-foreground: rgba(255, 255, 255, 0.95);
+  --popover-foreground: #ffffff;
   --primary: #00d2ff;
   --primary-foreground: #070707;
   --secondary: rgba(255, 255, 255, 0.03);
-  --secondary-foreground: rgba(255, 255, 255, 0.60);
+  --secondary-foreground: rgba(255, 255, 255, 0.75);
   --muted: rgba(255, 255, 255, 0.02);
-  --muted-foreground: rgba(255, 255, 255, 0.38);
+  --muted-foreground: rgba(255, 255, 255, 0.55);
   --accent: #7dd3fc;
   --accent-foreground: #070707;
   --destructive: #ef4444;
@@ -74,7 +74,7 @@
   --input: rgba(255, 255, 255, 0.02);
   --ring: rgba(0, 210, 255, 0.25);
   --sidebar: #070707;
-  --sidebar-foreground: rgba(255, 255, 255, 0.95);
+  --sidebar-foreground: #ffffff;
 }
 
 @layer base {
@@ -542,15 +542,7 @@ header nav .bg-black {
   box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6) !important;
 }
 
-/* Homepage specific styling overrides to clean inline tags and resolve hydration mismatch */
-body.home-page-active * {
-  color: #ffffff !important;
-}
-
-body.home-page-active .bg-white,
-body.home-page-active .bg-white * {
-  color: #000000 !important;
-}
+/* Homepage specific overrides removed to allow standardized white typography opacities */
 
 /* Specificity override for Navbar 'Book Appointment' buttons to enforce pure white text permanently */
 header button a[href*="wa.me"],
@@ -590,7 +582,7 @@ button.bg-white.text-black,
 button.bg-primary,
 .bg-primary {
   background: linear-gradient(135deg, rgba(0, 210, 255, 0.15) 0%, rgba(125, 211, 252, 0.05) 100%) !important;
-  color: rgba(255, 255, 255, 0.95) !important;
+  color: #ffffff !important;
   backdrop-filter: blur(12px) !important;
   -webkit-backdrop-filter: blur(12px) !important;
   border: 1px solid rgba(0, 210, 255, 0.3) !important;
@@ -610,7 +602,7 @@ button.bg-white.text-black *,
 .btn-primary *,
 button.bg-primary *,
 .bg-primary * {
-  color: rgba(255, 255, 255, 0.95) !important;
+  color: #ffffff !important;
 }
 
 button.bg-white.text-black:hover,
@@ -647,7 +639,7 @@ a.bg-white\/10,
 .btn-outline {
   background: rgba(255, 255, 255, 0.02) !important;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  color: rgba(255, 255, 255, 0.95) !important;
+  color: #ffffff !important;
   backdrop-filter: blur(12px) !important;
   -webkit-backdrop-filter: blur(12px) !important;
   border-radius: 9999px !important;
@@ -667,7 +659,7 @@ a.bg-white\/5 *,
 button.bg-white\/10 *,
 a.bg-white\/10 *,
 .btn-outline * {
-  color: rgba(255, 255, 255, 0.95) !important;
+  color: #ffffff !important;
 }
 
 button.border-white\/15:hover,
@@ -732,7 +724,7 @@ button[role="combobox"],
   backdrop-filter: blur(12px) !important;
   -webkit-backdrop-filter: blur(12px) !important;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  color: rgba(255, 255, 255, 0.95) !important;
+  color: #ffffff !important;
   border-radius: 1rem !important;
   box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.03) !important;
   transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
@@ -747,7 +739,7 @@ input[type="password"]::placeholder,
 input[type="number"]::placeholder,
 input[type="url"]::placeholder,
 textarea::placeholder {
-  color: rgba(255, 255, 255, 0.3) !important;
+  color: rgba(255, 255, 255, 0.55) !important;
 }
 
 input[type="text"]:focus,
@@ -790,7 +782,7 @@ table {
 
 th {
   background-color: rgba(255, 255, 255, 0.02) !important;
-  color: rgba(255, 255, 255, 0.95) !important;
+  color: #ffffff !important;
   font-weight: 600 !important;
   text-align: left !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
@@ -803,15 +795,103 @@ th {
 td {
   padding: 1.25rem 1rem !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
-  color: rgba(255, 255, 255, 0.60) !important;
+  color: rgba(255, 255, 255, 0.75) !important;
   font-size: 0.9375rem !important;
   transition: background-color 0.3s ease !important;
 }
 
 tr:hover td {
   background-color: rgba(255, 255, 255, 0.01) !important;
-  color: rgba(255, 255, 255, 0.95) !important;
+  color: #ffffff !important;
 }
+
+/* ==========================================================
+   UNIVERSAL WHITE TYPOGRAPHY SYSTEM OVERRIDES
+   ========================================================== */
+
+/* 1. PRIMARY TYPOGRAPHY TIER: #FFFFFF */
+h1:not(:hover), h2:not(:hover), h3:not(:hover), h4:not(:hover), h5:not(:hover), h6:not(:hover),
+h1 *:not(:hover), h2 *:not(:hover), h3 *:not(:hover), h4 *:not(:hover), h5 *:not(:hover), h6 *:not(:hover),
+strong, b,
+button, .btn, [role="button"],
+.badge, [class*="badge"],
+.text-white,
+.text-white\/100,
+.text-white\/95,
+.text-white\/90 {
+  color: #ffffff !important;
+}
+
+/* 2. SECONDARY TYPOGRAPHY TIER: rgba(255, 255, 255, 0.75) */
+p, li,
+.nav-link,
+.text-white\/85:not(:hover),
+.text-white\/80:not(:hover),
+.text-white\/75:not(:hover),
+.text-white\/70:not(:hover),
+.text-white\/65:not(:hover),
+.text-white\/60:not(:hover),
+.text-text-muted,
+.text-premium-muted,
+/* Map common Tailwind color utilities to secondary white */
+.text-indigo-400:not(:hover),
+.text-blue-400:not(:hover),
+.text-emerald-400:not(:hover),
+.text-purple-400:not(:hover),
+.text-green-400:not(:hover),
+.text-indigo-500:not(:hover),
+.text-blue-500:not(:hover),
+.text-emerald-500:not(:hover),
+.text-purple-500:not(:hover),
+.text-green-500:not(:hover),
+.text-indigo-200:not(:hover),
+.text-blue-200:not(:hover),
+.text-purple-200:not(:hover) {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+/* 3. MUTED TYPOGRAPHY TIER: rgba(255, 255, 255, 0.55) */
+caption, figcaption,
+.text-muted,
+.text-white\/55:not(:hover),
+.text-white\/50:not(:hover),
+.text-white\/45:not(:hover),
+.text-white\/40:not(:hover),
+.text-white\/35:not(:hover),
+.text-white\/30:not(:hover),
+.text-white\/25:not(:hover),
+.text-white\/20:not(:hover),
+.text-white\/15:not(:hover),
+.text-white\/10:not(:hover),
+.text-red-400\/70:not(:hover) {
+  color: rgba(255, 255, 255, 0.55) !important;
+}
+
+/* 4. PRESERVE & PROTECT HOVER STYLES, ACTIVE ACCENTS & GRADIENTS */
+
+/* Do not color text gradients (requires transparent text & bg-clip-text) */
+.text-gradient,
+.text-transparent {
+  color: transparent !important;
+}
+
+/* Exclude selection from overrides */
+::selection {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+}
+
+/* Brand mark logo: preserve AdmirerX branding */
+header a span.font-display > span,
+footer a span.font-display > span {
+  color: rgba(255, 255, 255, 0.4) !important;
+  transition: color 0.5s ease !important;
+}
+header a:hover span.font-display > span,
+footer a:hover span.font-display > span {
+  color: #ffffff !important;
+}
+
 
 /* Atmospheric Aura Glow Breathing Keyframe Animations */
 @keyframes aura-float-1 {
