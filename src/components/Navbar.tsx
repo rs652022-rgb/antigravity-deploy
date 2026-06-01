@@ -154,14 +154,14 @@ export function Navbar() {
                     {/* Dropdown Menu */}
                     <div
                       className={cn(
-                        "absolute top-full left-1/2 -translate-x-1/2 pt-4 w-auto max-w-[90vw] z-50 transition-[opacity,visibility,transform,filter] duration-400 ease-[cubic-bezier(0.22,1,0.36,1)]",
+                        "absolute top-full left-1/2 -translate-x-1/2 pt-3 w-auto max-w-[90vw] z-50 transition-[opacity,visibility,transform] duration-350 ease-[cubic-bezier(0.22,1,0.36,1)]",
                         isServicesHovered
-                          ? "opacity-100 visible translate-y-0 scale-100 blur-0 pointer-events-auto"
-                          : "opacity-0 invisible translate-y-2 scale-[0.98] blur-[6px] pointer-events-none"
+                          ? "opacity-100 visible translate-y-0 pointer-events-auto"
+                          : "opacity-0 invisible translate-y-[10px] pointer-events-none"
                       )}
                     >
-                      <div className="bg-black backdrop-blur-[80px] saturate-[1.8] border border-white/20 rounded-3xl p-6 shadow-[0_40px_80px_rgba(0,0,0,0.6)] overflow-hidden min-w-[800px] ring-1 ring-white/10">
-                        <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-white/5 to-transparent pointer-events-none" />
+                      <div className="bg-black border border-white/[0.08] rounded-2xl p-6 shadow-[0_40px_80px_rgba(0,0,0,0.6)] overflow-hidden min-w-[800px] ring-1 ring-white/5">
+                        <div className="absolute inset-0 bg-gradient-to-b from-white/[0.03] via-white/[0.01] to-transparent pointer-events-none" />
                         <div className="grid grid-cols-4 gap-6 relative z-10">
                           {services.map((section, idx) => (
                             <div key={idx} className="flex flex-col h-full">
