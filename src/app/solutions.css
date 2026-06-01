@@ -2,26 +2,32 @@
 
 .solution-card {
     position: relative;
-    backdrop-filter: blur(32px);
-    -webkit-backdrop-filter: blur(32px);
-    background: rgba(15, 15, 15, 0.4);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 2rem;
     overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+                background-color 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+                border-color 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+                box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.35),
+        inset 0 1px 1px rgba(255, 255, 255, 0.08);
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
 .solution-card:hover {
-    background: rgba(15, 15, 15, 0.6);
-    border-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-4px);
-    box-shadow:
-        0 25px 50px -12px rgba(0, 0, 0, 0.6),
-        inset 0 0 20px rgba(255, 255, 255, 0.02);
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(0, 210, 255, 0.3);
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.55),
+        0 0 25px rgba(0, 210, 255, 0.15),
+        inset 0 1px 1px rgba(255, 255, 255, 0.18);
 }
 
 .solution-card-content {
@@ -63,7 +69,7 @@
 }
 
 .solution-desc {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.60);
     font-size: 0.9375rem;
     line-height: 1.6;
     margin-bottom: 2.5rem;

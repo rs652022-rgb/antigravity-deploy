@@ -9,20 +9,21 @@ import "@/app/solutions.css"; // Importing styles
 export default function InnovativeSolutionsSection() {
     return (
         <section className="py-20 bg-background relative overflow-hidden">
-            {/* Background Image & Blending */}
-            <div className="absolute inset-0 z-0 pointer-events-none">
-                <Image
-                    src="/images/innovative-bg.png"
-                    alt="Innovative Solutions Background"
-                    fill
-                    className="object-cover opacity-40 mix-blend-screen scale-105"
-                    sizes="100vw"
-                    quality={50}
-                    priority={false}
+            {/* Background & Ambient Glow */}
+            <div 
+                className="absolute inset-0 z-0 pointer-events-none"
+                style={{
+                    background: "linear-gradient(to bottom, rgba(10,10,10,0.96), rgba(15,15,15,0.98))"
+                }}
+            >
+                {/* Soft radial glow */}
+                <div 
+                    className="absolute inset-0"
+                    style={{
+                        background: "radial-gradient(circle at center, rgba(0, 210, 255, 0.08), transparent 60%)"
+                    }}
                 />
-                {/* Lighter overlay to let image show through */}
-                <div className="absolute inset-0 bg-background/60" />
-                <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-transparent to-[#0a0a0a]" />
             </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

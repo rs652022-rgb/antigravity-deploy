@@ -9,18 +9,20 @@ import { ArrowRight } from "lucide-react";
 export default function CTASection() {
     return (
         <section className="py-24 relative overflow-hidden">
-            {/* Full Section Background Image */}
-            <div className="absolute inset-0 z-0">
-                <Image
-                    src="/images/reflect_blackhole_remix.png"
-                    alt="CTA Background"
-                    fill
-                    className="object-cover blur-[8px]"
-                    sizes="100vw"
-                    quality={70}
+            {/* Full Section Background - Premium dark cinematic layout */}
+            <div 
+                className="absolute inset-0 z-0"
+                style={{
+                    background: "linear-gradient(to bottom, rgba(10,10,10,0.96), rgba(15,15,15,0.98))"
+                }}
+            >
+                {/* Subtle ambient radial glow */}
+                <div 
+                    className="absolute inset-0"
+                    style={{
+                        background: "radial-gradient(circle at center, rgba(0, 210, 255, 0.06), transparent 65%)"
+                    }}
                 />
-                {/* Subtle overlay to ensure text readability if needed, but keeping it minimal for richness */}
-                <div className="absolute inset-0 bg-black/10 mix-blend-overlay" />
             </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

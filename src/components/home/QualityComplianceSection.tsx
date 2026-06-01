@@ -8,30 +8,21 @@ import { Check } from "lucide-react";
 export default function QualityComplianceSection() {
     return (
         <section className="relative py-24 overflow-hidden">
-            {/* Full Section Background Image */}
-            <div className="absolute inset-0 z-0">
-                <Image
-                    src="/images/quality-bg-premium-v2.jpg"
-                    alt="Quality Background"
-                    fill
-                    className="object-cover blur-[6px]"
-                    sizes="100vw"
-                    quality={70}
+            {/* Full Section Background - Premium dark cinematic layout */}
+            <div 
+                className="absolute inset-0 z-0"
+                style={{
+                    background: "linear-gradient(to bottom, rgba(8,8,8,0.96), rgba(14,14,14,0.98))"
+                }}
+            >
+                {/* Subtle top-centered radial ambient glow */}
+                <div 
+                    className="absolute inset-0"
+                    style={{
+                        background: "radial-gradient(circle at top center, rgba(0, 210, 255, 0.06), transparent 65%)"
+                    }}
                 />
-                {/* Subtle overlay for text readability without killing the vibe */}
-                <div className="absolute inset-0 bg-black/60 mix-blend-overlay" />
-
-                {/* Additional darkening layer for that 'little darker tone' */}
-                <div className="absolute inset-0 bg-black/50" />
-
-                {/* Vignette / Radial Fade for focus - intensified */}
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,transparent_35%,black_100%)] pointer-events-none opacity-90" />
-
-                {/* Top Fade (Merging effect) */}
-                <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#050505] to-transparent z-10" />
-
-                {/* Bottom Fade (Merging effect) */}
-                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#050505] to-transparent z-10" />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-transparent to-[#0a0a0a]" />
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

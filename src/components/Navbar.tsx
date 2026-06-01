@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -61,6 +61,24 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const [isServicesHovered, setIsServicesHovered] = useState(false);
+  const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const handleMouseEnter = () => {
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+      hoverTimeoutRef.current = null;
+    }
+    setIsServicesHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+    }
+    hoverTimeoutRef.current = setTimeout(() => {
+      setIsServicesHovered(false);
+    }, 150);
+  };
   const pathname = usePathname();
 
   useEffect(() => {
@@ -118,15 +136,15 @@ export function Navbar() {
                   <div
                     key={link.href}
                     className="relative"
-                    onMouseEnter={() => setIsServicesHovered(true)}
-                    onMouseLeave={() => setIsServicesHovered(false)}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
                   >
                     <button
                       className={cn(
                         "flex items-center gap-1 px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full relative outline-none",
                         isActive
                           ? "text-white bg-white/10"
-                          : "text-white/60 hover:text-white hover:bg-white/5 py-4"
+                          : "text-white/60 hover:text-white hover:bg-white/5"
                       )}
                     >
                       {link.label}
@@ -136,10 +154,10 @@ export function Navbar() {
                     {/* Dropdown Menu */}
                     <div
                       className={cn(
-                        "absolute top-full left-1/2 -translate-x-1/2 pt-4 w-auto max-w-[90vw] transition-all duration-300 transform",
+                        "absolute top-full left-1/2 -translate-x-1/2 pt-4 w-auto max-w-[90vw] z-50 transition-[opacity,visibility,transform,filter] duration-400 ease-[cubic-bezier(0.22,1,0.36,1)]",
                         isServicesHovered
-                          ? "opacity-100 visible translate-y-0"
-                          : "opacity-0 invisible translate-y-2 pointer-events-none"
+                          ? "opacity-100 visible translate-y-0 scale-100 blur-0 pointer-events-auto"
+                          : "opacity-0 invisible translate-y-2 scale-[0.98] blur-[6px] pointer-events-none"
                       )}
                     >
                       <div className="bg-black backdrop-blur-[80px] saturate-[1.8] border border-white/20 rounded-3xl p-6 shadow-[0_40px_80px_rgba(0,0,0,0.6)] overflow-hidden min-w-[800px] ring-1 ring-white/10">

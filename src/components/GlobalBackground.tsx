@@ -47,12 +47,12 @@ export function GlobalBackground() {
                       willChange: "transform"
                     }}
                 />
-                <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-purple-900/10 blur-[120px]" />
-                <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-indigo-900/10 blur-[120px]" />
-                <div className="absolute top-[40%] left-[50%] -translate-x-1/2 w-[60%] h-[60%] rounded-full bg-blue-900/5 blur-[150px]" />
+                <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-purple-600/5 blur-[120px] aura-blob-1" />
+                <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-indigo-600/5 blur-[120px] aura-blob-2" />
+                <div className="absolute top-[30%] left-[20%] w-[60%] h-[60%] rounded-full bg-cyan-900/5 blur-[150px] aura-blob-3" />
                 <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-[0.03] mix-blend-overlay" />
                 {/* Cinematic dark vignette overlay for focus */}
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent,30%,rgba(12,13,18,0.75)_100%)] pointer-events-none" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent,30%,rgba(7,7,7,0.75)_100%)] pointer-events-none" />
             </div>
         );
     }
@@ -66,8 +66,8 @@ export function GlobalBackground() {
                     <>
                         <div className="absolute inset-0 bg-[#02040a]" />
                         <div className="absolute top-0 inset-x-0 h-[500px] bg-gradient-to-b from-indigo-950/40 via-purple-900/10 to-transparent blur-3xl" />
-                        <div className="absolute top-[20%] right-[10%] w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-[120px] mix-blend-screen opacity-40" />
-                        <div className="absolute bottom-[20%] left-[10%] w-[500px] h-[500px] bg-violet-600/10 rounded-full blur-[100px] mix-blend-screen opacity-30" />
+                        <div className="absolute top-[20%] right-[10%] w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-[120px] mix-blend-screen opacity-40 aura-blob-1" />
+                        <div className="absolute bottom-[20%] left-[10%] w-[500px] h-[500px] bg-violet-600/10 rounded-full blur-[100px] mix-blend-screen opacity-30 aura-blob-2" />
                         <div
                             className="absolute inset-0 opacity-[0.15]"
                             style={{
@@ -84,8 +84,8 @@ export function GlobalBackground() {
                 <>
                     <div className="absolute inset-0 bg-[#030508]" />
                     <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-[#050810] to-[#020305]" />
-                    <div className="absolute top-[-20%] left-[20%] w-[800px] h-[800px] bg-blue-900/10 rounded-full blur-[130px] opacity-40" />
-                    <div className="absolute bottom-[10%] right-[-10%] w-[600px] h-[600px] bg-cyan-900/5 rounded-full blur-[100px] opacity-30" />
+                    <div className="absolute top-[-20%] left-[20%] w-[800px] h-[800px] bg-blue-900/10 rounded-full blur-[130px] opacity-40 aura-blob-1" />
+                    <div className="absolute bottom-[10%] right-[-10%] w-[600px] h-[600px] bg-cyan-900/5 rounded-full blur-[100px] opacity-30 aura-blob-2" />
                     <div
                         className="absolute inset-0 opacity-[0.07]"
                         style={{
@@ -103,7 +103,7 @@ export function GlobalBackground() {
                 <>
                     <div className="absolute inset-0 bg-[#0b0c15]" />
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-slate-800/20 via-[#0b0c15] to-[#050508]" />
-                    <div className="absolute top-[10%] left-[10%] w-[700px] h-[700px] bg-indigo-950/30 rounded-full blur-[120px] opacity-50" />
+                    <div className="absolute top-[10%] left-[10%] w-[700px] h-[700px] bg-indigo-950/30 rounded-full blur-[120px] opacity-50 aura-blob-1" />
                     <div className="absolute bottom-0 right-0 w-full h-[50%] bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
                 </>
             );
@@ -115,8 +115,8 @@ export function GlobalBackground() {
                 <>
                     <div className="absolute inset-0 bg-[#050505]" />
                     <div className="absolute bottom-0 left-0 right-0 h-[80vh] bg-gradient-to-t from-indigo-950/20 via-transparent to-transparent opacity-40" />
-                    <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-purple-900/10 rounded-full blur-[100px] mix-blend-screen" />
-                    <div className="absolute bottom-[-10%] left-[20%] w-[500px] h-[500px] bg-orange-900/5 rounded-full blur-[120px] mix-blend-screen opacity-60" /> {/* Subtle warmth */}
+                    <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-purple-900/10 rounded-full blur-[100px] mix-blend-screen aura-blob-1" />
+                    <div className="absolute bottom-[-10%] left-[20%] w-[500px] h-[500px] bg-orange-900/5 rounded-full blur-[120px] mix-blend-screen opacity-60 aura-blob-2" /> {/* Subtle warmth */}
                 </>
             );
         }
@@ -181,7 +181,7 @@ export function GlobalBackground() {
             {/* Consistent Global Noise Overlay for texture */}
             <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-[0.02] mix-blend-overlay pointer-events-none" />
             {/* Cinematic dark vignette overlay for focus */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,rgba(12,13,18,0.75)_100%)] pointer-events-none" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,rgba(7,7,7,0.75)_100%)] pointer-events-none" />
         </div>
     );
 }
