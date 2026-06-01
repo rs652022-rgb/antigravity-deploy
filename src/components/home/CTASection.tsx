@@ -11,10 +11,7 @@ export default function CTASection() {
         <section className="py-24 relative overflow-hidden">
             {/* Full Section Background - Premium dark cinematic layout */}
             <div 
-                className="absolute inset-0 z-0"
-                style={{
-                    background: "linear-gradient(to bottom, rgba(10,10,10,0.96), rgba(15,15,15,0.98))"
-                }}
+                className="absolute inset-0 z-0 bg-gradient-to-b from-[#070707]/70 via-[#070707]/80 to-[#070707]/88"
             >
                 {/* Subtle ambient radial glow */}
                 <div 

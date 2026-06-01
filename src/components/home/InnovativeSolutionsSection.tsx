@@ -11,10 +11,7 @@ export default function InnovativeSolutionsSection() {
         <section className="py-20 bg-background relative overflow-hidden">
             {/* Background & Ambient Glow */}
             <div 
-                className="absolute inset-0 z-0 pointer-events-none"
-                style={{
-                    background: "linear-gradient(to bottom, rgba(10,10,10,0.96), rgba(15,15,15,0.98))"
-                }}
+                className="absolute inset-0 z-0 pointer-events-none bg-gradient-to-b from-[#070707]/70 via-[#070707]/80 to-[#070707]/88"
             >
                 {/* Soft radial glow */}
                 <div 
@@ -23,7 +20,7 @@ export default function InnovativeSolutionsSection() {
                         background: "radial-gradient(circle at center, rgba(0, 210, 255, 0.08), transparent 60%)"
                     }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-transparent to-[#0a0a0a]" />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#070707]/60 via-transparent to-[#070707]/70" />
             </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

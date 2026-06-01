@@ -420,13 +420,13 @@ body {
 .solution-card,
 .industry-card,
 .liquid-glass {
-  background: rgba(255, 255, 255, 0.02) !important;
-  backdrop-filter: blur(18px) !important;
-  -webkit-backdrop-filter: blur(18px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background: rgba(10, 10, 10, 0.45) !important;
+  backdrop-filter: blur(28px) !important;
+  -webkit-backdrop-filter: blur(28px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
   box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.35),
-    inset 0 1px 1px rgba(255, 255, 255, 0.08) !important;
+    0 20px 50px -15px rgba(0, 0, 0, 0.7),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
   border-radius: 2rem !important;
   position: relative;
   overflow: hidden;
@@ -469,13 +469,13 @@ body {
 /* Sparse Premium Glass & Overlay Panels */
 .glass-premium,
 .mobile-menu-panel {
-  background: rgba(255, 255, 255, 0.03) !important;
-  backdrop-filter: blur(24px) !important;
-  -webkit-backdrop-filter: blur(24px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background: rgba(8, 8, 8, 0.6) !important;
+  backdrop-filter: blur(40px) !important;
+  -webkit-backdrop-filter: blur(40px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
   box-shadow: 
-    0 25px 60px rgba(0, 0, 0, 0.45),
-    inset 0 1px 1px 0 rgba(255, 255, 255, 0.12) !important;
+    0 30px 70px -10px rgba(0, 0, 0, 0.8),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
   border-radius: 2rem !important;
 }
 
@@ -514,23 +514,25 @@ body {
 .glass-card:hover,
 .solution-card:hover,
 .industry-card:hover {
-  background: rgba(255, 255, 255, 0.04) !important;
-  border-color: rgba(0, 210, 255, 0.3) !important;
-  transform: translateY(-6px) scale(1.01) !important;
+  background: rgba(20, 20, 20, 0.55) !important;
+  border-color: rgba(0, 210, 255, 0.25) !important;
+  transform: translateY(-4px) !important;
   box-shadow: 
-    0 30px 60px rgba(0, 0, 0, 0.55),
-    0 0 25px rgba(0, 210, 255, 0.15),
-    inset 0 1px 1px 0 rgba(255, 255, 255, 0.18) !important;
+    0 35px 70px -10px rgba(0, 0, 0, 0.8),
+    0 0 25px rgba(0, 210, 255, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
   animation-play-state: paused !important;
 }
 
 /* Frosted Liquid Glass Navigation Bar */
 header nav {
-  background-color: rgba(255, 255, 255, 0.02) !important;
-  backdrop-filter: blur(18px) !important;
-  -webkit-backdrop-filter: blur(18px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+  background-color: rgba(8, 8, 8, 0.5) !important;
+  backdrop-filter: blur(28px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(160%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  box-shadow: 
+    0 12px 40px -10px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
 }
 
 /* Services Dropdown Menu Panel */
@@ -540,6 +542,27 @@ header nav .bg-black {
   -webkit-backdrop-filter: none !important;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
   box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Refine background overlay gradients for smoother, transparent section blending */
+section > div[style*="background: linear-gradient"],
+section > div[style*="background-image: linear-gradient"] {
+  background: linear-gradient(
+    to bottom,
+    rgba(7, 7, 7, 0.70) 0%,
+    rgba(7, 7, 7, 0.82) 50%,
+    rgba(7, 7, 7, 0.88) 100%
+  ) !important;
+}
+
+/* ServingEveryIndustrySection background blending */
+.industry-section div.bg-\[\#0d0b16\],
+.industry-section .bg-\[\#0d0b16\] {
+  background: linear-gradient(
+    135deg,
+    rgba(13, 11, 22, 0.70) 0%,
+    rgba(8, 8, 12, 0.80) 100%
+  ) !important;
 }
 
 /* Homepage specific overrides removed to allow standardized white typography opacities */

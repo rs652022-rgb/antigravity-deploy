@@ -65,11 +65,11 @@ const industries = [
 
 export default function ServingEveryIndustrySection() {
     return (
-        <section className="industry-section relative py-24 overflow-hidden bg-[#0d0b16]">
+        <section className="industry-section relative py-24 overflow-hidden bg-transparent">
             {/* Background Texture - Scanlines & Streaks */}
             <div className="absolute inset-0 pointer-events-none z-0">
                 {/* Deep purple/indigo base */}
-                <div className="absolute inset-0 bg-[#0d0b16]" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#0d0b16]/70 to-[#070707]/80" />
 
                 {/* Scanline pattern */}
                 <div
@@ -93,10 +93,10 @@ export default function ServingEveryIndustrySection() {
                 <div className="absolute top-0 right-1/3 w-[1px] h-full bg-gradient-to-b from-transparent via-indigo-500/20 to-transparent blur-[1px]" />
 
                 {/* Top Fade (Merging effect) */}
-                <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-black via-black/80 to-transparent z-10 backdrop-blur-md" />
+                <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-[#070707]/75 via-[#070707]/40 to-transparent z-10 backdrop-blur-md" />
 
                 {/* Bottom Fade (Merging effect) */}
-                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#050505] to-transparent z-10" />
+                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#070707]/75 to-transparent z-10" />
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

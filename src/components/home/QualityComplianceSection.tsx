@@ -10,10 +10,7 @@ export default function QualityComplianceSection() {
         <section className="relative py-24 overflow-hidden">
             {/* Full Section Background - Premium dark cinematic layout */}
             <div 
-                className="absolute inset-0 z-0"
-                style={{
-                    background: "linear-gradient(to bottom, rgba(8,8,8,0.96), rgba(14,14,14,0.98))"
-                }}
+                className="absolute inset-0 z-0 bg-gradient-to-b from-[#070707]/70 via-[#070707]/80 to-[#070707]/88"
             >
                 {/* Subtle top-centered radial ambient glow */}
                 <div 
@@ -22,7 +19,7 @@ export default function QualityComplianceSection() {
                         background: "radial-gradient(circle at top center, rgba(0, 210, 255, 0.06), transparent 65%)"
                     }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-transparent to-[#0a0a0a]" />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#070707]/60 via-transparent to-[#070707]/70" />
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
