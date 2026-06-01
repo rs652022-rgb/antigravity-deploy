@@ -388,9 +388,15 @@ p, body {
   letter-spacing: -0.003em !important;
 }
 
-/* Universal Page Background Harmonizer */
+/* Universal Page Background Harmonizer - Render page containers transparently to reveal background video */
 .bg-background,
 .bg-background-deep,
+main,
+main.bg-black,
+section,
+.industry-section,
+.culture-values-section,
+.how-we-partner-section,
 [class*="bg-[#020205]"],
 [class*="bg-[#050505]"],
 [class*="bg-[#0d0b16]"],
@@ -399,7 +405,12 @@ p, body {
 [class*="bg-[#02040a]"],
 [class*="bg-[#0b0c15]"],
 [class*="bg-[#050507]"],
-[class*="bg-[#08080a]"] {
+[class*="bg-[#08080a]"],
+[class*="bg-[#010103]"] {
+  background-color: transparent !important;
+}
+
+body {
   background-color: #0c0d12 !important;
 }
 
