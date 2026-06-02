@@ -5,6 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import dynamic from "next/dynamic";
+
+const LaserFlow = dynamic(() => import("@/components/ui/LaserFlow"), {
+    ssr: false,
+});
 
 export default function CTASection() {
     return (
@@ -13,6 +18,16 @@ export default function CTASection() {
             <div 
                 className="absolute inset-0 z-0 bg-gradient-to-b from-[#070707]/70 via-[#070707]/80 to-[#070707]/88"
             >
+                {/* LaserFlow animation in the background */}
+                <div className="absolute inset-0 opacity-40">
+                    <LaserFlow 
+                        color="#00D2FF"
+                        horizontalBeamOffset={0.05}
+                        verticalBeamOffset={0.0}
+                        wispDensity={1.5}
+                        fogIntensity={0.5}
+                    />
+                </div>
                 {/* Subtle ambient radial glow */}
                 <div 
                     className="absolute inset-0"
