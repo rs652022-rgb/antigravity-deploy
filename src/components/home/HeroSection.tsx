@@ -8,12 +8,11 @@ import { ArrowRight } from "lucide-react";
 import dynamic from "next/dynamic";
 
 const Silk = dynamic(() => import("@/app/Silk"), { ssr: false });
-const LightPillar = dynamic(() => import("@/components/ui/LightPillar"), { ssr: false });
 
 export default function HeroSection() {
     return (
         <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-            {/* Background Elements - Silk & LightPillar Animations */}
+            {/* Background Elements - Silk Animation */}
             <div className="absolute inset-0 z-0">
                 <Silk 
                     speed={5}
@@ -21,13 +20,6 @@ export default function HeroSection() {
                     color="#7B7481"
                     noiseIntensity={1.5}
                     rotation={0}
-                />
-                <LightPillar 
-                    topColor="#5227FF"
-                    bottomColor="#FF9FFC"
-                    intensity={0.6}
-                    rotationSpeed={0.2}
-                    interactive={true}
                 />
             </div>
 
