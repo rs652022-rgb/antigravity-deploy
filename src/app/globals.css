@@ -499,16 +499,25 @@ body {
   }
 }
 
-.glass-card {
-  animation: float-cinematic 9s ease-in-out infinite;
-}
-
-.solution-card {
-  animation: float-cinematic 12s ease-in-out infinite;
-}
-
-.industry-card {
+.float-slow {
   animation: float-cinematic 15s ease-in-out infinite;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.float-medium {
+  animation: float-cinematic 12s ease-in-out infinite;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.float-fast {
+  animation: float-cinematic 9s ease-in-out infinite;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .glass-card:hover,

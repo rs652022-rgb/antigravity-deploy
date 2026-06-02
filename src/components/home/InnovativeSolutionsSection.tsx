@@ -44,26 +44,30 @@ export default function InnovativeSolutionsSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                        className="solution-card group"
+                        className="h-full"
                     >
-                        <div className="solution-card-content">
-                            <div className="solution-icon-chip">
-                                <Bot className="w-5 h-5 text-white" />
+                        <div className="float-fast">
+                            <div className="solution-card group">
+                                <div className="solution-card-content">
+                                    <div className="solution-icon-chip">
+                                        <Bot className="w-5 h-5 text-white" />
+                                    </div>
+                                    <h3 className="solution-title">AI-Powered <br /> Intelligence</h3>
+                                    <p className="solution-desc">
+                                        Advanced machine learning models that understand context and deliver personalized responses.
+                                    </p>
+                                </div>
+                                <div className="solution-image-container">
+                                    <Image
+                                        src="/ai-intelligence-v2.png"
+                                        alt="AI"
+                                        fill
+                                        className="object-cover"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                                        quality={80}
+                                    />
+                                </div>
                             </div>
-                            <h3 className="solution-title">AI-Powered <br /> Intelligence</h3>
-                            <p className="solution-desc">
-                                Advanced machine learning models that understand context and deliver personalized responses.
-                            </p>
-                        </div>
-                        <div className="solution-image-container">
-                            <Image
-                                src="/ai-intelligence-v2.png"
-                                alt="AI"
-                                fill
-                                className="object-cover"
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                                quality={80}
-                            />
                         </div>
                     </motion.div>
 
@@ -73,26 +77,30 @@ export default function InnovativeSolutionsSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-                        className="solution-card group"
+                        className="h-full"
                     >
-                        <div className="solution-card-content">
-                            <div className="solution-icon-chip">
-                                <Zap className="w-5 h-5 text-white" />
+                        <div className="float-medium">
+                            <div className="solution-card group">
+                                <div className="solution-card-content">
+                                    <div className="solution-icon-chip">
+                                        <Zap className="w-5 h-5 text-white" />
+                                    </div>
+                                    <h3 className="solution-title">Lightning Fast <br /> Response</h3>
+                                    <p className="solution-desc">
+                                        Sub-second response times powered by distributed cloud infrastructure.
+                                    </p>
+                                </div>
+                                <div className="solution-image-container">
+                                    <Image
+                                        src="/lightning-fast-update.png"
+                                        alt="Speed"
+                                        fill
+                                        className="object-cover"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                                        quality={80}
+                                    />
+                                </div>
                             </div>
-                            <h3 className="solution-title">Lightning Fast <br /> Response</h3>
-                            <p className="solution-desc">
-                                Sub-second response times powered by distributed cloud infrastructure.
-                            </p>
-                        </div>
-                        <div className="solution-image-container">
-                            <Image
-                                src="/lightning-fast-update.png"
-                                alt="Speed"
-                                fill
-                                className="object-cover"
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                                quality={80}
-                            />
                         </div>
                     </motion.div>
 
@@ -102,26 +110,30 @@ export default function InnovativeSolutionsSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-                        className="solution-card group"
+                        className="h-full"
                     >
-                        <div className="solution-card-content">
-                            <div className="solution-icon-chip">
-                                <Shield className="w-5 h-5 text-white" />
+                        <div className="float-slow">
+                            <div className="solution-card group">
+                                <div className="solution-card-content">
+                                    <div className="solution-icon-chip">
+                                        <Shield className="w-5 h-5 text-white" />
+                                    </div>
+                                    <h3 className="solution-title">Enterprise-Grade <br /> Security</h3>
+                                    <p className="solution-desc">
+                                        ISO 27001 certified with end-to-end encryption and compliance automation.
+                                    </p>
+                                </div>
+                                <div className="solution-image-container">
+                                    <Image
+                                        src="/enterprise-security-update.png"
+                                        alt="Security"
+                                        fill
+                                        className="object-cover"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                                        quality={80}
+                                    />
+                                </div>
                             </div>
-                            <h3 className="solution-title">Enterprise-Grade <br /> Security</h3>
-                            <p className="solution-desc">
-                                ISO 27001 certified with end-to-end encryption and compliance automation.
-                            </p>
-                        </div>
-                        <div className="solution-image-container">
-                            <Image
-                                src="/enterprise-security-update.png"
-                                alt="Security"
-                                fill
-                                className="object-cover"
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                                quality={80}
-                            />
                         </div>
                     </motion.div>
 
@@ -131,26 +143,30 @@ export default function InnovativeSolutionsSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
-                        className="solution-card group"
+                        className="h-full"
                     >
-                        <div className="solution-card-content">
-                            <div className="solution-icon-chip">
-                                <Activity className="w-5 h-5 text-white" />
+                        <div className="float-medium">
+                            <div className="solution-card group">
+                                <div className="solution-card-content">
+                                    <div className="solution-icon-chip">
+                                        <Activity className="w-5 h-5 text-white" />
+                                    </div>
+                                    <h3 className="solution-title">Continuous <br /> Innovation</h3>
+                                    <p className="solution-desc">
+                                        Weekly updates with cutting-edge AI features and performance enhancements.
+                                    </p>
+                                </div>
+                                <div className="solution-image-container">
+                                    <Image
+                                        src="/continuous-innovation-update.png"
+                                        alt="Innovation"
+                                        fill
+                                        className="object-cover"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                                        quality={80}
+                                    />
+                                </div>
                             </div>
-                            <h3 className="solution-title">Continuous <br /> Innovation</h3>
-                            <p className="solution-desc">
-                                Weekly updates with cutting-edge AI features and performance enhancements.
-                            </p>
-                        </div>
-                        <div className="solution-image-container">
-                            <Image
-                                src="/continuous-innovation-update.png"
-                                alt="Innovation"
-                                fill
-                                className="object-cover"
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                                quality={80}
-                            />
                         </div>
                     </motion.div>
                 </div>

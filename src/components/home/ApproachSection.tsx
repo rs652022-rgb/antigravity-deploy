@@ -30,28 +30,32 @@ export default function ApproachSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                        className="group glass-card flex flex-col h-full relative"
+                        className="h-full"
                     >
-                        <div className="p-10 pb-0 flex-grow relative z-10">
-                            <div className="approach-icon-chip mb-8">
-                                <Users className="w-5 h-5 text-white" />
+                        <div className="float-fast">
+                            <div className="group glass-card flex flex-col h-full relative">
+                                <div className="p-10 pb-0 flex-grow relative z-10">
+                                    <div className="approach-icon-chip mb-8">
+                                        <Users className="w-5 h-5 text-white" />
+                                    </div>
+                                    <h3 className="text-2xl font-bold mb-4 font-display tracking-tight">Stronger Teams</h3>
+                                    <p className="text-text-muted leading-relaxed mb-10 text-[15px]">
+                                        Building high-performing teams that combine human expertise with cutting-edge technology to deliver exceptional results.
+                                    </p>
+                                </div>
+                                <div className="relative h-72 w-full mt-auto overflow-hidden">
+                                    <Image
+                                        src="/images/pexels-fauxels-3184302.jpg"
+                                        alt="Stronger Teams"
+                                        fill
+                                        className="object-cover group-hover:scale-[1.03] transition-transform duration-700 opacity-90 group-hover:opacity-100"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        quality={60}
+                                        priority={false}
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                                </div>
                             </div>
-                            <h3 className="text-2xl font-bold mb-4 font-display tracking-tight">Stronger Teams</h3>
-                            <p className="text-text-muted leading-relaxed mb-10 text-[15px]">
-                                Building high-performing teams that combine human expertise with cutting-edge technology to deliver exceptional results.
-                            </p>
-                        </div>
-                        <div className="relative h-72 w-full mt-auto overflow-hidden">
-                            <Image
-                                src="/images/pexels-fauxels-3184302.jpg"
-                                alt="Stronger Teams"
-                                fill
-                                className="object-cover group-hover:scale-[1.03] transition-transform duration-700 opacity-90 group-hover:opacity-100"
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                quality={60}
-                                priority={false}
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                         </div>
                     </motion.div>
 
@@ -61,28 +65,32 @@ export default function ApproachSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-                        className="group glass-card flex flex-col h-full relative"
+                        className="h-full"
                     >
-                        <div className="p-10 pb-0 flex-grow relative z-10">
-                            <div className="approach-icon-chip mb-8">
-                                <Cpu className="w-5 h-5 text-white" />
+                        <div className="float-medium">
+                            <div className="group glass-card flex flex-col h-full relative">
+                                <div className="p-10 pb-0 flex-grow relative z-10">
+                                    <div className="approach-icon-chip mb-8">
+                                        <Cpu className="w-5 h-5 text-white" />
+                                    </div>
+                                    <h3 className="text-2xl font-bold mb-4 font-display tracking-tight">Smarter Technology</h3>
+                                    <p className="text-text-muted leading-relaxed mb-10 text-[15px]">
+                                        AI-powered automation and intelligent systems that transform operations and drive business efficiency at scale.
+                                    </p>
+                                </div>
+                                <div className="relative h-72 w-full mt-auto overflow-hidden">
+                                    <Image
+                                        src="/images/pexels-michelangelo-buonarroti-8728380.jpg"
+                                        alt="Smarter Technology"
+                                        fill
+                                        className="object-cover group-hover:scale-[1.03] transition-transform duration-700 opacity-90 group-hover:opacity-100"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        quality={60}
+                                        priority={false}
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                                </div>
                             </div>
-                            <h3 className="text-2xl font-bold mb-4 font-display tracking-tight">Smarter Technology</h3>
-                            <p className="text-text-muted leading-relaxed mb-10 text-[15px]">
-                                AI-powered automation and intelligent systems that transform operations and drive business efficiency at scale.
-                            </p>
-                        </div>
-                        <div className="relative h-72 w-full mt-auto overflow-hidden">
-                            <Image
-                                src="/images/pexels-michelangelo-buonarroti-8728380.jpg"
-                                alt="Smarter Technology"
-                                fill
-                                className="object-cover group-hover:scale-[1.03] transition-transform duration-700 opacity-90 group-hover:opacity-100"
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                quality={60}
-                                priority={false}
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                         </div>
                     </motion.div>
 
@@ -92,28 +100,32 @@ export default function ApproachSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-                        className="group glass-card flex flex-col h-full relative"
+                        className="h-full"
                     >
-                        <div className="p-10 pb-0 flex-grow relative z-10">
-                            <div className="approach-icon-chip mb-8">
-                                <Lock className="w-5 h-5 text-white" />
+                        <div className="float-slow">
+                            <div className="group glass-card flex flex-col h-full relative">
+                                <div className="p-10 pb-0 flex-grow relative z-10">
+                                    <div className="approach-icon-chip mb-8">
+                                        <Lock className="w-5 h-5 text-white" />
+                                    </div>
+                                    <h3 className="text-2xl font-bold mb-4 font-display tracking-tight">Safer Operations</h3>
+                                    <p className="text-text-muted leading-relaxed mb-10 text-[15px]">
+                                        Enterprise-grade security protocols ensuring data protection and compliance across all client engagements.
+                                    </p>
+                                </div>
+                                <div className="relative h-72 w-full mt-auto overflow-hidden">
+                                    <Image
+                                        src="/images/pexels-cottonbro-5473960.jpg"
+                                        alt="Safer Operations"
+                                        fill
+                                        className="object-cover group-hover:scale-[1.03] transition-transform duration-700 opacity-90 group-hover:opacity-100"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        quality={60}
+                                        priority={false}
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                                </div>
                             </div>
-                            <h3 className="text-2xl font-bold mb-4 font-display tracking-tight">Safer Operations</h3>
-                            <p className="text-text-muted leading-relaxed mb-10 text-[15px]">
-                                Enterprise-grade security protocols ensuring data protection and compliance across all client engagements.
-                            </p>
-                        </div>
-                        <div className="relative h-72 w-full mt-auto overflow-hidden">
-                            <Image
-                                src="/images/pexels-cottonbro-5473960.jpg"
-                                alt="Safer Operations"
-                                fill
-                                className="object-cover group-hover:scale-[1.03] transition-transform duration-700 opacity-90 group-hover:opacity-100"
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                quality={60}
-                                priority={false}
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                         </div>
                     </motion.div>
                 </div>
